@@ -16,6 +16,15 @@ public class Login_HP {
 		By login_button = By.xpath("/html/body/app-root/app-common-login/div/div[2]/div[2]/form/button");
 		driver.findElement(login_button).click();
 
+		try {
+			Thread.sleep(4000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		By menu_item = By.xpath("/html/body/app-root/app-crm/div/app-navigation/div/div[2]/div/img");
+		driver.findElement(menu_item).click();
 	}
 
 }
