@@ -37,7 +37,7 @@ public class Clinical_Profile {
 			Thread.sleep(3000);
 
 			By close_icon = By.xpath(
-					"/html/body/app-root/app-crm/div/div/app-patient-view/div/app-dashboard/div/gridster/gridster-item[2]/app-widget/div/div[2]/app-clinical-profile-items/div/app-widget-header/div/img");
+					"/html/body/app-root/app-crm/div/div/app-patient-view/div/app-dashboard/div/gridster/gridster-item[2]/app-widget/div/div[1]/app-clinical-profile/div[1]/app-widget-header/div/img");
 			driver.findElement(close_icon).click();
 
 		} catch (InterruptedException ex) {
