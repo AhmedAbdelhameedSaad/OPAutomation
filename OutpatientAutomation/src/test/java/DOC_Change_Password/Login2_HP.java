@@ -15,7 +15,7 @@ public class Login2_HP {
 		
 		// Login to HP Web
 		By username = By.id("user-id");
-		driver.findElement(username).sendKeys("DOCIPD01");
+		driver.findElement(username).sendKeys("DOCOPD01");
 
 		By password = By.id("his-password");
 		driver.findElement(password).sendKeys("egy456");

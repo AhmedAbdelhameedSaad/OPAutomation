@@ -527,7 +527,7 @@ public class UITestCases_test {
 
 					TestListenerAdapter tla = new TestListenerAdapter();
 					TestNG testng = new TestNG();
-					testng.setTestClasses(new Class[] { IP_TC_001.class });
+			//		testng.setTestClasses(new Class[] { IP_TC_001.class });
 					testng.addListener(tla);
 					testng.run();
 				} else if (rdbtnNewRadioButton.isSelected()) {
@@ -618,7 +618,7 @@ public class UITestCases_test {
 				} else if (rdbtnNewRadioButton_9_1_5.isSelected()) {
 					TestListenerAdapter tla = new TestListenerAdapter();
 					TestNG testng = new TestNG();
-					testng.setTestClasses(new Class[] { IP_TC_409_790_877_790.class });
+				//	testng.setTestClasses(new Class[] { IP_TC_409_790_877_790.class });
 					testng.addListener(tla);
 					testng.run();
 				} else if (rdbtnNewRadioButton_9_1_5_1.isSelected()) {
@@ -882,13 +882,13 @@ public class UITestCases_test {
 				} else if (rdbtnNewRadioButton_34.isSelected()) {
 					TestListenerAdapter tla = new TestListenerAdapter();
 					TestNG testng = new TestNG();
-					testng.setTestClasses(new Class[] { IP_TC_693.class });
+					//testng.setTestClasses(new Class[] { IP_TC_693.class });
 					testng.addListener(tla);
 					testng.run();
 				} else if (rdbtnNewRadioButton_35.isSelected()) {
 					TestListenerAdapter tla = new TestListenerAdapter();
 					TestNG testng = new TestNG();
-					testng.setTestClasses(new Class[] { IP_TC_694.class });
+			//		testng.setTestClasses(new Class[] { IP_TC_694.class });
 					testng.addListener(tla);
 					testng.run();
 				} else if (rdbtnNewRadioButton_36.isSelected()) {
@@ -900,7 +900,7 @@ public class UITestCases_test {
 				} else if (rdbtnNewRadioButton_37.isSelected()) {
 					TestListenerAdapter tla = new TestListenerAdapter();
 					TestNG testng = new TestNG();
-					testng.setTestClasses(new Class[] { IP_TC_697.class });
+				//	testng.setTestClasses(new Class[] { IP_TC_697.class });
 					testng.addListener(tla);
 					testng.run();
 				} else if (rdbtnNewRadioButton_38.isSelected()) {
@@ -918,7 +918,7 @@ public class UITestCases_test {
 				} else if (rdbtnNewRadioButton_40.isSelected()) {
 					TestListenerAdapter tla = new TestListenerAdapter();
 					TestNG testng = new TestNG();
-					testng.setTestClasses(new Class[] { IP_TC_714.class });
+				//	testng.setTestClasses(new Class[] { IP_TC_714.class });
 					testng.addListener(tla);
 					testng.run();
 				} else if (rdbtnNewRadioButton_41.isSelected()) {
@@ -948,25 +948,25 @@ public class UITestCases_test {
 				} else if (rdbtnNewRadioButton_45.isSelected()) {
 					TestListenerAdapter tla = new TestListenerAdapter();
 					TestNG testng = new TestNG();
-					testng.setTestClasses(new Class[] { IP_TC_725_726_727_728_729_730_755.class });
+			//		testng.setTestClasses(new Class[] { IP_TC_725_726_727_728_729_730_755.class });
 					testng.addListener(tla);
 					testng.run();
 				} else if (rdbtnNewRadioButton_46.isSelected()) {
 					TestListenerAdapter tla = new TestListenerAdapter();
 					TestNG testng = new TestNG();
-					testng.setTestClasses(new Class[] { IP_TC_733.class });
+			//		testng.setTestClasses(new Class[] { IP_TC_733.class });
 					testng.addListener(tla);
 					testng.run();
 				} else if (rdbtnNewRadioButton_47.isSelected()) {
 					TestListenerAdapter tla = new TestListenerAdapter();
 					TestNG testng = new TestNG();
-					testng.setTestClasses(new Class[] { IP_TC_734_735_736_737.class });
+				//	testng.setTestClasses(new Class[] { IP_TC_734_735_736_737.class });
 					testng.addListener(tla);
 					testng.run();
 				} else if (rdbtnNewRadioButton_48.isSelected()) {
 					TestListenerAdapter tla = new TestListenerAdapter();
 					TestNG testng = new TestNG();
-					testng.setTestClasses(new Class[] { IP_TC_756_762_765.class });
+				//	testng.setTestClasses(new Class[] { IP_TC_756_762_765.class });
 					testng.addListener(tla);
 					testng.run();
 				} else if (rdbtnNewRadioButton_49.isSelected()) {
@@ -1002,7 +1002,7 @@ public class UITestCases_test {
 				} else if (rdbtnNewRadioButton_54.isSelected()) {
 					TestListenerAdapter tla = new TestListenerAdapter();
 					TestNG testng = new TestNG();
-					testng.setTestClasses(new Class[] { IP_TC_788.class });
+				//	testng.setTestClasses(new Class[] { IP_TC_788.class });
 					testng.addListener(tla);
 					testng.run();
 				} else if (rdbtnNewRadioButton_55.isSelected()) {
@@ -1014,25 +1014,25 @@ public class UITestCases_test {
 				} else if (rdbtnNewRadioButton_56.isSelected()) {
 					TestListenerAdapter tla = new TestListenerAdapter();
 					TestNG testng = new TestNG();
-					testng.setTestClasses(new Class[] { IP_TC_791_792.class });
+				//	testng.setTestClasses(new Class[] { IP_TC_791_792.class });
 					testng.addListener(tla);
 					testng.run();
 				} else if (rdbtnNewRadioButton_57.isSelected()) {
 					TestListenerAdapter tla = new TestListenerAdapter();
 					TestNG testng = new TestNG();
-					testng.setTestClasses(new Class[] { IP_TC_793.class });
+				//	testng.setTestClasses(new Class[] { IP_TC_793.class });
 					testng.addListener(tla);
 					testng.run();
 				} else if (rdbtnNewRadioButton_58.isSelected()) {
 					TestListenerAdapter tla = new TestListenerAdapter();
 					TestNG testng = new TestNG();
-					testng.setTestClasses(new Class[] { IP_TC_794.class });
+			//		testng.setTestClasses(new Class[] { IP_TC_794.class });
 					testng.addListener(tla);
 					testng.run();
 				} else if (rdbtnNewRadioButton_59.isSelected()) {
 					TestListenerAdapter tla = new TestListenerAdapter();
 					TestNG testng = new TestNG();
-					testng.setTestClasses(new Class[] { IP_TC_795.class });
+				//	testng.setTestClasses(new Class[] { IP_TC_795.class });
 					testng.addListener(tla);
 					testng.run();
 				} else if (rdbtnNewRadioButton_60.isSelected()) {
@@ -1200,13 +1200,13 @@ public class UITestCases_test {
 				} else if (rdbtnNewRadioButton_87.isSelected()) {
 					TestListenerAdapter tla = new TestListenerAdapter();
 					TestNG testng = new TestNG();
-					testng.setTestClasses(new Class[] { GroupL.class });
+			//		testng.setTestClasses(new Class[] { GroupL.class });
 					testng.addListener(tla);
 					testng.run();
 				} else if (rdbtnNewRadioButton_88.isSelected()) {
 					TestListenerAdapter tla = new TestListenerAdapter();
 					TestNG testng = new TestNG();
-					testng.setTestClasses(new Class[] { GroupM.class });
+				//	testng.setTestClasses(new Class[] { GroupM.class });
 					testng.addListener(tla);
 					testng.run();
 

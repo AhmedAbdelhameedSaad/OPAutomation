@@ -1,4 +1,4 @@
-package DOC_Place_panel_order;
+package DOC_OPD_OPConsultation;
 
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
@@ -8,9 +8,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
-public class SelectForm {
+public class SelectForm_OP_Consultation {
 	public void select_form(WebDriver driver) {
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+
+		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+
 		try {
 
 			Thread.sleep(9000);
@@ -23,14 +25,12 @@ public class SelectForm {
 					"/html/body/app-root/app-crm/div/div/app-patient-view/app-lead-actions-popover/div/div/div[3]/div");
 			driver.findElement(newDocument).click();
 
-			Thread.sleep(6000);
+			Thread.sleep(5000);
 
 			// Search for Form
 			By searchFormText = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/div/div[2]/div[2]/div[1]/input");
-			driver.findElement(searchFormText).sendKeys("old Physicians order form" + Keys.ENTER);
-
-			Thread.sleep(2000);
+			driver.findElement(searchFormText).sendKeys("OP Consultation" + Keys.ENTER);
 
 			// Select The Form
 			By selectform = By.xpath(
@@ -38,7 +38,7 @@ public class SelectForm {
 			driver.findElement(selectform).click();
 
 		} catch (InterruptedException ex) {
-			Logger.getLogger(SelectForm.class.getName()).log(Level.SEVERE, null, ex);
+			Logger.getLogger(SelectForm_OP_Consultation.class.getName()).log(Level.SEVERE, null, ex);
 		}
 	}
 }

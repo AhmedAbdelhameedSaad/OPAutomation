@@ -9,10 +9,11 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import DOC_IPD_OPConsultation.OP_consultation_form;
-import DOC_IPD_OPConsultation.SelectForm_OP_Consultation;
+
+import DOC_OPD_OPConsultation.DOC_SelectPatientOP;
+import DOC_OPD_OPConsultation.SelectForm_OP_Consultation;
 import DOC_Pages.DOC_Login_HP;
-import DOC_Pages.DOC_SelectPatientIP;
+import Outpatient_OP_consultation.OP_consultation_form;
 
 public class IP_TC_001 {
 
@@ -37,8 +38,8 @@ public class IP_TC_001 {
 		DOC_Login_HP Login = new DOC_Login_HP();
 		Login.login_Edge(driver);
 
-		DOC_SelectPatientIP select_patient = new DOC_SelectPatientIP();
-		select_patient.selectpatientIP(driver, Patient_ID);
+		DOC_SelectPatientOP select_patient = new DOC_SelectPatientOP();
+		select_patient.selectpatientOP(driver, Patient_ID);
 
 		SelectForm_OP_Consultation Form = new SelectForm_OP_Consultation();
 		Form.select_form(driver);

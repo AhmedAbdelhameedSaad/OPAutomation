@@ -173,7 +173,7 @@ public class UITestCasesTitle {
 				} else if (rdbtnNewRadioButton_10.isSelected()) {
 					TestListenerAdapter tla = new TestListenerAdapter();
 					TestNG testng = new TestNG();
-					testng.setTestClasses(new Class[] { IP_TC_001.class });
+					//testng.setTestClasses(new Class[] { IP_TC_001.class });
 					testng.addListener(tla);
 					testng.run();
 
