@@ -1,30 +1,27 @@
-package CMO_OPD_Create_consultation_visit;
+package Login;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class Login_HP {
 
+	private String username;
+	private String password;
+	public Login_HP(String username, String password) {
+		this.username = username;
+		this.password = password;
+	}
 	public void login_Edge(WebDriver driver) {
 		driver.navigate().to("http://10.209.1.140/healthplug/#/user/leads");
 
 //	 Login to HP Web
 		By username = By.id("user-id");
-		driver.findElement(username).sendKeys("CMOOPD02");
+		driver.findElement(username).sendKeys(this.username);
 		By password = By.id("his-password");
-		driver.findElement(password).sendKeys("egy123");
+		driver.findElement(password).sendKeys(this.password);
 		By login_button = By.xpath("/html/body/app-root/app-common-login/div/div[2]/div[2]/form/button");
 		driver.findElement(login_button).click();
 
-		try {
-			Thread.sleep(4000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		By menu_item = By.xpath("/html/body/app-root/app-crm/div/app-navigation/div/div[2]/div/img");
-		driver.findElement(menu_item).click();
 	}
 
 }

@@ -7,6 +7,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import CMO_OPD_Create_consultation_visit.*;
+import Login.Login_HP;
 
 public class IP_TC_519 {
 
@@ -25,7 +26,7 @@ public class IP_TC_519 {
 	@Test
 	public void navigate_to_login() {
 
-		Login_HP Login = new Login_HP();
+		Login_HP Login = new Login_HP("CMOOPD02","egy123");
 		Login.login_Edge(driver);
 
 		SelectForm Form = new SelectForm();
