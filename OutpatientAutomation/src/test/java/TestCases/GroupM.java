@@ -7,9 +7,10 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.*;
 
-import DOC_OPD_OPConsultation.DOC_SelectPatientOP;
+import OPD_OPConsultation.DOC_SelectPatientOP;
+import OP_Consultation_Sections.Prescribe_Medications;
 //import DOC_Place_Rad_Order.SelectForm;
-import DOC_Prescribe_Medications.Prescribe_Medications;
+//import DOC_Prescribe_Medications.Prescribe_Medications;
 import Outpatient_OP_consultation.SelectForm;
 import PCY_Dispense_Medication.Deliver;
 import PCY_Dispense_Medication.Fill;

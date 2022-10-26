@@ -10,9 +10,10 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import DOC_OPD_OPConsultation.DOC_SelectPatientOP;
-import DOC_OPD_OPConsultation.SelectForm_OP_Consultation;
-import Outpatient_OP_consultation.OP_consultation_form;
+import Login.Login_HP;
+import OPD_OPConsultation.DOC_SelectPatientOP;
+import OPD_OPConsultation.SelectForm_OP_Consultation;
+//import OPD_OPConsultation.*;
 
 public class IP_TC_001 {
 
@@ -22,7 +23,7 @@ public class IP_TC_001 {
 	public void setup() {
 
 		// System Property for Edge Driver
-		String EdgePath = System.getProperty("user.dir") + "\\Drivers\\msedgedriver.exe";
+		String EdgePath = System.getProperty("user.dir") + "\\Drivers\\msedgedriver2.exe";
 		System.setProperty("webdriver.edge.driver", EdgePath);
 
 		// Initialize Edge Driver
@@ -34,8 +35,8 @@ public class IP_TC_001 {
 	@Test(dataProvider = "test_data")
 	public void navigate_to_OP_consultation_form(String Patient_ID) {
 
-		//DOC_Login_HP Login = new DOC_Login_HP();
-	//	Login.login_Edge(driver);
+		Login_HP Login = new Login_HP("DOCOPD01","egy123");
+        Login.login_Edge(driver);
 
 		DOC_SelectPatientOP select_patient = new DOC_SelectPatientOP();
 		select_patient.selectpatientOP(driver, Patient_ID);
@@ -43,8 +44,8 @@ public class IP_TC_001 {
 		SelectForm_OP_Consultation Form = new SelectForm_OP_Consultation();
 		Form.select_form(driver);
 
-		OP_consultation_form form = new OP_consultation_form();
-		form.Physicians_consultation_Edge(driver);
+		SelectForm_OP_Consultation form = new SelectForm_OP_Consultation();
+		form.select_form(driver);
 
 	}
 

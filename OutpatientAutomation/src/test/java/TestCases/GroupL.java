@@ -7,12 +7,12 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.*;
 
-import DOC_OPD_OPConsultation.DOC_SelectPatientOP;
-import DOC_Place_Lab_Order.*;
-import DOC_Place_Rad_Order.*;
 //import DOC_Place_Rad_Order.SelectForm;
 import Rad_Technician_Orders.*;
 import Lab_Technician_Orders.*;
+import OPD_OPConsultation.DOC_SelectPatientOP;
+import OP_Consultation_Sections.Place_Lab_Order;
+import OP_Consultation_Sections.Place_Rad_Order;
 import Outpatient_OP_consultation.SelectForm;
 import Utilities.*;
 
