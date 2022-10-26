@@ -1,11 +1,11 @@
-package CMO_Pages;
+package Login;
 
 import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 
-public class CMO_Select_Form {
+public class Select_Form_EM {
 
 	public void select_form(WebDriver driver) {
 

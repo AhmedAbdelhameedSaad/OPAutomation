@@ -37,7 +37,7 @@ public class Create_consultation_visit {
 			// ٍChoose Clinic
 			By search_Text_Clinic = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-create-visit/div/div[2]/div/div[2]/div[2]/div[2]/div/app-clinic/div/div[2]/div/input");
-			driver.findElement(search_Text_Clinic).sendKeys("General Surgery");
+			driver.findElement(search_Text_Clinic).sendKeys("Family Medicine Clinic");
 
 			// Select Clinic
 			By Select_Clinic = By.xpath(
@@ -49,7 +49,7 @@ public class Create_consultation_visit {
 			// ٍChoose practitioner
 			By search_Text_practitioner = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-create-visit/div/div[2]/div/div[2]/div[2]/div[2]/div/app-ex-choose-practitioner/div/div[2]/div/input");
-			driver.findElement(search_Text_practitioner).sendKeys("Doctor El Zohour Inpatient 01");
+			driver.findElement(search_Text_practitioner).sendKeys("Mohamed saeed hussin abdraboh");
 
 			Thread.sleep(2000);
 
