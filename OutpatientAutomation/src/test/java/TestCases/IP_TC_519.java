@@ -29,7 +29,7 @@ public class IP_TC_519 {
 		Login_HP Login = new Login_HP("CMOOPD02","egy123");
 		Login.login_Edge(driver);
 
-		SelectForm Form = new SelectForm();
+		SelectVisit Form = new SelectVisit();
 		Form.select_form(driver);
 
 		Create_consultation_visit form = new Create_consultation_visit();

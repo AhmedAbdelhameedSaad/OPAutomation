@@ -10,7 +10,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import DOC_OPD_OPConsultation.DOC_SelectPatientOP;
+import OPD_OPConsultation.DOC_SelectPatientOP;
 import Utilities.read_excel_data_HP;
 
 public class IP_TC_733 {

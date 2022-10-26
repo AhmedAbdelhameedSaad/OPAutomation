@@ -14,7 +14,7 @@ public class Submit_after_save_as_draft {
 
 			Thread.sleep(8000);
 			// Click on Action
-			By Action = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/div/div/div[2]/div/div[7]");
+			By Action = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/div/div/div[2]/div/div[2]");
 			driver.findElement(Action).click();
 
 			Thread.sleep(4000);
@@ -33,8 +33,7 @@ public class Submit_after_save_as_draft {
 			Thread.sleep(4000);
 
 			// Submit the Form
-			By Submit_Button = By.xpath(
-					"/html/body/app-root/app-crm/div/div/app-patient-view/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-clinicalform/div/div[2]/div[2]/div[2]/button[4]");
+			By Submit_Button = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-clinicalform/div/div[2]/div[2]/div[2]/button[4]");
 			driver.findElement(Submit_Button).click();
 
 		} catch (InterruptedException ex) {

@@ -9,8 +9,9 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import DOC_OPD_OPConsultation.DOC_SelectPatientOP;
-import DOC_Prescribe_Medications.Prescribe_Medications;
+import OPD_OPConsultation.DOC_SelectPatientOP;
+import OP_Consultation_Sections.Prescribe_Medications;
+//import DOC_Prescribe_Medications.Prescribe_Medications;
 import Outpatient_OP_consultation.SelectForm;
 //import DOC_Prescribe_Medications.SelectForm;
 import Utilities.read_excel_data_HP;

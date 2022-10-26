@@ -10,8 +10,8 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import DOC_OPD_OPConsultation.DOC_SelectPatientOP;
-import DOC_Place_panel_order.*;
+import OPD_OPConsultation.DOC_SelectPatientOP;
+import OP_Consultation_Sections.Place_panel_order;
 import Outpatient_OP_consultation.SelectForm;
 import Utilities.read_excel_data_HP;
 
