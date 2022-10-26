@@ -18,7 +18,7 @@ public class Clinical_Profile {
 
 			Thread.sleep(3000);
 
-			// patients Vitals and Allergies fghhh
+			// patients Vitals and Allergies fghhh dadadfgshshs
             
 			By Allergies = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-patient-view/div/app-dashboard/div/gridster/gridster-item[2]/app-widget/div/div[1]/app-clinical-profile/div[1]/div[2]/div[1]/p");
