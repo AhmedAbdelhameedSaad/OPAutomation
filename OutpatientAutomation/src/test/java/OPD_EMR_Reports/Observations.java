@@ -18,7 +18,7 @@ public class Observations {
 
 			Thread.sleep(3000);
 			
-			// open observation icon     
+			// open observation icon      
 			
 			By observation_icon = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-patient-view/div/app-dashboard/div/gridster/gridster-item[10]/app-widget/div/div[1]/app-observation/div[1]/div[1]/img[2]");

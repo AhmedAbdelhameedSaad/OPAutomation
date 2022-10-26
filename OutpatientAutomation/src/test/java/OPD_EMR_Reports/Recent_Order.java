@@ -11,7 +11,9 @@ public class Recent_Order {
 		try {
 
 			Thread.sleep(6000);
-
+			
+            // open icon
+			
 			By Recent_Order = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-patient-view/div/app-dashboard/div/gridster/gridster-item[3]/app-widget/div/div[1]/app-order/div[1]/div[1]/img[2]");
 			driver.findElement(Recent_Order).click();

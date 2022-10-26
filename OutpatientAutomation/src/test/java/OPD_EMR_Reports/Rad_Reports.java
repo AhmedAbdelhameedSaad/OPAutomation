@@ -18,7 +18,7 @@ public class Rad_Reports {
 
 			Thread.sleep(3000);
 			
-			// open Rad report icon     
+			// open Radiology report icon     
 			
 			By radreport_icon = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-patient-view/div/app-dashboard/div/gridster/gridster-item[8]/app-widget/div/div[1]/app-reports/div/div[1]/img[2]");

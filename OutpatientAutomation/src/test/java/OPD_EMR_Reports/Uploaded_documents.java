@@ -11,7 +11,9 @@ public class Uploaded_documents {
 		try {
 
 			Thread.sleep(6000);
-
+      
+			// open icon
+			
 			By Uploaded_documents = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-patient-view/div/app-dashboard/div/gridster/gridster-item[6]/app-widget/div/div[1]/app-uploaded-docs/div/div[1]/div[2]");
 			driver.findElement(Uploaded_documents).click();

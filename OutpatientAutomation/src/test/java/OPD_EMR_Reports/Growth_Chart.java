@@ -24,7 +24,7 @@ public class Growth_Chart {
 
 			Thread.sleep(3000);
 			
-			// close icon
+			// close icon 
 			
 			By close_icon = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-patient-view/div/app-dashboard/div/gridster/gridster-item[7]/app-widget/div/div[1]/app-special-chart/div/app-widget-header/div/img");

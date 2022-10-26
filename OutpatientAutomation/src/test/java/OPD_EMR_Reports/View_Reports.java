@@ -13,7 +13,7 @@ public class View_Reports {
 
 			Thread.sleep(5000);
 
-			// Open Reports
+			// Open Reports 
 			By Reports = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-patient-view/div/app-dashboard/div/gridster/gridster-item[1]/app-widget/div/div[1]/app-reports/div[1]/div[1]/img[2]");
 			driver.findElement(Reports).click();
