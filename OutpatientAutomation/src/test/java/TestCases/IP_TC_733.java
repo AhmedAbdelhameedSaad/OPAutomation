@@ -10,8 +10,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import DOC_Operation_Note.*;
-import DOC_Pages.*;
+import DOC_OPD_OPConsultation.DOC_SelectPatientOP;
 import Utilities.read_excel_data_HP;
 
 public class IP_TC_733 {
@@ -35,17 +34,17 @@ public class IP_TC_733 {
 	@Test(dataProvider = "test_data")
 	public void navigate_to_Doctor_Submit_Operation_Note(String Patient_ID) {
 
-		DOC_Login_HP Login = new DOC_Login_HP();
-		Login.login_Edge(driver);
+	//	DOC_Login_HP Login = new DOC_Login_HP();
+		//Login.login_Edge(driver);
 
-		DOC_SelectPatientIP select_patient = new DOC_SelectPatientIP();
-		select_patient.selectpatientIP(driver, Patient_ID);
+		DOC_SelectPatientOP select_patient = new DOC_SelectPatientOP();
+		select_patient.selectpatientOP(driver, Patient_ID);
 
-		SelectForm_Operation_Note Form = new SelectForm_Operation_Note();
-		Form.select_form(driver);
+	//	SelectForm_Operation_Note Form = new SelectForm_Operation_Note();
+	//	Form.select_form(driver);
 
-		operation_note note = new operation_note();
-		note.Physicians_operation_note_Edge(driver);
+	//	operation_note note = new operation_note();
+	//	note.Physicians_operation_note_Edge(driver);
 
 	}
 

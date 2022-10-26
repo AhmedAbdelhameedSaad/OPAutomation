@@ -12,7 +12,6 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import DOC_Assign_and_Approve_Order.*;
-import DOC_Pages.DOC_Login_HP;
 import NUR_Pages.NUR_Login_HP;
 import NUR_Pages.NUR_Logout_HP;
 import NUR_Pages.SelectPatientIP;
@@ -52,8 +51,8 @@ public class NUR_DOC_Assign_and_Approve_Order_Setup {
 		NUR_Logout_HP logout = new NUR_Logout_HP();
 		logout.logout_Edge(driver);
 
-		DOC_Login_HP DOC_Login = new DOC_Login_HP();
-		DOC_Login.login_Edge(driver);
+	//	DOC_Login_HP DOC_Login = new DOC_Login_HP();
+		//DOC_Login.login_Edge(driver);
 
 		DOC_Assign_and_Approve_Order approve = new DOC_Assign_and_Approve_Order();
 		approve.Physicians_approve_Edge(driver);

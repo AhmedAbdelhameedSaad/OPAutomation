@@ -10,8 +10,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import DOC_Pages.*;
-import DOC_Save_as_draft_and_Submit_operation_note.*;
+import DOC_OPD_OPConsultation.DOC_SelectPatientOP;
 import Utilities.read_excel_data_HP;
 
 public class IP_TC_734_735_736_737 {
@@ -35,20 +34,20 @@ public class IP_TC_734_735_736_737 {
 	@Test(dataProvider = "test_data")
 	public void navigate_to_Doctor_Submit_after_save_as_draft_Operation_Note(String Patient_ID) {
 
-		DOC_Login_HP Login = new DOC_Login_HP();
-		Login.login_Edge(driver);
+	//	DOC_Login_HP Login = new DOC_Login_HP();
+	//	Login.login_Edge(driver);
 
-		DOC_SelectPatientIP select_patient = new DOC_SelectPatientIP();
-		select_patient.selectpatientIP(driver, Patient_ID);
+		DOC_SelectPatientOP select_patient = new DOC_SelectPatientOP();
+		select_patient.selectpatientOP(driver, Patient_ID);
 
-		SelectForm_Operation_Note Form = new SelectForm_Operation_Note();
-		Form.select_form(driver);
+	//	SelectForm_Operation_Note Form = new SelectForm_Operation_Note();
+	//	Form.select_form(driver);
 
-		Save_as_draft_operation_note note = new Save_as_draft_operation_note();
-		note.Physicians_operation_note_Edge(driver);
+	//	Save_as_draft_operation_note note = new Save_as_draft_operation_note();
+	//	note.Physicians_operation_note_Edge(driver);
 
-		Submit_after_save_as_draft submit = new Submit_after_save_as_draft();
-		submit.select_form(driver);
+		//Submit_after_save_as_draft submit = new Submit_after_save_as_draft();
+	//	submit.select_form(driver);
 	}
 
 	@AfterTest

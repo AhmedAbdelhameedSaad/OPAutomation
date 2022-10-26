@@ -5,7 +5,8 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import CMO_Pages.*;
+import Login.Login_EM;
+import Login.Select_Form_EM;
 
 public class IP_TC_007 {
 	WebDriver driver;
@@ -26,10 +27,10 @@ public class IP_TC_007 {
 	@Test
 	public void CMO_navigate_to_login_EM() {
 
-		CMO_Login_EM login = new CMO_Login_EM();
+		Login_EM login = new Login_EM("CMOOPD02","egy123");
 		login.login(driver);
 
-		CMO_Select_Form form = new CMO_Select_Form();
+		Select_Form_EM form = new Select_Form_EM();
 		form.select_form(driver);
 
 	}

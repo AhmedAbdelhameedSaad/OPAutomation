@@ -17,8 +17,6 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import DOC_Pages.DOC_Login_HP;
-
 public class IP_TC_724_754 {
 
 	WebDriver driver;
@@ -55,8 +53,8 @@ public class IP_TC_724_754 {
 		NUR_Logout_HP logout = new NUR_Logout_HP();
 		logout.logout_Edge(driver);
 
-		DOC_Login_HP DOC_Login = new DOC_Login_HP();
-		DOC_Login.login_Edge(driver);
+		//DOC_Login_HP DOC_Login = new DOC_Login_HP();
+		//DOC_Login.login_Edge(driver);
 
 		DOC_reject_Order reject = new DOC_reject_Order();
 		reject.Physicians_approve_Edge(driver);

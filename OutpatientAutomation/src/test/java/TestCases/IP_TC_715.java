@@ -6,7 +6,6 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import DOC_Pages.*;
 
 public class IP_TC_715 {
 
@@ -29,8 +28,8 @@ public class IP_TC_715 {
 	@Test
 	public void navigate_to_Doctor_login_HP() {
 
-		DOC_Login_HP Login = new DOC_Login_HP();
-		Login.login_Edge(driver);
+	//	DOC_Login_HP Login = new DOC_Login_HP();
+	//	Login.login_Edge(driver);
 
 		System.out.println("Doctor logged in on successfully and home page is displayed");
 

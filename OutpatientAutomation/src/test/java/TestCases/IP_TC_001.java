@@ -12,7 +12,6 @@ import org.testng.annotations.Test;
 
 import DOC_OPD_OPConsultation.DOC_SelectPatientOP;
 import DOC_OPD_OPConsultation.SelectForm_OP_Consultation;
-import DOC_Pages.DOC_Login_HP;
 import Outpatient_OP_consultation.OP_consultation_form;
 
 public class IP_TC_001 {
@@ -35,8 +34,8 @@ public class IP_TC_001 {
 	@Test(dataProvider = "test_data")
 	public void navigate_to_OP_consultation_form(String Patient_ID) {
 
-		DOC_Login_HP Login = new DOC_Login_HP();
-		Login.login_Edge(driver);
+		//DOC_Login_HP Login = new DOC_Login_HP();
+	//	Login.login_Edge(driver);
 
 		DOC_SelectPatientOP select_patient = new DOC_SelectPatientOP();
 		select_patient.selectpatientOP(driver, Patient_ID);

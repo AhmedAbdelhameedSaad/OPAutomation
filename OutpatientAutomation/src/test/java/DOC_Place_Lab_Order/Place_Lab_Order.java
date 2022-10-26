@@ -75,7 +75,7 @@ public class Place_Lab_Order {
 			JavascriptExecutor java = (JavascriptExecutor) driver;
 			java.executeScript("scroll(0,250)");
 		} catch (InterruptedException ex) {
-			Logger.getLogger(Place_Lab_Order.class.getName()).log(Level.SEVERE, null, ex);
+			Logger.getLogger(Place_Lab_Order.class.getName()).log(Level.SEVERE, null, ex); 
 		}
 	}
 }

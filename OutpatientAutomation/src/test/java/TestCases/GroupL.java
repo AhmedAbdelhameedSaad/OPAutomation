@@ -6,12 +6,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.*;
-import DOC_Pages.*;
+
+import DOC_OPD_OPConsultation.DOC_SelectPatientOP;
 import DOC_Place_Lab_Order.*;
 import DOC_Place_Rad_Order.*;
-import DOC_Place_Rad_Order.SelectForm;
+//import DOC_Place_Rad_Order.SelectForm;
 import Rad_Technician_Orders.*;
 import Lab_Technician_Orders.*;
+import Outpatient_OP_consultation.SelectForm;
 import Utilities.*;
 
 public class GroupL {
@@ -31,11 +33,11 @@ public class GroupL {
 		driver.navigate().to("http://10.209.1.140/healthplug/#/user/leads");
 		driver.manage().window().maximize();
 
-		DOC_Login_HP Login = new DOC_Login_HP();
-		Login.login_Edge(driver);
+	//	DOC_Login_HP Login = new DOC_Login_HP();
+		//Login.login_Edge(driver);
 
-		DOC_SelectPatientIP select_patient = new DOC_SelectPatientIP();
-		select_patient.selectpatientIP(driver, Patient_ID);
+		DOC_SelectPatientOP select_patient = new DOC_SelectPatientOP();
+		select_patient.selectpatientOP(driver, Patient_ID);
 
 		SelectForm Form = new SelectForm();
 		Form.select_form(driver);
@@ -86,11 +88,11 @@ public class GroupL {
 		driver.navigate().to("http://10.209.1.140/healthplug/#/user/leads");
 		driver.manage().window().maximize();
 
-		DOC_Login_HP Login = new DOC_Login_HP();
-		Login.login_Edge(driver);
+		//DOC_Login_HP Login = new DOC_Login_HP();
+	//	Login.login_Edge(driver);
 
-		DOC_SelectPatientIP select_patient = new DOC_SelectPatientIP();
-		select_patient.selectpatientIP(driver, Patient_ID);
+		DOC_SelectPatientOP select_patient = new DOC_SelectPatientOP();
+		select_patient.selectpatientOP(driver, Patient_ID);
 
 		SelectForm Form = new SelectForm();
 		Form.select_form(driver);

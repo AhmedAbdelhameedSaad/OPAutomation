@@ -6,9 +6,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.*;
-import DOC_Pages.*;
-import DOC_Place_Rad_Order.SelectForm;
+
+import DOC_OPD_OPConsultation.DOC_SelectPatientOP;
+//import DOC_Place_Rad_Order.SelectForm;
 import DOC_Prescribe_Medications.Prescribe_Medications;
+import Outpatient_OP_consultation.SelectForm;
 import PCY_Dispense_Medication.Deliver;
 import PCY_Dispense_Medication.Fill;
 import PCY_Dispense_Medication.Verification;
@@ -36,11 +38,11 @@ public class GroupM {
 		driver.navigate().to("http://10.209.1.140/healthplug/#/user/leads");
 		driver.manage().window().maximize();
 
-		DOC_Login_HP Login = new DOC_Login_HP();
-		Login.login_Edge(driver);
+		//DOC_Login_HP Login = new DOC_Login_HP();
+		//Login.login_Edge(driver);
 
-		DOC_SelectPatientIP select_patient = new DOC_SelectPatientIP();
-		select_patient.selectpatientIP(driver, Patient_ID);
+		DOC_SelectPatientOP select_patient = new DOC_SelectPatientOP();
+		select_patient.selectpatientOP(driver, Patient_ID);
 
 		SelectForm Form = new SelectForm();
 		Form.select_form(driver);

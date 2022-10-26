@@ -10,7 +10,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import DOC_Pages.*;
+import DOC_OPD_OPConsultation.DOC_SelectPatientOP;
 import DOC_View_Recent_Order.*;
 import Utilities.read_excel_data_HP;
 
@@ -35,11 +35,11 @@ public class DOC_View_Recent_Order_Setup {
 	@Test(dataProvider = "test_data")
 	public void navigate_to_view_Recent_Order(String Patient_ID) {
 
-		DOC_Login_HP Login = new DOC_Login_HP();
-		Login.login_Edge(driver);
+		//DOC_Login_HP Login = new DOC_Login_HP();
+		//Login.login_Edge(driver);
 
-		DOC_SelectPatientIP select_patient = new DOC_SelectPatientIP();
-		select_patient.selectpatientIP(driver, Patient_ID);
+		DOC_SelectPatientOP select_patient = new DOC_SelectPatientOP();
+		select_patient.selectpatientOP(driver, Patient_ID);
 
 		Recent_Order view = new Recent_Order();
 		view.select_form(driver);

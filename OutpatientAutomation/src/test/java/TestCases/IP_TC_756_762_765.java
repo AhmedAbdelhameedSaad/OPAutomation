@@ -10,8 +10,8 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import DOC_IPD_Refer_to_Admission.*;
-import DOC_Pages.*;
+import DOC_OPD_OPConsultation.DOC_SelectPatientOP;
+import Outpatient_Refer_to_Admission.Refer_to_Admission;
 import Utilities.read_excel_data_HP;
 
 public class IP_TC_756_762_765 {
@@ -35,14 +35,14 @@ public class IP_TC_756_762_765 {
 	@Test(dataProvider = "test_data")
 	public void navigate_to_Doctor_Refer_to_Admission(String Patient_ID) {
 
-		DOC_Login_HP Login = new DOC_Login_HP();
-		Login.login_Edge(driver);
+		//DOC_Login_HP Login = new DOC_Login_HP();
+	//	Login.login_Edge(driver);
 
-		DOC_SelectPatientIP select_patient = new DOC_SelectPatientIP();
-		select_patient.selectpatientIP(driver, Patient_ID);
+		DOC_SelectPatientOP select_patient = new DOC_SelectPatientOP();
+		select_patient.selectpatientOP(driver, Patient_ID);
 
-		SelectForm_Refer Form = new SelectForm_Refer();
-		Form.select_form(driver);
+		//SelectForm_Refer Form = new SelectForm_Refer();
+		//Form.select_form(driver);
 
 		Refer_to_Admission refer = new Refer_to_Admission();
 		refer.Physicians_Refer_to_Admission_Edge(driver);
