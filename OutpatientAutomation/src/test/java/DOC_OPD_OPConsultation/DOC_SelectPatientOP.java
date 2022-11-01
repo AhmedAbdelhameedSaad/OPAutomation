@@ -27,6 +27,7 @@ public class DOC_SelectPatientOP {
 			By patientName = By.xpath(
 					"//*[@id=\"lead-search\"]/div/div/div[2]/div[1]");
 			driver.findElement(patientName).click();
+			
 			By patientdoctor = By.xpath("/html/body/app-root/app-crm/div/div/app-crm-leads/div[2]/div/div[2]/div[2]/div/app-crm-leads-list/div[3]/div[2]/div[2]/div[2]/p[1]");
 			driver.findElement(patientdoctor).click();
 		} catch (InterruptedException ex) {

@@ -5,6 +5,8 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+import Login.Login_HP;
 import NUR_Pages.*;
 import NUR_View_Patient_list.*;
 
@@ -29,7 +31,7 @@ public class IP_TC_546 {
 	@Test
 	public void navigate_to_login() {
 
-		NUR_Login_HP Login = new NUR_Login_HP();
+		Login_HP Login = new Login_HP("NURIPD01","egy123");
 		Login.login_Edge(driver);
 
 		View_Patient_list li = new View_Patient_list();
