@@ -12,8 +12,7 @@ public class Login_HP {
 		this.password = password;
 	}
 	public void login_Edge(WebDriver driver) {
-		driver.navigate().to("http://10.209.1.140/healthplug/#/user/leads");
-
+		
 //	 Login to HP Web
 		By username = By.id("user-id");
 		driver.findElement(username).sendKeys(this.username);

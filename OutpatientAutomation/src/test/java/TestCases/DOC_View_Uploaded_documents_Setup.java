@@ -10,7 +10,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import DOC_View_Uploaded_documents.*;
+
 import OPD_OPConsultation.DOC_SelectPatientOP;
 import Utilities.read_excel_data_HP;
 
@@ -41,8 +41,6 @@ public class DOC_View_Uploaded_documents_Setup {
 		DOC_SelectPatientOP select_patient = new DOC_SelectPatientOP();
 		select_patient.selectpatientOP(driver, Patient_ID);
 
-		Uploaded_documents view = new Uploaded_documents();
-		view.select_form(driver);
 	}
 
 	@AfterTest

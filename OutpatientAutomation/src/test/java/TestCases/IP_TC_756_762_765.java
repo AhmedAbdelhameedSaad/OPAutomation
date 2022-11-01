@@ -11,7 +11,6 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import OPD_OPConsultation.DOC_SelectPatientOP;
-import Outpatient_Refer_to_Admission.Refer_to_Admission;
 import Utilities.read_excel_data_HP;
 
 public class IP_TC_756_762_765 {
@@ -44,8 +43,7 @@ public class IP_TC_756_762_765 {
 		//SelectForm_Refer Form = new SelectForm_Refer();
 		//Form.select_form(driver);
 
-		Refer_to_Admission refer = new Refer_to_Admission();
-		refer.Physicians_Refer_to_Admission_Edge(driver);
+		
 
 	}
 

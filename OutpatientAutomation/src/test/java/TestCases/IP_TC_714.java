@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 import OPD_OPConsultation.DOC_SelectPatientOP;
 import OP_Consultation_Sections.Prescribe_Medications;
 //import DOC_Prescribe_Medications.Prescribe_Medications;
-import Outpatient_OP_consultation.SelectForm;
+
 //import DOC_Prescribe_Medications.SelectForm;
 import Utilities.read_excel_data_HP;
 
@@ -43,8 +43,7 @@ public class IP_TC_714 {
 		DOC_SelectPatientOP select_patient = new DOC_SelectPatientOP();
 		select_patient.selectpatientOP(driver, Patient_ID);
 
-		SelectForm Form = new SelectForm();
-		Form.select_form(driver);
+	
 
 		Prescribe_Medications Medication = new Prescribe_Medications();
 		Medication.Physicians_Prescribe_Medications_Edge(driver);

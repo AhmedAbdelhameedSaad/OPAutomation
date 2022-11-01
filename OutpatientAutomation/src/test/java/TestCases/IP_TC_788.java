@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import OPD_OPConsultation.DOC_SelectPatientOP;
 import OP_Consultation_Sections.*;
-import Outpatient_OP_consultation.SelectForm;
+
 import Utilities.read_excel_data_HP;
 
 public class IP_TC_788 {
@@ -42,9 +42,7 @@ public class IP_TC_788 {
 		DOC_SelectPatientOP select_patient = new DOC_SelectPatientOP();
 		select_patient.selectpatientOP(driver, Patient_ID);
 
-		SelectForm Form = new SelectForm();
-		Form.select_form(driver);
-
+		
 		Place_Lab_Order order = new Place_Lab_Order();
 		order.Physicians_order_Edge(driver);
 	}

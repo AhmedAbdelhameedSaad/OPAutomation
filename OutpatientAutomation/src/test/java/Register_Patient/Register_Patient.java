@@ -14,20 +14,34 @@ public class Register_Patient {
 		try {
 
 			Thread.sleep(5000);
+			
+			//click on clinical diary icon
+			
+			By clinical_diary = By.name("/html/body/app-root/app-crm/div/app-navigation/div/div[2]/div/img");
+			
+			driver.findElement(clinical_diary).click();
+			
+			// click on search icon to open register pop up
+			
+			By search_icon = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/app-crm-header/div/div/div[1]/img");
+			
+			driver.findElement(search_icon).click();
+			
+			Thread.sleep(5000);
 
 			By first_name = By.name("FName");
 				
-			driver.findElement(first_name).sendKeys("123456789");
+			driver.findElement(first_name).sendKeys("waleed");
 
 			Thread.sleep(3000);
             
 			By family_name = By.name("FAName");
 					
-			driver.findElement(family_name).sendKeys("123456789");
+			driver.findElement(family_name).sendKeys("youssef");
 
-			By male_gender_checkbox = By.id("SX_M");
+	     	By male_gender_checkbox = By.id("SX_M");
 					
-	     	driver.findElement(male_gender_checkbox).click() ;
+	     	// driver.findElement(male_gender_checkbox).click() ;
 	     	
 	     	By female_gender_checkbox = By.id("SX_F");
 			
@@ -50,7 +64,7 @@ public class Register_Patient {
 			
 			By no_citizen_checkbox = By.id("citizenN");
 			
-	     	driver.findElement(no_citizen_checkbox).click() ;
+	     	//driver.findElement(no_citizen_checkbox).click() ;
 	     	
 	     	By national_id = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form/div/div[2]/div/div[10]/div/input");

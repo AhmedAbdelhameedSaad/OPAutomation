@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import OPD_OPConsultation.DOC_SelectPatientOP;
 import OPD_OPConsultation.SelectForm_OP_Consultation;
-import Outpatient_OP_consultation.OP_consultation_form;
+
 //import DOC_IPD_OPConsultation.*;
 import Utilities.read_excel_data_HP;
 
@@ -46,9 +46,7 @@ public class IP_TC_725_726_727_728_729_730_755 {
 		SelectForm_OP_Consultation Form = new SelectForm_OP_Consultation();
 		Form.select_form(driver);
 
-		OP_consultation_form form = new OP_consultation_form();
-		form.Physicians_consultation_Edge(driver);
-
+		
 	}
 
 	@AfterTest
