@@ -10,8 +10,8 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import DOC_Upload_Document.*;
 import OPD_OPConsultation.DOC_SelectPatientOP;
+import OPD_Upload_Document.*;
 import Utilities.read_excel_data_HP;
 
 public class DOC_Upload_Document_Setup {

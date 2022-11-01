@@ -1,4 +1,4 @@
-package DOC_Change_Password;
+package Logout;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;

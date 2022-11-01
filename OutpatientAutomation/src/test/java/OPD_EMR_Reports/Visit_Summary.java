@@ -18,6 +18,11 @@ public class Visit_Summary {
 
 			Thread.sleep(3000);
 			
+			//By last_visit = By.xpath(
+			//		"/html/body/app-root/app-crm/div/div/app-patient-view/div/app-dashboard/div/gridster/gridster-item[5]/app-widget/div/div[1]/app-visit/div[1]/div[2]/div[2]/div[2]");
+			//driver.findElement(last_visit).click();
+	  		// Thread.sleep(3000);
+			
 			// close icon 
 			
 			By Close_icon = By.xpath(

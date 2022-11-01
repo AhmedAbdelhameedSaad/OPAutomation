@@ -20,6 +20,12 @@ public class Recent_Order {
 
 		
 			Thread.sleep(5000);
+			
+			/*By click_order = By.xpath(
+					"/html/body/app-root/app-crm/div/div/app-patient-view/div/app-dashboard/div/gridster/gridster-item[3]/app-widget/div/div[1]/app-order/div[1]/div[2]/div[2]/div[2]/div[2]/div/p[1]");
+			driver.findElement(click_order).click();
+
+			Thread.sleep(3000);*/
 
 			By close_icon = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-patient-view/div/app-dashboard/div/gridster/gridster-item[3]/app-widget/div/div[1]/app-order/div[1]/app-widget-header/div/img");

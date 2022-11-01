@@ -1,11 +1,19 @@
-package DOC_Change_Password;
+package OPD_Change_Password;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class Rechange_Password {
+public class Change_Password {
+	
+	private String Old_password;
+	private String New_password;
+	public Change_Password(String Old_password, String New_password) {
+		this.Old_password = Old_password;
+		this.New_password = New_password;
+	}
+
 	public void Change_Edge(WebDriver driver) {
 
 		try {
@@ -32,19 +40,19 @@ public class Rechange_Password {
 
 			By Enter_old_password = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-crm-leads/app-crm-header/app-profile/div/div[2]/div/div[2]/div[2]/div/div/div/div/div[2]/div[1]/input");
-			driver.findElement(Enter_old_password).sendKeys("egy456");
+			driver.findElement(Enter_old_password).sendKeys(this.Old_password);
 
 			Thread.sleep(2000);
 
 			By Enter_new_password = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-crm-leads/app-crm-header/app-profile/div/div[2]/div/div[2]/div[2]/div/div/div/div/div[2]/div[2]/input");
-			driver.findElement(Enter_new_password).sendKeys("egy123");
+			driver.findElement(Enter_new_password).sendKeys(this.New_password);
 
 			Thread.sleep(2000);
 
 			By Reenter_password = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-crm-leads/app-crm-header/app-profile/div/div[2]/div/div[2]/div[2]/div/div/div/div/div[2]/div[3]/input");
-			driver.findElement(Reenter_password).sendKeys("egy123");
+			driver.findElement(Reenter_password).sendKeys(this.New_password);
 
 			Thread.sleep(2000);
 
