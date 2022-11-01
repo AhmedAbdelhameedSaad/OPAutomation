@@ -7,10 +7,11 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.*;
 
-import DOC_OPD_OPConsultation.DOC_SelectPatientOP;
+import OPD_OPConsultation.DOC_SelectPatientOP;
+import OP_Consultation_Sections.Prescribe_Medications;
 //import DOC_Place_Rad_Order.SelectForm;
-import DOC_Prescribe_Medications.Prescribe_Medications;
-import Outpatient_OP_consultation.SelectForm;
+//import DOC_Prescribe_Medications.Prescribe_Medications;
+
 import PCY_Dispense_Medication.Deliver;
 import PCY_Dispense_Medication.Fill;
 import PCY_Dispense_Medication.Verification;
@@ -44,8 +45,7 @@ public class GroupM {
 		DOC_SelectPatientOP select_patient = new DOC_SelectPatientOP();
 		select_patient.selectpatientOP(driver, Patient_ID);
 
-		SelectForm Form = new SelectForm();
-		Form.select_form(driver);
+		
 
 		Prescribe_Medications Medication = new Prescribe_Medications();
 		Medication.Physicians_Prescribe_Medications_Edge(driver);

@@ -10,8 +10,9 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import DOC_OPD_OPConsultation.DOC_SelectPatientOP;
 import DOC_Save_as_draft_and_Submit_Order.*;
+import OPD_OPConsultation.DOC_SelectPatientOP;
+//import Outpatient_OP_consultation.SelectForm;
 import Utilities.read_excel_data_HP;
 
 public class DOC_Submit_after_save_as_draft_order_Setup {
@@ -37,8 +38,8 @@ public class DOC_Submit_after_save_as_draft_order_Setup {
 		DOC_SelectPatientOP select_patient = new DOC_SelectPatientOP();
 		select_patient.selectpatientOP(driver, Patient_ID);
 
-		SelectForm_order Form = new SelectForm_order();
-		Form.select_form(driver);
+	//	SelectForm Form = new SelectForm();
+	//	Form.select_form(driver);
 
 		Save_as_draft_Place_Order save = new Save_as_draft_Place_Order();
 		save.Physicians_order_Edge(driver);

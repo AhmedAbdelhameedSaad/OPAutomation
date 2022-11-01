@@ -6,7 +6,6 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import Outpatient_Refer_to_Admission.*;
 
 public class IP_TC_002_003_004 {
 
@@ -28,17 +27,7 @@ public class IP_TC_002_003_004 {
 	@Test
 	public void navigate_to_Refer_to_Admission() {
 
-		Login_HP Login = new Login_HP();
-		Login.login_Edge(driver);
-
-		SelectPatientIP select_patient = new SelectPatientIP();
-		select_patient.selectpatientIP_Edge(driver);
-
-		SelectForm Form = new SelectForm();
-		Form.select_form(driver);
-
-		Refer_to_Admission refer = new Refer_to_Admission();
-		refer.Physicians_Refer_to_Admission_Edge(driver);
+		
 
 	}
 

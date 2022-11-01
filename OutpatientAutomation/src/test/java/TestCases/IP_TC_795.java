@@ -10,8 +10,8 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import DOC_OPD_OPConsultation.DOC_SelectPatientOP;
-import DOC_View_Visit_Summary.*;
+
+import OPD_OPConsultation.DOC_SelectPatientOP;
 import Utilities.read_excel_data_HP;
 
 public class IP_TC_795 {
@@ -41,8 +41,7 @@ public class IP_TC_795 {
 		DOC_SelectPatientOP select_patient = new DOC_SelectPatientOP();
 		select_patient.selectpatientOP(driver, Patient_ID);
 
-		Visit_Summary view = new Visit_Summary();
-		view.select_form(driver);
+		
 	}
 
 	@AfterTest

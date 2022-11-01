@@ -5,7 +5,6 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import DOC_View_Patient_list.*;
 
 public class IP_TC_796 {
 
@@ -31,8 +30,7 @@ public class IP_TC_796 {
 		//DOC_Login_HP Login = new DOC_Login_HP();
 	//	Login.login_Edge(driver);
 
-		View_Patient_list list = new View_Patient_list();
-		list.list(driver);
+		
 
 	}
 

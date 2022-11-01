@@ -7,13 +7,13 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.*;
 
-import DOC_OPD_OPConsultation.DOC_SelectPatientOP;
-import DOC_Place_Lab_Order.*;
-import DOC_Place_Rad_Order.*;
 //import DOC_Place_Rad_Order.SelectForm;
 import Rad_Technician_Orders.*;
 import Lab_Technician_Orders.*;
-import Outpatient_OP_consultation.SelectForm;
+import OPD_OPConsultation.DOC_SelectPatientOP;
+import OP_Consultation_Sections.Place_Lab_Order;
+import OP_Consultation_Sections.Place_Rad_Order;
+
 import Utilities.*;
 
 public class GroupL {
@@ -39,9 +39,7 @@ public class GroupL {
 		DOC_SelectPatientOP select_patient = new DOC_SelectPatientOP();
 		select_patient.selectpatientOP(driver, Patient_ID);
 
-		SelectForm Form = new SelectForm();
-		Form.select_form(driver);
-
+		
 		Place_Lab_Order order = new Place_Lab_Order();
 		order.Physicians_order_Edge(driver);
 
@@ -94,8 +92,7 @@ public class GroupL {
 		DOC_SelectPatientOP select_patient = new DOC_SelectPatientOP();
 		select_patient.selectpatientOP(driver, Patient_ID);
 
-		SelectForm Form = new SelectForm();
-		Form.select_form(driver);
+		
 
 		Place_Rad_Order order = new Place_Rad_Order();
 		order.Physicians_order_Edge(driver);

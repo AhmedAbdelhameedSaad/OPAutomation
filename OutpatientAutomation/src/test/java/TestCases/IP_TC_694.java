@@ -10,9 +10,9 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import DOC_OPD_OPConsultation.DOC_SelectPatientOP;
-import DOC_Place_Rad_Order.*;
-import Outpatient_OP_consultation.SelectForm;
+import OPD_OPConsultation.DOC_SelectPatientOP;
+import OP_Consultation_Sections.Place_Rad_Order;
+
 import Utilities.read_excel_data_HP;
 
 public class IP_TC_694 {
@@ -42,9 +42,8 @@ public class IP_TC_694 {
 		DOC_SelectPatientOP select_patient = new DOC_SelectPatientOP();
 		select_patient.selectpatientOP(driver, Patient_ID);
 
-		SelectForm Form = new SelectForm();
-		Form.select_form(driver);
-
+		
+		
 		Place_Rad_Order order = new Place_Rad_Order();
 		order.Physicians_order_Edge(driver);
 	}
