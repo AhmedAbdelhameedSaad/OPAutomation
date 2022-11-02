@@ -5,9 +5,8 @@
     <classes>
       <class name="TestCases.TC_OP001_login_valid">
         <methods>
-          <include name="close"/>
           <include name="setup"/>
-          <include name="navigate_to_OP_consultation_form" invocation-numbers="0"/>
+          <include name="user_login_success"/>
         </methods>
       </class> <!-- TestCases.TC_OP001_login_valid -->
     </classes>
