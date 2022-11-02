@@ -48,7 +48,7 @@ public class NUR_DOC_Assign_and_Approve_Order_Setup {
 		NUR_Place_Order Nur_order = new NUR_Place_Order();
 		Nur_order.Nurse_order_Edge(driver);
 
-		NUR_Logout_HP logout = new NUR_Logout_HP();
+		Logout_HP logout = new Logout_HP();
 		logout.logout_Edge(driver);
 
 	//	DOC_Login_HP DOC_Login = new DOC_Login_HP();

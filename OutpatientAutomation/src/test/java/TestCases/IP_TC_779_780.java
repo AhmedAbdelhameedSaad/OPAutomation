@@ -5,7 +5,8 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import DOC_Change_Password.*;
+
+import OPD_Change_Password.*;
 
 public class IP_TC_779_780 {
 

@@ -9,7 +9,8 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import NUR_Pages.*;
+import Login.Login_HP;
+import DOC_OPD_OPConsultation.*;
 import NUR_Patient_Vitals.*;
 import Utilities.read_excel_data_HP;
 
@@ -32,11 +33,11 @@ public class IP_TC_620_624_625 {
 	@Test(dataProvider = "test_data")
 	public void navigate_to_Nurse_View_Patient_Vitals(String Patient_ID) {
 
-		NUR_Login_HP Login = new NUR_Login_HP();
+		Login_HP Login = new Login_HP("NURIPD01","egy123");
 		Login.login_Edge(driver);
 
-		SelectPatientIP select_patient = new SelectPatientIP();
-		select_patient.selectpatientIP_Edge(driver, Patient_ID);
+		DOC_SelectPatientOP select_patient = new DOC_SelectPatientOP();
+		select_patient.selectpatientOP(driver, Patient_ID);
 
 		SelectForm Form = new SelectForm();
 		Form.select_form(driver);

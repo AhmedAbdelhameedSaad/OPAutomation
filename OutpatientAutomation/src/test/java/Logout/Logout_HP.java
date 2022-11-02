@@ -1,11 +1,11 @@
-package NUR_Pages;
+package Logout;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class NUR_Logout_HP {
+public class Logout_HP {
 
 	public void logout_Edge(WebDriver driver) {
 
@@ -23,7 +23,7 @@ public class NUR_Logout_HP {
 			driver.findElement(logout_button).click();
 
 		} catch (InterruptedException ex) {
-			Logger.getLogger(NUR_Logout_HP.class.getName()).log(Level.SEVERE, null, ex);
+			Logger.getLogger(Logout_HP.class.getName()).log(Level.SEVERE, null, ex);
 		}
 	}
 

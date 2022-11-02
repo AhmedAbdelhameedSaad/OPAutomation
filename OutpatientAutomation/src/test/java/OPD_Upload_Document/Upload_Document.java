@@ -1,4 +1,4 @@
-package DOC_Upload_Document;
+package OPD_Upload_Document;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;

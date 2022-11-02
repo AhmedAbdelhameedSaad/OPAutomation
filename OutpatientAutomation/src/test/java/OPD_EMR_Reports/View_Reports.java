@@ -19,6 +19,12 @@ public class View_Reports {
 			driver.findElement(Reports).click();
 
 			Thread.sleep(2000);
+			
+			// click report
+			
+			//By click_report = By.xpath(
+			//		"/html/body/app-root/app-crm/div/div/app-patient-view/div/app-dashboard/div/gridster/gridster-item[1]/app-widget/div/div[1]/app-reports/div[1]/div[2]/div[1]/div[1]/div[2]/div");
+			//driver.findElement(click_report).click();
 
 			//close button
 			By close_icon = By.xpath(
