@@ -4,12 +4,19 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.By.ByXPath;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class Register_Patient {
-	public void select_form(WebDriver driver) {
+import testBase.Page_Base;
+
+public class Register_Patient extends Page_Base  {
+	
+
+	public Register_Patient(WebDriver driver) {
+		super(driver);
+	}
+
+	public void Register_Form(String firstname, String familyname, int mobileNum, int natioID, int Pass, Object address ) { 
 
 		try {
 
@@ -23,7 +30,7 @@ public class Register_Patient {
 			
 			// click on search icon to open register pop up
 			
-			By search_icon = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/app-crm-header/div/div/div[1]/img");
+			 By search_icon = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/app-crm-header/div/div/div[1]/img");
 			
 			driver.findElement(search_icon).click();
 			
@@ -57,7 +64,7 @@ public class Register_Patient {
 			
 			// citizen checkbox
 			
-             By yes_citizen_checkbox = By.id("citizenY");
+            By yes_citizen_checkbox = By.id("citizenY");
 			
 	     	driver.findElement(yes_citizen_checkbox).click() ;
 			
@@ -76,9 +83,9 @@ public class Register_Patient {
 			driver.findElement(passport).sendKeys("123456789");
 			  		
 
-			By address = By.xpath(
+			By address1 = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form/div/div[2]/div/div[12]/div/input");
-			driver.findElement(address).sendKeys("123456789") ;
+			driver.findElement(address1).sendKeys("123456789") ;
 			
 			JavascriptExecutor java1 = (JavascriptExecutor) driver;
 			java1.executeScript("scroll(0,1200)");
