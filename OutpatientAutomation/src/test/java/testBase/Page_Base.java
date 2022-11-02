@@ -12,6 +12,7 @@ public class Page_Base {
 	
 	// create constructor
 
+
 		public Page_Base (WebDriver driver) {
 			
 			PageFactory.initElements(driver, this);

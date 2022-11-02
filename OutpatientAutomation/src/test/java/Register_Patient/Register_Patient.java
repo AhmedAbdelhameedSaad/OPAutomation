@@ -133,6 +133,7 @@ public class Register_Patient extends Page_Base  {
 		} catch (InterruptedException ex) {
 			Logger.getLogger(Register_Patient.class.getName()).log(Level.SEVERE, null, ex);
 			
+			
 		}
 	}
 }

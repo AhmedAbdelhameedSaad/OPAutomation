@@ -48,13 +48,14 @@ public class TC_OP002_Register_patient extends Test_Base {
 public void  User_Register_patient(String firstName, String familyName, int mobileNum, int natioID, int Pass, Object address)
 
 {
-	 loginobject.login_Edge("CMOOPD02", "egy123");
-	 loginobject = new Login_HP(driver);
+	 loginobject.login_Edge(driver);
+	 loginobject = new Login_HP("CMOOPD02", "egy123");
 	
 	
 	  registerobject = new Register_Patient(driver) ; 
 	 
 	 registerobject.Register_Form(firstName, familyName, mobileNum, natioID, Pass, address);
+	 
 	 
 	 
 

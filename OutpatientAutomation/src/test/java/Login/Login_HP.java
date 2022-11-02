@@ -27,7 +27,7 @@ public class Login_HP  {
 	
 	
 	/*public Login_HP(WebDriver driver) {
-		super(driver);
+		super(driver);   
 	}
 
 	
@@ -40,7 +40,8 @@ public class Login_HP  {
 		By password = By.id("his-password");
 		driver.findElement(password).sendKeys(pass);
 		By login_button = By.xpath("/html/body/app-root/app-common-login/div/div[2]/div[2]/form/button");
-		driver.findElement(login_button).click();
+		driver.findElement(login_button).click(); 
+		
 
 	}*/
 
