@@ -8,26 +8,25 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import Login.Login_HP;
+import testBase.Page_Base;
 
 
-public class TC_OP001_login_valid extends Test_Base
+public class OP_TC_01_Login extends Test_Base {
 
-{
-	 
+ 
    Login_HP loginobj;
-   
+   Page_Base pageobject;
+  
    @Test
 	public void  user_login_success()
 	{
             
-    	loginobj = new Login_HP("CMOOPD02", "egy123");
+    	loginobj = new Login_HP(driver);
 		
-		 loginobj.login_Edge(driver);
+		 loginobj.login_Edge("CMOOPD02", "egy123");
 
 	}
 	
-   
-
 	
 }
 

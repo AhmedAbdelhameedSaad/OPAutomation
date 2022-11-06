@@ -9,8 +9,16 @@ import org.openqa.selenium.By.ByXPath;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class Book_appointment {
-	public void select_form(WebDriver driver) {
+import testBase.Page_Base;
+
+public class Book_appointment_ByNationalID extends Page_Base {
+	
+	public Book_appointment_ByNationalID(WebDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}
+
+	public void UserBookAppintmentByNationalID(String department , String natID) {
 
 		try {
 
@@ -32,8 +40,8 @@ public class Book_appointment {
 	     			
 	     	By search_txt = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-clinic/div/div[2]/div/input");
-			driver.findElement(search_txt).sendKeys("Family Medicine") ;
-			driver.findElement(search_txt).sendKeys("General Surgery") ;
+			driver.findElement(search_txt).sendKeys(department) ;
+			//driver.findElement(search_txt).sendKeys("General Surgery" or "Family Medicine") ;
 			
 			By familymedicine_text = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-clinic/div/div[3]/div/div/p");
@@ -78,12 +86,12 @@ public class Book_appointment {
 					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-practitioner/div[3]/app-ex-schedule-appointment/div/div[2]/app-practitioner-slot/div/div/div/div/div/div[4]/div");
 			driver.findElement(visit_three_pm).click();
 	
-         // search for identity patient
+         // search for identity patient By National ID
 			
 			By identity_txtbox = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-ex-identify-patient/div/div[2]/div/input");
 			
-			driver.findElement(identity_txtbox).sendKeys("a200000406" + Keys.ENTER);
+			driver.findElement(identity_txtbox).sendKeys("natID" + Keys.ENTER);
 			
 			By patient_name = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-ex-identify-patient/div[2]/app-find-patient-detail/div/div/app-flash-card/div/div/div[1]/div/div/div[2]/div[2]/div[2]/div/div/div[1]/p");
@@ -111,7 +119,7 @@ public class Book_appointment {
 			driver.findElement(close_btn).click();
 
 		} catch (InterruptedException ex) {
-			Logger.getLogger(Book_appointment.class.getName()).log(Level.SEVERE, null, ex);
+			Logger.getLogger(Book_appointment_ByNationalID.class.getName()).log(Level.SEVERE, null, ex);
 			
 		}
 	}

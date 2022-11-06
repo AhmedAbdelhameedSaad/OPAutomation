@@ -1,7 +1,6 @@
 package TestCases;
 
 import java.io.IOException;
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterTest;
@@ -15,16 +14,22 @@ import Register_Patient.Register_Patient;
 import Utilities.Read_Excel_Register_Patient;
 
 
-public class TC_OP002_Register_patient extends Test_Base {
-
-
-
-	Login_HP loginobject;
+public class OP_TC_02_Register_patient extends Test_Base {
+	
 	Register_Patient registerobject;
+	Login_HP loginobj;
+	   
+	   @Test(priority=1)
+		public void  user_login_success()
+		{
+	            
+	    	loginobj = new Login_HP(driver);
+			 loginobj.login_Edge("CMOOPD02", "egy123");
 
-
-	@DataProvider(name = "Excel Data")
-	public Object[][] Register_Data() throws InvalidFormatException, IOException {
+		}
+	
+/*	@DataProvider(name = "Excel Data")
+	public Object[][] Register_Data() throws Throwable {
 		
 		
 
@@ -39,34 +44,26 @@ public class TC_OP002_Register_patient extends Test_Base {
 			
 			System.out.println("Error occured");
 		}
-		return null;				
+		return ER.getExcelData();			
 	
 }
+*/
 
-
-@Test(dataProvider = "Excel Data")
-public void  User_Register_patient(String firstName, String familyName, int mobileNum, int natioID, int Pass, Object address)
+@Test(priority=2  )
+public void  User_Register_patient()
 
 {
-	 loginobject.login_Edge(driver);
-	 loginobject = new Login_HP("CMOOPD02", "egy123");
-	
-	
+	 	
 	  registerobject = new Register_Patient(driver) ; 
 	 
-	 registerobject.Register_Form(firstName, familyName, mobileNum, natioID, Pass, address);
+	 registerobject.Register_Form("waleed", "taher", "01123456789", "11223344556677", "12345678190", "giza,cairo");
 	 
-	 
-	 
-
-
 }
 
 }
 
 
-
-
+//dataProvider = "Excel Data"
 
 
 

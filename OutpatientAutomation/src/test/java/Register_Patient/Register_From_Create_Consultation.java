@@ -4,45 +4,53 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.By.ByXPath;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
 import testBase.Page_Base;
 
-public class Register_Patient extends Page_Base  {
-	
-
-	public Register_Patient(WebDriver driver) {
+public class Register_From_Create_Consultation extends Page_Base {
+	public Register_From_Create_Consultation(WebDriver driver) {
 		super(driver);
 	}
 
-	public void Register_Form(String firstname, String familyname, String mobileNum, String natioID,  String Pass, String address ) { 
+	public void UserRegisterFromConsultationForm(String firstname, String familyname, String mobileNum, String natioID,  String Pass, String add) {
 
 		try {
 
-			Thread.sleep(5000);
-			
-			//click on clinical diary icon
-			
-			By clinical_diary = By.xpath("/html/body/app-root/app-crm/div/app-navigation/div/div[2]/div/img");
-			
-			driver.findElement(clinical_diary).click();
-			
-			// click on search icon to open register pop up
-			
-			 By search_icon = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/app-crm-header/div/div/div[1]/img");
-			
-			driver.findElement(search_icon).click();
+			Thread.sleep(3000);
+
+			By actions_btn = By.xpath(
+					"/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[1]/div[2]/div/div[2]");
+			driver.findElement(actions_btn).click() ;
 			
 			Thread.sleep(2000);
 			
-			 By register_btn = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/div[2]/app-find-patient-detail/div/div/app-flash-card/div/div/div[1]/div/div/div[2]/div[2]/div[2]/div/div/div[3]/button");
-				
-				driver.findElement(register_btn).click(); 
+             By create_consult_btn = By.xpath(
+ 					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-crm-forms-list/div/div[2]/div[2]/div[2]/div[3]");
+             
+	     	driver.findElement(create_consult_btn).click() ;
+	     	
+	    	
+						
+         // search for identity patient
 			
+			By identity_txtbox = By.xpath(
+					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-ex-identify-patient/div/div[2]/div/input");
 			
+			driver.findElement(identity_txtbox).sendKeys("aqqppppq" + Keys.ENTER);
+			
+	//Register Patient
+			
+			By register_btn = By.xpath(
+					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-ex-identify-patient/div[2]/app-find-patient-detail/div/div/app-flash-card/div/div/div[1]/div/div/div[2]/div[2]/div[2]/div/div/div[3]/button");
+			driver.findElement(register_btn).click();
+			
+	
 			By first_name = By.name("FName");
-				
+			
 			driver.findElement(first_name).sendKeys(firstname);
 
 			Thread.sleep(3000);
@@ -63,7 +71,7 @@ public class Register_Patient extends Page_Base  {
 	     	
              By Birth_list = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form/div/div[2]/div/div[6]/div/vaadin-date-picker//vaadin-text-field/div[2]");
 			
-	     	driver.findElement( Birth_list).click();
+	     	driver.findElement( Birth_list).click() ;
 	     	
 	     	// By time_number = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form/div/div[2]/div/div[6]/div/vaadin-date-picker//vaadin-text-field/div[2]");
 				
@@ -77,10 +85,12 @@ public class Register_Patient extends Page_Base  {
 
 			By mobile_number = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form/div/div[2]/div/div[7]/div/input");
+			
+			
 			driver.findElement(mobile_number).sendKeys( mobileNum) ;
 			
-			JavascriptExecutor java = (JavascriptExecutor) driver;
-			java.executeScript("scroll(0,1400)");
+			JavascriptExecutor java1 = (JavascriptExecutor) driver;
+			java1.executeScript("scroll(0,1400)");
 			
 			// citizen checkbox
 			
@@ -94,10 +104,11 @@ public class Register_Patient extends Page_Base  {
 	     	//driver.findElement(no_citizen_checkbox).click() ;
 	     	
 	     	By national_id = By.xpath(
-					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form/div/div[2]/div/div[10]/div/input");
+					"]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form/div/div[2]/div/div[10]/div/input");
 			driver.findElement(national_id).sendKeys(natioID);
 			
 			
+						
 			By passport = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form/div/div[2]/div/div[11]/div/input");
 			driver.findElement(passport).sendKeys (Pass);
@@ -105,11 +116,10 @@ public class Register_Patient extends Page_Base  {
 
 			By address1 = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form/div/div[2]/div/div[12]/div/input");
-			driver.findElement(address1).sendKeys(address) ;
+			driver.findElement(address1).sendKeys(add) ;
 			
-			JavascriptExecutor java1 = (JavascriptExecutor) driver;
-			java1.executeScript("scroll(0,1200)");
-			
+			JavascriptExecutor java11 = (JavascriptExecutor) driver;
+			java11.executeScript("scroll(0,1200)");
 					
 		
          // selecting cash and credit checkboxes
@@ -140,13 +150,13 @@ public class Register_Patient extends Page_Base  {
 					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[2]/div[2]/button");
 			driver.findElement(billing_group).sendKeys("fffdd");
 			
+			
 			By close_btn = By.xpath(
-					"/html/body/app-root/app-crm/div/div/app-clinical-diary/div[2]/app-find-patient-detail/div/div/app-flash-card/div/div/div[1]/div/div/div[1]/img");
+					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[1]/div/div[2]/div/img");
 			driver.findElement(close_btn).click();
 
 		} catch (InterruptedException ex) {
-			Logger.getLogger(Register_Patient.class.getName()).log(Level.SEVERE, null, ex);
-			
+			Logger.getLogger(Register_From_Create_Consultation.class.getName()).log(Level.SEVERE, null, ex);
 			
 		}
 	}

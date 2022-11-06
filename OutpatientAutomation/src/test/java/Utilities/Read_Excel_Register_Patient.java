@@ -20,7 +20,7 @@ public class Read_Excel_Register_Patient {
 	public FileInputStream getFileInputStream() 
 	{
 	
-		String filepath = System.getProperty("user.dir")+"/src/test/java/Test-data/RegisterPatient_Data.xlsx";
+		String filepath = System.getProperty("user.dir")+"/Test-data/RegisterPatient_Data.xlsx";
 		File srcfile = new File (filepath);
 		
 		
@@ -30,8 +30,7 @@ public class Read_Excel_Register_Patient {
 		} catch (FileNotFoundException e) {
 			
 			System.out.println("Test Data File Not Found. Terminating process, Check File Path");
-			System.exit(0);
-			
+			System.exit(0);	
 		} 
 		
 		return fis;		
@@ -53,7 +52,7 @@ public class Read_Excel_Register_Patient {
 		String[][] myarrayExcel = new String[number_of_rows ][number_of_columns];
 
 		for (int i = 1; i < number_of_rows; i++) {
-			for (int c = 0; c < number_of_columns; c++) {
+			for (int c = 1; c < number_of_columns; c++) {
 				
 				XSSFRow row = sheet.getRow(i);
 				myarrayExcel [i - 1][c] = row.getCell(c).toString();
