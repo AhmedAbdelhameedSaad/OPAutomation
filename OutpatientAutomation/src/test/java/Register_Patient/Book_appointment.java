@@ -14,20 +14,6 @@ public class Book_appointment {
 
 		try {
 
-			Thread.sleep(5000);
-
-			By actions_btn = By.xpath(
-					"/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[1]/div[2]/div/div[2]");
-			driver.findElement(actions_btn).click() ;
-			
-			Thread.sleep(3000);
-			
-             By book_appointment = By.xpath(
- 					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-crm-forms-list/div/div[2]/div[2]/div[2]/div[2]");
-             
-	     	driver.findElement(book_appointment).click() ;
-	     	
-	     	
 	     // ٍsearch for department
 	     			
 	     	By search_txt = By.xpath(
@@ -115,4 +101,5 @@ public class Book_appointment {
 			
 		}
 	}
+
 }

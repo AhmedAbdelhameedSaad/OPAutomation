@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestCases.TC_OP001_login_valid">
+      <class name="TestCases.OP_TC_054_Create_Consultation_Visit">
         <methods>
+          <include name="navigate_to_login"/>
           <include name="setup"/>
-          <include name="user_login_success"/>
+          <include name="close"/>
         </methods>
-      </class> <!-- TestCases.TC_OP001_login_valid -->
+      </class> <!-- TestCases.OP_TC_054_Create_Consultation_Visit -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
