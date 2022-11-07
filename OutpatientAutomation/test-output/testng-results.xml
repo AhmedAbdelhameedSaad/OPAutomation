@@ -1,91 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-11-03T19:19:03 EET" name="Default suite" finished-at="2022-11-03T19:19:58 EET" duration-ms="55317">
+  <suite started-at="2022-11-07T19:05:27 EET" name="Default suite" finished-at="2022-11-07T19:05:57 EET" duration-ms="30447">
     <groups>
     </groups>
-    <test started-at="2022-11-03T19:19:03 EET" name="Default test" finished-at="2022-11-03T19:19:58 EET" duration-ms="55317">
-      <class name="TestCases.OP_TC_054_Create_Consultation_Visit">
-        <test-method is-config="true" signature="setup()[pri:0, instance:TestCases.OP_TC_054_Create_Consultation_Visit@6eda5c9]" started-at="2022-11-03T19:18:29 EET" name="setup" finished-at="2022-11-03T19:19:03 EET" duration-ms="33650" status="PASS">
+    <test started-at="2022-11-07T19:05:27 EET" name="Default test" finished-at="2022-11-07T19:05:57 EET" duration-ms="30447">
+      <class name="testCases.OP_TC_148_Nurse_Preview_PatientVitals">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.OP_TC_148_Nurse_Preview_PatientVitals@393671df]" started-at="2022-11-07T19:05:15 EET" name="setup" finished-at="2022-11-07T19:05:27 EET" duration-ms="11209" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="navigate_to_login()[pri:0, instance:TestCases.OP_TC_054_Create_Consultation_Visit@6eda5c9]" started-at="2022-11-03T19:19:03 EET" name="navigate_to_login" finished-at="2022-11-03T19:19:58 EET" duration-ms="55198" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="slotcontainer"]/div/div/div[1]"}
-  (Session info: MicrosoftEdge=107.0.1418.26)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-41S85J5', ip: '192.168.8.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 107.0.1418.26, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:65533}, msedge: {msedgedriverVersion: 106.0.1370.52 (dc5b94d8835a..., userDataDir: C:\Users\REHABE~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: b13403d2fe564b797f163cedaca4ad04
-*** Element info: {Using=xpath, value=//*[@id="slotcontainer"]/div/div/div[1]}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="slotcontainer"]/div/div/div[1]"}
-  (Session info: MicrosoftEdge=107.0.1418.26)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-41S85J5', ip: '192.168.8.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 107.0.1418.26, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:65533}, msedge: {msedgedriverVersion: 106.0.1370.52 (dc5b94d8835a..., userDataDir: C:\Users\REHABE~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: b13403d2fe564b797f163cedaca4ad04
-*** Element info: {Using=xpath, value=//*[@id="slotcontainer"]/div/div/div[1]}
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at opd_consultation_visit.Consultation_Visit.create(Consultation_Visit.java:72)
-at TestCases.OP_TC_054_Create_Consultation_Visit.navigate_to_login(OP_TC_054_Create_Consultation_Visit.java:27)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method signature="patient_vitals()[pri:0, instance:testCases.OP_TC_148_Nurse_Preview_PatientVitals@393671df]" started-at="2022-11-07T19:05:27 EET" name="patient_vitals" finished-at="2022-11-07T19:05:57 EET" duration-ms="30388" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- navigate_to_login -->
-        <test-method is-config="true" signature="close()[pri:0, instance:TestCases.OP_TC_054_Create_Consultation_Visit@6eda5c9]" started-at="2022-11-03T19:19:58 EET" name="close" finished-at="2022-11-03T19:19:58 EET" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- close -->
-      </class> <!-- TestCases.OP_TC_054_Create_Consultation_Visit -->
+        </test-method> <!-- patient_vitals -->
+      </class> <!-- testCases.OP_TC_148_Nurse_Preview_PatientVitals -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

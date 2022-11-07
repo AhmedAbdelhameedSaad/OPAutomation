@@ -7,9 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
-
-import DOC_Save_as_draft_and_Submit_Order.Save_as_draft_Place_Order;
-import DOC_Save_as_draft_and_Submit_Order.Submit_after_save_as_draft;
 import testBase.Page_Base;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;

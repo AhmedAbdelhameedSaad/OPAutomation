@@ -9,10 +9,10 @@ import opd_authentication.Authentication;
 import opd_consultation_visit.*;
 import testBase.HP_Test_Base;
 
-public class OP_TC_054_Create_Consultation_Visit extends HP_Test_Base {
+public class OP_TC_054_097_Create_Consultation_Visit extends HP_Test_Base {
 
 	@Test
-	public void navigate_to_login() {
+	public void create() {
 		
 		  Authentication auth = new Authentication(driver);
 		  auth.login_HP("CMOOPD02","egy123");

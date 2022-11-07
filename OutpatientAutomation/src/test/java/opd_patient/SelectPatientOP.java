@@ -15,7 +15,7 @@ public class SelectPatientOP extends Page_Base{
 		// TODO Auto-generated constructor stub
 	}
 
-	public void selectpatientOP( String Patient_ID) {
+	public void cmo_findpatientOP( String Patient_ID) {
 
 		try {
 			By Findpatient = By.xpath("/html/body/app-root/app-crm/div/div/app-crm-leads/div[1]/div[2]/div[1]/div[1]");
@@ -39,5 +39,21 @@ public class SelectPatientOP extends Page_Base{
 		} catch (InterruptedException ex) {
 			Logger.getLogger(SelectPatientOP.class.getName()).log(Level.SEVERE, null, ex);
 		}
+	}
+
+
+
+	public void NUR_DOC_selectpatient ()
+	{
+		try {
+			Thread.sleep(5000);
+			By selectpatient = By.xpath(
+					"/html/body/app-root/app-crm/div/div/app-crm-leads/div[2]/div/div[2]/div/div/app-crm-patients-list/div/div[2]/div/div[1]/div[1]");
+			driver.findElement(selectpatient).click();
+			
+		}catch (InterruptedException ex) {
+			Logger.getLogger(SelectPatientOP.class.getName()).log(Level.SEVERE, null, ex);
+		}
+		
 	}
 }

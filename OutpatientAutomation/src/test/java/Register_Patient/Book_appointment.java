@@ -4,8 +4,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.By.ByXPath;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -96,7 +94,7 @@ public class Book_appointment {
 					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[3]/div[2]/button");
 			driver.findElement(close_btn).click();
 
-		} catch (InterruptedException ex) {
+		}catch (InterruptedException ex) {
 			Logger.getLogger(Book_appointment.class.getName()).log(Level.SEVERE, null, ex);
 			
 		}

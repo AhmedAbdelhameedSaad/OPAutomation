@@ -6,8 +6,6 @@ import java.util.logging.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-
-import NUR_Place_Order.NUR_SelectForm;
 import testBase.Page_Base;
 
 public class NewDocument_Menu_Items extends Page_Base{
@@ -16,6 +14,7 @@ public class NewDocument_Menu_Items extends Page_Base{
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}
+	
 	public void select_pain_assessment() {
 
 		try {
@@ -160,7 +159,7 @@ public class NewDocument_Menu_Items extends Page_Base{
 					"/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/div/div[2]/div[2]/div[2]/div[2]");
 			driver.findElement(selectform).click();
 		} catch (InterruptedException ex) {
-			Logger.getLogger(NUR_SelectForm.class.getName()).log(Level.SEVERE, null, ex);
+			Logger.getLogger(NewDocument_Menu_Items.class.getName()).log(Level.SEVERE, null, ex);
 		}
 	}
 }

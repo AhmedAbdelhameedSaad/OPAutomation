@@ -20,9 +20,8 @@ public class Patient_Vitals_Form extends Page_Base{
 
 		try {
 
-			// Fill in the form
-
-			// Patient Vitals
+			// Fill in the form Patient Vitals
+			Thread.sleep(3000);
 			By enter_Temperature = By.xpath("//*[@id=\"EL000004#0#VB0004\"]/div/div/app-numericinteger/div/input");
 			driver.findElement(enter_Temperature).sendKeys("37");
 
@@ -63,16 +62,53 @@ public class Patient_Vitals_Form extends Page_Base{
 					"/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-clinicalform/div/div[2]/div[1]/div[1]/div[1]/div[3]");
 			driver.findElement(click_Perview).click();
 
+			JavascriptExecutor java = (JavascriptExecutor) driver;
+			java.executeScript("scroll(0,250)");
+		} catch (InterruptedException ex) {
+			Logger.getLogger(Patient_Vitals_Form.class.getName()).log(Level.SEVERE, null, ex);
+		}
+	}
+
+	public void preview_vitals()
+	{ 
+		try {
+		Thread.sleep(4000);
+		By preview_button = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-clinicalform/div/div[2]/div[1]/div[1]/div[1]/div[3]");
+		driver.findElement(preview_button).click();
+	} catch (InterruptedException ex) {
+		Logger.getLogger(Patient_Vitals_Form.class.getName()).log(Level.SEVERE, null, ex);
+           }	
+         }
+
+	
+	public void submit_vitals()
+	{
+		try {
 			Thread.sleep(3000);
 
 			By submit_button = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-clinicalform/div/div[2]/div[2]/div[2]/button[4]");
 			driver.findElement(submit_button).click();
 
-			JavascriptExecutor java = (JavascriptExecutor) driver;
-			java.executeScript("scroll(0,250)");
-		} catch (InterruptedException ex) {
+		}catch (InterruptedException ex) {
 			Logger.getLogger(Patient_Vitals_Form.class.getName()).log(Level.SEVERE, null, ex);
 		}
+		
+	}
+
+	public void save_vitals()
+	{
+		try {
+			Thread.sleep(3000);
+
+			By save_button = By.xpath(
+					"/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-clinicalform/div/div[2]/div[2]/div[2]/button[3]");
+			driver.findElement(save_button).click();
+
+		}catch (InterruptedException ex) {
+			Logger.getLogger(Patient_Vitals_Form.class.getName()).log(Level.SEVERE, null, ex);
+		}
+		
 	}
 }
