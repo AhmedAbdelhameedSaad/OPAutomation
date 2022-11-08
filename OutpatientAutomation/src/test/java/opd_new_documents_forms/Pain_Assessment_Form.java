@@ -22,6 +22,7 @@ public class Pain_Assessment_Form extends Page_Base {
 
 			// Fill in the form
 
+			Thread.sleep(3000);
 			By enter_Date_Time = By.xpath("//*[@id=\"PAINASSESS#0#DATE243123423\"]/div/div/app-dateandtime/input");
 			driver.findElement(enter_Date_Time).click();
 
@@ -64,20 +65,39 @@ public class Pain_Assessment_Form extends Page_Base {
 
 			Thread.sleep(3000);
 
-			By next_button = By.xpath(
-					"/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-clinicalform/div/div[2]/div[2]/div[2]/button[2]");
-			driver.findElement(next_button).click();
-
-			Thread.sleep(4000);
-
-			By submit_button = By.xpath(
-					"/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-clinicalform/div/div[2]/div[2]/div[2]/button[4]");
-			driver.findElement(submit_button).click();
 
 			JavascriptExecutor java = (JavascriptExecutor) driver;
 			java.executeScript("scroll(0,250)");
 		} catch (InterruptedException ex) {
 			Logger.getLogger(Pain_Assessment_Form.class.getName()).log(Level.SEVERE, null, ex);
 		}
-	}
+	}	
+
+
+	public void preview_Ass()
+	{ 
+		try {
+		Thread.sleep(4000);
+		By next_button = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-clinicalform/div/div[2]/div[2]/div[2]/button[2]");
+		driver.findElement(next_button).click();
+	} catch (InterruptedException ex) {
+		Logger.getLogger(Pain_Assessment_Form.class.getName()).log(Level.SEVERE, null, ex);
+           }	
+         }
+	
+	public void submit_Ass()
+	{ 
+		try {
+		Thread.sleep(4000);
+
+		By submit_button = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-clinicalform/div/div[2]/div[2]/div[2]/button[4]");
+		driver.findElement(submit_button).click();
+	} catch (InterruptedException ex) {
+		Logger.getLogger(Pain_Assessment_Form.class.getName()).log(Level.SEVERE, null, ex);
+           }	
+         }
 }
+		
+	

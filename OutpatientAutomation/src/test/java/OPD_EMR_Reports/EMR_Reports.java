@@ -27,7 +27,7 @@ public class EMR_Reports extends Page_Base {
 
 			// patients Vitals and Allergies
 
-			By Allergies = By.xpath(
+		/*	By Allergies = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-patient-view/div/app-dashboard/div/gridster/gridster-item[2]/app-widget/div/div[1]/app-clinical-profile/div[1]/div[2]/div[1]/p");
 			driver.findElement(Allergies).click();
 
@@ -41,7 +41,7 @@ public class EMR_Reports extends Page_Base {
 					"/html/body/app-root/app-crm/div/div/app-patient-view/div/app-dashboard/div/gridster/gridster-item[2]/app-widget/div/div[1]/app-clinical-profile/div[1]/div[2]/div[2]/p");
 			driver.findElement(Diagnosis).click();
 
-			Thread.sleep(3000);
+			Thread.sleep(3000);*/
 
 			By close_icon = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-patient-view/div/app-dashboard/div/gridster/gridster-item[2]/app-widget/div/div[1]/app-clinical-profile/div[1]/app-widget-header/div/img");
