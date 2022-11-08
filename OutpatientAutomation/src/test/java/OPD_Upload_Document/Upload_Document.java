@@ -3,12 +3,20 @@ package OPD_Upload_Document;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+
+import testBase.Page_Base;
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class Upload_Document {
+public class Upload_Document extends Page_Base{
 
-	public void Physicians_Document_Edge(WebDriver driver) {
+	public Upload_Document(WebDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}
+
+	public void Physicians_Document_Edge() {
 
 		try {
 

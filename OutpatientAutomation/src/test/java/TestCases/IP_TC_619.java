@@ -1,4 +1,4 @@
-package TestCases;
+package testCases;
 
 import java.io.IOException;
 
@@ -38,8 +38,8 @@ public class IP_TC_619 {
 		SelectPatientIP select_patient = new SelectPatientIP();
 		select_patient.selectpatientIP_Edge(driver, Patient_ID);
 
-		Clinical_Profile view = new Clinical_Profile();
-		view.select_form(driver);
+		EMR_Reports view = new EMR_Reports();
+		view.select_growth_chart(driver);
 	}
 
 	@AfterTest

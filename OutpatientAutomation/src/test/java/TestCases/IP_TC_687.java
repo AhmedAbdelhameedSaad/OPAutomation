@@ -1,4 +1,4 @@
-package TestCases;
+package testCases;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -31,7 +31,7 @@ public class IP_TC_687 {
 		login.login(driver);
 
 		NUR_Select_Form_EM form = new NUR_Select_Form_EM();
-		form.select_form(driver);
+		form.select_growth_chart(driver);
 
 		Nurse_View_MAR_Chart Medication = new Nurse_View_MAR_Chart();
 		Medication.Medication(driver);

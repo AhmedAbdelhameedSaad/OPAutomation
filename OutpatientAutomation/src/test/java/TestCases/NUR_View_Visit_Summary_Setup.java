@@ -1,4 +1,4 @@
-package TestCases;
+package testCases;
 
 import java.io.IOException;
 
@@ -37,7 +37,7 @@ public class NUR_View_Visit_Summary_Setup {
 		select_patient.selectpatientIP_Edge(driver, Patient_ID);
 
 		Visit_Summary view = new Visit_Summary();
-		view.select_form(driver);
+		view.select_growth_chart(driver);
 	}
 
 	@AfterTest

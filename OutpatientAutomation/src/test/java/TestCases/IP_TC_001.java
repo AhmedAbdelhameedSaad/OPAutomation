@@ -1,6 +1,10 @@
-package TestCases;
+package testCases;
 
 import Utilities.read_excel_data_HP;
+import opd_authentication.Authentication;
+import opd_new_documents_forms.DOC_SelectPatientOP;
+import opd_new_documents_forms.SelectForm_OP_Consultation;
+
 import java.io.IOException;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.WebDriver;
@@ -9,11 +13,6 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import Login.Login_HP;
-import OPD_OPConsultation.DOC_SelectPatientOP;
-import OPD_OPConsultation.SelectForm_OP_Consultation;
-//import OPD_OPConsultation.*;
 
 public class IP_TC_001 {
 
@@ -35,10 +34,10 @@ public class IP_TC_001 {
 	@Test(dataProvider = "test_data")
 	public void navigate_to_OP_consultation_form(String Patient_ID) {
 
-		Login_HP Login = new Login_HP("DOCOPD01","egy123");
+		Authentication Login = new Authentication("DOCOPD01","egy123");
         Login.login_Edge(driver);
 
-		DOC_SelectPatientOP select_patient = new DOC_SelectPatientOP();
+		SelectPatientOP select_patient = new SelectPatientOP();
 		select_patient.selectpatientOP(driver, Patient_ID);
 
 		SelectForm_OP_Consultation Form = new SelectForm_OP_Consultation();

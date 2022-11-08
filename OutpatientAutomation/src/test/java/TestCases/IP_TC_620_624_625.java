@@ -1,4 +1,4 @@
-package TestCases;
+package testCases;
 
 import java.io.IOException;
 
@@ -9,10 +9,11 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import Login.Login_HP;
+
 import DOC_OPD_OPConsultation.*;
 import NUR_Patient_Vitals.*;
 import Utilities.read_excel_data_HP;
+import opd_authentication.Authentication;
 
 public class IP_TC_620_624_625 {
 
@@ -33,16 +34,16 @@ public class IP_TC_620_624_625 {
 	@Test(dataProvider = "test_data")
 	public void navigate_to_Nurse_View_Patient_Vitals(String Patient_ID) {
 
-		Login_HP Login = new Login_HP("NURIPD01","egy123");
+		Authentication Login = new Authentication("NURIPD01","egy123");
 		Login.login_Edge(driver);
 
-		DOC_SelectPatientOP select_patient = new DOC_SelectPatientOP();
+		SelectPatientOP select_patient = new SelectPatientOP();
 		select_patient.selectpatientOP(driver, Patient_ID);
 
 		SelectForm Form = new SelectForm();
 		Form.select_form(driver);
 
-		Patient_Vitals vitals = new Patient_Vitals();
+		Patient_Vitals_Form vitals = new Patient_Vitals_Form();
 		vitals.Physicians_vitals_Edge(driver);
 	}
 

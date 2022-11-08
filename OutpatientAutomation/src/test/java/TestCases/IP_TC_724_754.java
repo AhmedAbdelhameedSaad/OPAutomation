@@ -1,4 +1,4 @@
-package TestCases;
+package testCases;
 
 import NUR_Place_Order.*;
 import Utilities.read_excel_data_HP;
@@ -48,7 +48,7 @@ public class IP_TC_724_754 {
 		Form.select_form(driver);
 
 		NUR_Place_Order Nur_order = new NUR_Place_Order();
-		Nur_order.Nurse_order_Edge(driver);
+		Nur_order.nurse_order(driver);
 
 		Logout_HP logout = new Logout_HP();
 		logout.logout_Edge(driver);
@@ -57,7 +57,7 @@ public class IP_TC_724_754 {
 		//DOC_Login.login_Edge(driver);
 
 		DOC_reject_Order reject = new DOC_reject_Order();
-		reject.Physicians_approve_Edge(driver);
+		reject.approve_order(driver);
 
 	}
 

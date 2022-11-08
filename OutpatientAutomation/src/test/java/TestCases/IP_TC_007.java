@@ -1,12 +1,13 @@
-package TestCases;
+package testCases;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import Login.Login_EM;
-import Login.Select_Form_EM;
+
+import opd_authentication.Login_EM;
+import opd_authentication.Select_Form_EM;
 
 public class IP_TC_007 {
 	WebDriver driver;

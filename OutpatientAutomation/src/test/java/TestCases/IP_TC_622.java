@@ -1,4 +1,4 @@
-package TestCases;
+package testCases;
 
 import java.io.IOException;
 
@@ -39,7 +39,7 @@ public class IP_TC_622 {
 		select_patient.selectpatientIP_Edge(driver, Patient_ID);
 
 		medications view = new medications();
-		view.select_form(driver);
+		view.select_growth_chart(driver);
 	}
 
 	@AfterTest

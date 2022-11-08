@@ -7,26 +7,24 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import Login.Login_HP;
-import OPD_OPConsultation.DOC_SelectPatientOP;
-import OPD_OPConsultation.SelectForm_OP_Consultation;
 import Register_Patient.Book_appointment_ByNationalID;
 import Register_Patient.Register_From_Book_Appointment;
 import Register_Patient.Register_Patient;
 import Utilities.Read_Excel_Register_Patient;
+import opd_authentication.Authentication;
 
 
 public class OP_TC_05_Book_Appointment_ByNationalID extends Test_Base {
 	
 	Book_appointment_ByNationalID bookAppointByNaionalID;
-	Login_HP loginobj;
+	Authentication loginobject2;
 	   
 	   @Test(priority=1)
-		public void  user_login_success()
+		public void  user_login_()
 		{
 	            
-	    	loginobj = new Login_HP(driver);
-			 loginobj.login_Edge("CMOOPD02", "egy123");
+	    	loginobject2 = new Authentication (driver);
+			 loginobject2.login_HP("CMOOPD02", "egy123");
 
 		}
 	
@@ -51,8 +49,8 @@ public class OP_TC_05_Book_Appointment_ByNationalID extends Test_Base {
 }
 */
 
-@Test(priority=2  )
-public void  User_Register_patient()
+@Test(priority=2 )
+public void  UserBookAppointmentByNationalID()
 
 {
 	 	

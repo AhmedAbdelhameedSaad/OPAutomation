@@ -1,4 +1,4 @@
-package TestCases;
+package testCases;
 
 import java.io.IOException;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
@@ -7,7 +7,6 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.*;
 
-import OPD_OPConsultation.DOC_SelectPatientOP;
 import OP_Consultation_Sections.Prescribe_Medications;
 //import DOC_Place_Rad_Order.SelectForm;
 //import DOC_Prescribe_Medications.Prescribe_Medications;
@@ -21,6 +20,7 @@ import PCY_Return_Medication.Accept_Return_Medication;
 import PCY_Return_Medication.Reject_Return_Medication;
 import PCY_Stock_Availability_of_medications.Stock_Availability_of_medications;
 import Utilities.*;
+import opd_new_documents_forms.DOC_SelectPatientOP;
 
 public class GroupM {
 	WebDriver driver;
@@ -42,7 +42,7 @@ public class GroupM {
 		//DOC_Login_HP Login = new DOC_Login_HP();
 		//Login.login_Edge(driver);
 
-		DOC_SelectPatientOP select_patient = new DOC_SelectPatientOP();
+		SelectPatientOP select_patient = new SelectPatientOP();
 		select_patient.selectpatientOP(driver, Patient_ID);
 
 		

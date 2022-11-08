@@ -1,4 +1,4 @@
-package TestCases;
+package testCases;
 
 import java.io.IOException;
 
@@ -10,8 +10,8 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import OPD_OPConsultation.DOC_SelectPatientOP;
 import Utilities.read_excel_data_HP;
+import opd_new_documents_forms.DOC_SelectPatientOP;
 
 public class IP_TC_756_762_765 {
 
@@ -37,7 +37,7 @@ public class IP_TC_756_762_765 {
 		//DOC_Login_HP Login = new DOC_Login_HP();
 	//	Login.login_Edge(driver);
 
-		DOC_SelectPatientOP select_patient = new DOC_SelectPatientOP();
+		SelectPatientOP select_patient = new SelectPatientOP();
 		select_patient.selectpatientOP(driver, Patient_ID);
 
 		//SelectForm_Refer Form = new SelectForm_Refer();

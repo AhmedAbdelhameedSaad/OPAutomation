@@ -1,4 +1,4 @@
-package TestCases;
+package testCases;
 
 import java.io.IOException;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
@@ -7,14 +7,13 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.*;
 
-//import DOC_Place_Rad_Order.SelectForm;
-import Rad_Technician_Orders.*;
-import Lab_Technician_Orders.*;
-import OPD_OPConsultation.DOC_SelectPatientOP;
 import OP_Consultation_Sections.Place_Lab_Order;
 import OP_Consultation_Sections.Place_Rad_Order;
 
 import Utilities.*;
+import opd_lab_technician_orders.*;
+import opd_new_documents_forms.DOC_SelectPatientOP;
+import opd_rad_technician_orders.*;
 
 public class GroupL {
 	WebDriver driver;
@@ -36,12 +35,12 @@ public class GroupL {
 	//	DOC_Login_HP Login = new DOC_Login_HP();
 		//Login.login_Edge(driver);
 
-		DOC_SelectPatientOP select_patient = new DOC_SelectPatientOP();
+		SelectPatientOP select_patient = new SelectPatientOP();
 		select_patient.selectpatientOP(driver, Patient_ID);
 
 		
 		Place_Lab_Order order = new Place_Lab_Order();
-		order.Physicians_order_Edge(driver);
+		order.consultaion_place_panel_order(driver);
 
 //		driver.quit();
 	}
@@ -89,13 +88,13 @@ public class GroupL {
 		//DOC_Login_HP Login = new DOC_Login_HP();
 	//	Login.login_Edge(driver);
 
-		DOC_SelectPatientOP select_patient = new DOC_SelectPatientOP();
+		SelectPatientOP select_patient = new SelectPatientOP();
 		select_patient.selectpatientOP(driver, Patient_ID);
 
 		
 
 		Place_Rad_Order order = new Place_Rad_Order();
-		order.Physicians_order_Edge(driver);
+		order.consultaion_place_panel_order(driver);
 
 //		driver.quit();
 	}

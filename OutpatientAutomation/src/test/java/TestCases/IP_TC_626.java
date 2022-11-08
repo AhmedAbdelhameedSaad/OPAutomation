@@ -1,4 +1,4 @@
-package TestCases;
+package testCases;
 
 import NUR_Pain_Assessment.*;
 import Utilities.read_excel_data_HP;
@@ -44,7 +44,7 @@ public class IP_TC_626 {
 		SelectForm Form = new SelectForm();
 		Form.select_form(driver);
 
-		Pain_Assessment pain = new Pain_Assessment();
+		Pain_Assessment_Form pain = new Pain_Assessment_Form();
 		pain.Physicians_pain_Edge(driver);
 	}
 

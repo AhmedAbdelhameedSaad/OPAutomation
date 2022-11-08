@@ -1,4 +1,4 @@
-package TestCases;
+package testCases;
 
 import java.io.IOException;
 
@@ -10,8 +10,8 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import Lab_Technician_Orders.*;
 import Utilities.read_excel_data_HP;
+import opd_lab_technician_orders.*;
 
 public class IP_TC_520 {
 	WebDriver driver;

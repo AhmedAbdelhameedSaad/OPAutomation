@@ -1,13 +1,13 @@
 package testBase;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.PageFactory;
 
 
 public class Page_Base {
 	
-	public  WebDriver driver ;
+	
+	public WebDriver driver ;
 	
 	// create constructor
 
@@ -15,7 +15,13 @@ public class Page_Base {
 			
 			this.driver = driver;
 			PageFactory.initElements(driver, this);
+			this.driver=driver;
+			PageFactory.initElements(this.driver, this);
+
 			
 		}
 	
 }
+	
+
+

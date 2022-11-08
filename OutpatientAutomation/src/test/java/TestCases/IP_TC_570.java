@@ -1,4 +1,4 @@
-package TestCases;
+package testCases;
 
 import java.io.IOException;
 
@@ -41,7 +41,7 @@ public class IP_TC_570 {
 		select_patient.selectpatientIP_Edge(driver, Patient_ID);
 
 		SelectForm Form = new SelectForm();
-		Form.select_form(driver);
+		Form.select_growth_chart(driver);
 
 		Upload_Document document = new Upload_Document();
 		document.Physicians_Document_Edge(driver);

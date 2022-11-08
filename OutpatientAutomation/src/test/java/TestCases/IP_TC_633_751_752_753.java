@@ -1,7 +1,8 @@
-package TestCases;
+package testCases;
 
 import NUR_Place_Order.*;
 import Utilities.read_excel_data_HP;
+import opd_order_actions.*;
 
 import java.io.IOException;
 
@@ -13,7 +14,6 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import DOC_Approve_Order.*;
 import NUR_Pages.NUR_Login_HP;
 import NUR_Pages.NUR_Logout_HP;
 import NUR_Pages.SelectPatientIP;
@@ -49,7 +49,7 @@ public class IP_TC_633_751_752_753 {
 		Form.select_form(driver);
 
 		NUR_Place_Order Nur_order = new NUR_Place_Order();
-		Nur_order.Nurse_order_Edge(driver);
+		Nur_order.nurse_order(driver);
 
 		Logout_HP logout = new Logout_HP();
 		logout.logout_Edge(driver);
@@ -57,8 +57,8 @@ public class IP_TC_633_751_752_753 {
 		//DOC_Login_HP DOC_Login = new DOC_Login_HP();
 	//	DOC_Login.login_Edge(driver);
 
-		DOC_approve_Order approve = new DOC_approve_Order();
-		approve.Physicians_approve_Edge(driver);
+		Order_Actions approve = new Order_Actions();
+		approve.approve_order(driver);
 	}
 
 	@AfterTest

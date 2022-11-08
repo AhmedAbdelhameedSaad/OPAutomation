@@ -1,4 +1,4 @@
-package TestCases;
+package testCases;
 
 import java.awt.EventQueue;
 import javax.swing.JFrame;

@@ -1,4 +1,4 @@
-package TestCases;
+package testCases;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -6,9 +6,9 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import Login.Login_HP;
 import NUR_Pages.*;
-import NUR_View_Patient_list.*;
+import opd_authentication.Authentication;
+import opd_patient.*;
 
 public class IP_TC_546 {
 
@@ -31,10 +31,10 @@ public class IP_TC_546 {
 	@Test
 	public void navigate_to_login() {
 
-		Login_HP Login = new Login_HP("NURIPD01","egy123");
+		Authentication Login = new Authentication("NURIPD01","egy123");
 		Login.login_Edge(driver);
 
-		View_Patient_list li = new View_Patient_list();
+		NUR_View_Patient_list li = new NUR_View_Patient_list();
 		li.list(driver);
 	}
 

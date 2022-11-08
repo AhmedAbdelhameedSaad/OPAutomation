@@ -1,39 +1,32 @@
 package TestCases;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import CMO_OPD_Create_consultation_visit.*;
-import Login.Login_HP;
+import opd_HP_Menus.Action_Menu_Items;
+import opd_HP_Menus.Left_Menu_Items;
+import opd_authentication.Authentication;
+import opd_consultation_visit.*;
+import testBase.HP_Test_Base;
 
-public class OP_TC_054_Create_Consultation_Visit {
-
-	WebDriver driver;
-
-	@BeforeTest
-	public void setup() {
-		// System Property for Edge Driver
-		System.setProperty("webdriver.edge.driver", "D:\\Automation testing tools\\Edgedriver\\msedgedriver.exe");
-		// Initialize Edge Driver
-		driver = new EdgeDriver();
-		driver.navigate().to("http://10.209.1.140/healthplug/#/user/leads");
-		driver.manage().window().maximize();
-	}
+public class OP_TC_054_Create_Consultation_Visit extends HP_Test_Base {
 
 	@Test
 	public void navigate_to_login() {
-
-		Login_HP Login = new Login_HP("CMOOPD02","egy123");
-		Login.login_Edge(driver);
-
-		SelectVisit Form = new SelectVisit();
-		Form.select_form(driver);
-
-		Create_consultation_visit form = new Create_consultation_visit();
-		form.select_form(driver);
+		
+		  Authentication auth = new Authentication(driver);
+		  auth.login_HP("CMOOPD02","egy123");
+		  
+		  Left_Menu_Items menuItem = new Left_Menu_Items(driver);
+		  menuItem.select_clinical_diary_item();
+		  
+		  Action_Menu_Items menu = new Action_Menu_Items(driver);
+		  menu.select_consultation_visit_item();
+		  
+		  Consultation_Visit consultation_Visit = new Consultation_Visit(driver);
+		  consultation_Visit.create("A200000468", "Family Medicine Clinic",
+		  "Mohamed saeed hussin abdraboh");
+		 
 	}
 
 	@AfterTest

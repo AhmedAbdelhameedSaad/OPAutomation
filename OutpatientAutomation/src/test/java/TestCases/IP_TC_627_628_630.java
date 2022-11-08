@@ -1,4 +1,4 @@
-package TestCases;
+package testCases;
 
 import java.io.IOException;
 
@@ -46,7 +46,7 @@ public class IP_TC_627_628_630 {
 		Form.select_form(driver);
 
 		NUR_Place_Order Nur_order = new NUR_Place_Order();
-		Nur_order.Nurse_order_Edge(driver);
+		Nur_order.nurse_order(driver);
 	}
 
 	@AfterTest

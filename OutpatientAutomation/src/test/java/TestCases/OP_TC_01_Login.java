@@ -7,23 +7,23 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import Login.Login_HP;
+import opd_authentication.Authentication;
 import testBase.Page_Base;
 
 
 public class OP_TC_01_Login extends Test_Base {
 
  
-   Login_HP loginobj;
+	Authentication loginobj;
    Page_Base pageobject;
   
    @Test
 	public void  user_login_success()
 	{
             
-    	loginobj = new Login_HP(driver);
+    	loginobj = new Authentication(driver);
 		
-		 loginobj.login_Edge("CMOOPD02", "egy123");
+		 loginobj.login_HP("CMOOPD02", "egy123");
 
 	}
 	

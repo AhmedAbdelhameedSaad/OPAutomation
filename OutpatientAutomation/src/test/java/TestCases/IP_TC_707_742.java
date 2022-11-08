@@ -1,6 +1,8 @@
-package TestCases;
+package testCases;
 
-import NUR_Change_Password.*;
+import OPD_Change_Password.*;
+import opd_authentication.*;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterTest;
@@ -27,7 +29,7 @@ public class IP_TC_707_742 {
 	@Test
 	public void navigate_to_Nurse_Change_Password() {
 
-		Login1_HP Login1 = new Login1_HP();
+		Authentication Login1 = new Authentication("","");
 		Login1.login_Edge(driver);
 
 		Change_Password Change = new Change_Password();
