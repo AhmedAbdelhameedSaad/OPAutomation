@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import opd_authentication.Authentication;
 import testBase.*;
 
-public class TC_OP001_login_valid extends HP_Test_Base
+public class OP_TC_001_login_valid extends HP_Test_Base
 
 {
 

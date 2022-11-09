@@ -9,16 +9,32 @@ import org.openqa.selenium.By.ByXPath;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import opd_HP_Menus.Action_Menu_Items;
 import testBase.Page_Base;
 
 
 public class Book_appointment extends Page_Base {
+	
+	Action_Menu_Items actionMenuObject;
+	
 	public Book_appointment(WebDriver driver) {
 		super(driver);
 	} 
 
 
-	public void Book_Appoint_ByInsuranceID(String department , String insuranceID) {
+	public void Book_Appoint_ByInsuranceID(String department , String insuranceID) throws InterruptedException {
+		
+		Thread.sleep(3000); 
+		
+		//click on clinical diary icon
+		
+		By clinical_diary = By.xpath("/html/body/app-root/app-crm/div/app-navigation/div/div[2]/div/img");
+		 
+		driver.findElement(clinical_diary).click(); 
+		
+		
+		actionMenuObject = new Action_Menu_Items(driver);
+		actionMenuObject.select_book_appointment_item();
 
 		By search_txt = By.xpath(
 				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-clinic/div/div[2]/div/input");
@@ -102,53 +118,49 @@ public class Book_appointment extends Page_Base {
 		driver.findElement(close_btn).click();
 	}
 
-
-
-
-public void Book_Appoint_ByNationalID(String department , String natID) {
-
-	try {
-
-		Thread.sleep(5000);
-
-		By actions_btn = By.xpath(
-				"/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[1]/div[2]/div/div[2]");
-		driver.findElement(actions_btn).click() ;
+	
+	public void Book_Appoint_ByNationalID(String department , String nationalID) throws InterruptedException {
 		
-		Thread.sleep(3000);
+
+		Thread.sleep(3000); 
 		
-         By book_appointment = By.xpath(
-					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-crm-forms-list/div/div[2]/div[2]/div[2]/div[2]");
-         
-     	driver.findElement(book_appointment).click() ;
-     	
-     	
-     // ٍsearch for department
-     			
-     	By search_txt = By.xpath(
+		//click on clinical diary icon
+		
+		By clinical_diary = By.xpath("/html/body/app-root/app-crm/div/app-navigation/div/div[2]/div/img");
+		
+		driver.findElement(clinical_diary).click();
+		
+		actionMenuObject = new Action_Menu_Items(driver);
+		actionMenuObject.select_book_appointment_item();
+
+		By search_txt = By.xpath(
 				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-clinic/div/div[2]/div/input");
 		driver.findElement(search_txt).sendKeys(department) ;
 		//driver.findElement(search_txt).sendKeys("General Surgery" or "Family Medicine") ;
 		
-		By familymedicine_text = By.xpath(
-				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-clinic/div/div[3]/div/div/p");
-		driver.findElement(familymedicine_text).click() ;
+		Thread.sleep(3000);
+		
+		/* By familymedicine_text = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-clinic/div/div[3]/div/div/p");
+				
+		driver.findElement(familymedicine_text).click() ;  */
 		
 		By generalsurgery_text = By.xpath(
-				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-clinic/div/div[3]/div/div[3]/p");
-		driver.findElement(generalsurgery_text).click() ;
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-clinic/div/div[3]/div/div/p");
+		driver.findElement(generalsurgery_text).click() ;  
 		
+		 
 		
 		// choose practitioner , visit type
+		Thread.sleep(5000); 
 		
-		JavascriptExecutor java = (JavascriptExecutor) driver;
-		java.executeScript("scroll(0,1200)");
-     	
+		 JavascriptExecutor jse = (JavascriptExecutor)driver;
+		 jse.executeScript("arguments[0].scrollTop = arguments[1];",driver.findElement(By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]")), 900);
+	                                                                                            			
 		By khaled_zend = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-practitioner/div[2]/div[4]/div/div[11]/div[2]/div[1]/span");
 		
-     	driver.findElement(khaled_zend).click() ;
-     	
-     	By new_visit_rb = By.xpath(
+		driver.findElement(khaled_zend).click() ;
+		
+		By new_visit_rb = By.xpath(
 				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-practitioner/div[3]/app-ex-schedule-appointment/div/div[2]/div/app-visittype/div/div/div[4]/input");
 		driver.findElement(new_visit_rb).click();
 		
@@ -167,18 +179,18 @@ public void Book_Appoint_ByNationalID(String department , String natID) {
 		driver.findElement(student_follow).click();
 		
 					
-	// choose visit time
+// choose visit time
 
 		By visit_three_pm = By.xpath(
 				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-practitioner/div[3]/app-ex-schedule-appointment/div/div[2]/app-practitioner-slot/div/div/div/div/div/div[4]/div");
 		driver.findElement(visit_three_pm).click();
 
-     // search for identity patient By National ID
+       // search for identity patient
 		
 		By identity_txtbox = By.xpath(
 				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-ex-identify-patient/div/div[2]/div/input");
 		
-		driver.findElement(identity_txtbox).sendKeys("natID" + Keys.ENTER);
+		driver.findElement(identity_txtbox).sendKeys(nationalID + Keys.ENTER);
 		
 		By patient_name = By.xpath(
 				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-ex-identify-patient/div[2]/app-find-patient-detail/div/div/app-flash-card/div/div/div[1]/div/div/div[2]/div[2]/div[2]/div/div/div[1]/p");
@@ -190,8 +202,8 @@ public void Book_Appoint_ByNationalID(String department , String natID) {
 				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-book-appoinment-patientdtls/div/div[1]");
 		driver.findElement(confirm_headline).click();
 		
-         // click on confirmation button then close button
-       
+		 // click on confirmation button then close button
+         
 		By confirm_btn = By.xpath(
 				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[3]/div[2]/button[1]");
 		driver.findElement(confirm_btn).click();
@@ -204,10 +216,7 @@ public void Book_Appoint_ByNationalID(String department , String natID) {
 		By close_btn = By.xpath(
 				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[3]/div[2]/button");
 		driver.findElement(close_btn).click();
-
-	} catch (InterruptedException ex) {
-		Logger.getLogger(Book_appointment.class.getName()).log(Level.SEVERE, null, ex);
-		}
+	}
 	
-  }
 }
+

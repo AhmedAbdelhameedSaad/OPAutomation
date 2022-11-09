@@ -10,7 +10,6 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import Utilities.Read_Excel_Register_Patient;
-import opd_Register_Patient.Book_appointment_ByNationalID;
 import opd_Register_Patient.Register_Patient;
 import opd_authentication.Authentication;
 import testBase.HP_Test_Base;
@@ -20,7 +19,7 @@ public class TC_OP002_Register_patient extends HP_Test_Base {
 
 
 
-	Authentication loginobject;
+	Authentication loginobject; 
 	Register_Patient registerobject;
 	
 	
@@ -40,7 +39,7 @@ public class TC_OP002_Register_patient extends HP_Test_Base {
 
 	{
 		registerobject= new Register_Patient(driver);
-		registerobject.Register_Form("Ali", "Mourad", "01223456789", "11223344556677" ,  "Giza,Cairo"); 
+		registerobject.CMO_Register_Patient("Ali", "Mourad", "01223456789", "11223344556677" ,  "Giza,Cairo"); 
 	}
 
 	 /* 	@DataProvider(name = "Excel Data")

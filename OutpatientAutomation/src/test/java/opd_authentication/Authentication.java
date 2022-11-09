@@ -12,10 +12,7 @@ public class Authentication extends Page_Base {
 	public Authentication(WebDriver driver) {
 		super(driver);
 	}
-
 	
-	
-
 
 	public void login_HP(String username, String password) {
 		By username_element = By.id("user-id");

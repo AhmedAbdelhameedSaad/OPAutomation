@@ -10,21 +10,22 @@ import org.testng.annotations.Test;
 
 import Utilities.Read_Excel_Register_Patient;
 import opd_Book_Appointment.Book_appointment;
-import opd_Book_Appointment.Book_appointment_ByNationalID;
-import opd_Register_Patient.Register_From_Book_Appointment;
+import opd_HP_Menus.Action_Menu_Items;
 import opd_Register_Patient.Register_Patient;
 import opd_authentication.Authentication;
+import testBase.HP_Test_Base;
 
 
-public class OP_TC_38_Book_Appointment_ByNationalID extends Test_Base {
+public class OP_TC_38_Book_Appointment_ByNationalID extends HP_Test_Base {
 	
-	Book_appointment_ByNationalID bookAppointByNaionalID;
+	 Book_appointment bookAppointByNaionalID;
 	Authentication loginobject2;
+	
 	   
 	   @Test(priority=1)
 		public void  user_login_()
 		{
-	            
+	             
 	    	loginobject2 = new Authentication (driver);
 			 loginobject2.login_HP("CMOOPD02", "egy123");
 
@@ -52,15 +53,16 @@ public class OP_TC_38_Book_Appointment_ByNationalID extends Test_Base {
 */
 
 @Test(priority=2 )
-public void  UserBookAppointmentByNationalID()
+public void  UserBookAppointmentByNationalID() throws InterruptedException 
 
 {
 	 	
-	bookAppointByNaionalID = new Book_appointment_ByNationalID(driver) ; 
+	bookAppointByNaionalID = new  Book_appointment(driver) ; 
 	 
-	bookAppointByNaionalID.UserBookAppintmentByNationalID( "Family Medicine",  "76753243200989");
-	 
-}
+	bookAppointByNaionalID.Book_Appoint_ByNationalID( "General Surgery",  "76753243200989");
+	
+	
+} 
 
 }
 

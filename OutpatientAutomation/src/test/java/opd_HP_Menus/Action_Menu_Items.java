@@ -12,9 +12,10 @@ public class Action_Menu_Items extends Page_Base {
 
 	public Action_Menu_Items(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
+		
+		 
 	}
-
+ 
 	public void select_book_appointment_item() {
 		try {
 

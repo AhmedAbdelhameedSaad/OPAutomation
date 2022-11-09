@@ -19,17 +19,18 @@ public class Register_Patient extends Page_Base  {
 		super(driver);
 	}
 
-	public void Register_Form(String firstname, String familyname, String mobileNum, String natioID,  String address ) { 
+	
+	public void CMO_Register_Patient(String firstname, String familyname, String mobileNum, String natioID,  String address ) { 
 
-		try {
+		try {  
 
 			Thread.sleep(3000); 
 			
 			//click on clinical diary icon
 			
 			By clinical_diary = By.xpath("/html/body/app-root/app-crm/div/app-navigation/div/div[2]/div/img");
-			
-			driver.findElement(clinical_diary).click();
+			 
+			driver.findElement(clinical_diary).click(); 
 			
 			// click on search icon to open register pop up
 			
@@ -52,7 +53,7 @@ public class Register_Patient extends Page_Base  {
             
 			By family_name = By.name("FAName");
 					
-			driver.findElement(family_name).sendKeys(familyname);
+			driver.findElement(family_name).sendKeys(familyname); 
 
 	     	//By male_gender_checkbox = By.id("SX_M");
 					
@@ -68,16 +69,15 @@ public class Register_Patient extends Page_Base  {
 	     	
 	     	driver.findElement (dob_txtbox).sendKeys("6-11-2022"+ Keys.ENTER);
 	     	
-
-		     	
+		
 			By mobile_number = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form/div/div[2]/div/div[7]/div/input");
 			driver.findElement(mobile_number).sendKeys( mobileNum) ;
 			
 
 			
-			JavascriptExecutor jse = (JavascriptExecutor)driver; 
-			 jse.executeScript("arguments[0].scrollTop = arguments[1];",driver.findElement(By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]")), 1200);
+			 JavascriptExecutor jse = (JavascriptExecutor)driver;
+			 jse.executeScript("arguments[0].scrollTop = arguments[1];",driver.findElement(By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form")), 1300);
 			
 			// citizen checkbox
 			

@@ -19,7 +19,7 @@ public class Consultation_Visit extends Page_Base {
 	public void create(String patient_id, String clinic_name, String doctor_name) {
 
 		try {
-
+ 
 			Thread.sleep(4000);
 			// ٍsearch for patient
 			By search_Text = By.xpath(

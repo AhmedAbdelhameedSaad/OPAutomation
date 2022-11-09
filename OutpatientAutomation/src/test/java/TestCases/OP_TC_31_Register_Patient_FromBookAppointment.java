@@ -9,14 +9,14 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import Utilities.Read_Excel_Register_Patient;
-import opd_Register_Patient.Register_From_Book_Appointment;
 import opd_Register_Patient.Register_Patient;
 import opd_authentication.Authentication;
+import testBase.HP_Test_Base;
 
 
-public class OP_TC_31_Register_Patient_FromBookAppointment extends Test_Base {
+public class OP_TC_31_Register_Patient_FromBookAppointment extends HP_Test_Base {
 	
-	Register_From_Book_Appointment register_App_object;
+	Register_Patient register_App_object;
 	Authentication loginobj;
 	   
 	   @Test(priority=1)
@@ -54,9 +54,9 @@ public void  User_Register_patient()
 
 {
 	 	
-	register_App_object = new Register_From_Book_Appointment(driver) ; 
+	register_App_object = new Register_Patient(driver) ; 
 	 
-	register_App_object.UserRegisterFromBookAppintment("waleed", "taher", "01123456789", "11223344556677", "12345678190", "giza,cairo");
+	register_App_object.User_Register_FromBookAppintment("waleed", "taher", "01123456789", "11223344556677", "12345678190", "giza,cairo");
 	 
 }
 
