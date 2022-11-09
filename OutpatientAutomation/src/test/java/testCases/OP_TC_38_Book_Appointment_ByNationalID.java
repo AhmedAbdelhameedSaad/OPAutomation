@@ -1,4 +1,4 @@
-package TestCases;
+package testCases;
 
 import java.io.IOException;
 import org.openqa.selenium.WebDriver;
@@ -9,23 +9,22 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import Utilities.Read_Excel_Register_Patient;
-import opd_Register_Patient.Register_From_Book_Appointment;
-import opd_Register_Patient.Register_From_Create_Consultation;
+import opd_Book_Appointment.Book_appointment;
 import opd_Register_Patient.Register_Patient;
 import opd_authentication.Authentication;
 
 
-public class OP_TC_32_Register_Patient_fromCreateConsultation extends Test_Base {
+public class OP_TC_38_Book_Appointment_ByNationalID extends Test_Base {
 	
-	Register_From_Create_Consultation register_App_object;
-	Authentication loginobj;
+	Book_appointment bookAppointByNaionalID;
+	Authentication loginobject2;
 	   
 	   @Test(priority=1)
-		public void  user_login_success()
+		public void  user_login_()
 		{
 	            
-	    	loginobj = new Authentication (driver);
-			 loginobj.login_HP("CMOOPD02", "egy123");
+	    	loginobject2 = new Authentication (driver);
+			 loginobject2.login_HP("CMOOPD02", "egy123");
 
 		}
 	
@@ -50,14 +49,14 @@ public class OP_TC_32_Register_Patient_fromCreateConsultation extends Test_Base 
 }
 */
 
-@Test(priority=2  )
-public void  User_Register_patient()
+@Test(priority=2 )
+public void  UserBookAppointmentByNationalID() throws InterruptedException
 
 {
 	 	
-	register_App_object = new Register_From_Create_Consultation(driver) ; 
+	bookAppointByNaionalID = new Book_appointment(driver) ; 
 	 
-	register_App_object.UserRegisterFromConsultationForm("waleed", "taher", "01123456789", "11223344556677", "12345678190", "giza,cairo");
+	bookAppointByNaionalID.Book_Appoint_ByNationalID( "Family Medicine",  "76753243200989");
 	 
 }
 

@@ -15,7 +15,7 @@ public class OP_TC_01_Login extends Test_Base {
 
  
 	Authentication loginobj;
-   Page_Base pageobject;
+   
   
    @Test
 	public void  user_login_success()

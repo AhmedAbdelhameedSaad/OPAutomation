@@ -18,7 +18,7 @@ public class Book_appointment extends Page_Base {
 	Action_Menu_Items actionMenuObject;
 	
 	public Book_appointment(WebDriver driver) {
-		super(driver);
+		super(driver); 
 	} 
 
 
@@ -122,7 +122,7 @@ public class Book_appointment extends Page_Base {
 	public void Book_Appoint_ByNationalID(String department , String nationalID) throws InterruptedException {
 		
 
-		Thread.sleep(3000); 
+		Thread.sleep(3000);   
 		
 		//click on clinical diary icon
 		
