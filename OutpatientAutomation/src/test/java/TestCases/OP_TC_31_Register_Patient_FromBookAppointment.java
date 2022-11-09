@@ -7,9 +7,10 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import Register_Patient.Register_From_Book_Appointment;
-import Register_Patient.Register_Patient;
+
 import Utilities.Read_Excel_Register_Patient;
+import opd_Register_Patient.Register_From_Book_Appointment;
+import opd_Register_Patient.Register_Patient;
 import opd_authentication.Authentication;
 
 

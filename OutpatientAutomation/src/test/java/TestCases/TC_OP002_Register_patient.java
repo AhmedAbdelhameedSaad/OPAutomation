@@ -9,9 +9,9 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import Register_Patient.Book_appointment_ByNationalID;
-import Register_Patient.Register_Patient;
 import Utilities.Read_Excel_Register_Patient;
+import opd_Register_Patient.Book_appointment_ByNationalID;
+import opd_Register_Patient.Register_Patient;
 import opd_authentication.Authentication;
 import testBase.HP_Test_Base;
 

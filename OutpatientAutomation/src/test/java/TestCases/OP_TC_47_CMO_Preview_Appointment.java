@@ -24,6 +24,7 @@ public class OP_TC_47_CMO_Preview_Appointment extends Test_Base {
     	loginobj = new Authentication(driver);
 		
 		 loginobj.login_HP("CMOOPD02", "egy123");
+		 
 
 	}
 	
