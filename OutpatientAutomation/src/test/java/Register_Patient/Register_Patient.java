@@ -4,7 +4,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 import testBase.Page_Base;
@@ -20,7 +22,7 @@ public class Register_Patient extends Page_Base  {
 
 		try {
 
-			Thread.sleep(3000);
+			Thread.sleep(3000); 
 			
 			//click on clinical diary icon
 			
@@ -55,49 +57,26 @@ public class Register_Patient extends Page_Base  {
 					
 	     	// driver.findElement(male_gender_checkbox).click() ;
 	     	
-	     	By female_gender_checkbox = By.id("SX_F");
+	     	//By female_gender_checkbox = By.id("SX_F");
 			
-	     	driver.findElement(female_gender_checkbox).click() ;
+	     	//driver.findElement(female_gender_checkbox).click() ;
 	     	
 	     // date of birth drop down list
 	     	
 	     	By dob_txtbox = By.id("vaadin-dp");      
 	     	
-	     	driver.findElement (dob_txtbox).sendKeys("6-11-2022");
+	     	driver.findElement (dob_txtbox).sendKeys("6-11-2022"+ Keys.ENTER);
 	     	
 
-             By time_day_text = By.xpath("/html/body/vaadin-date-picker-overlay//div[2]/div//vaadin-date-picker-overlay-content//div[3]/vaadin-infinite-scroller[1]/div[4]/vaadin-month-calendar//div[2]/div[2]/div[2]/div[8]");
-			
-	     	driver.findElement(time_day_text).click() ;     
-	     	
-	     	
-	     	JavascriptExecutor java = (JavascriptExecutor) driver;
-	     	
-			java.executeScript("scroll(0,5000)");
-			
-	     	
-             //By Birth_list = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form/div/div[2]/div/div[6]/div/vaadin-date-picker//vaadin-text-field/div[2]");
-			
-	     	//driver.findElement( Birth_list).click();
-	     	
-	     	// By time_number = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form/div/div[2]/div/div[6]/div/vaadin-date-picker//vaadin-text-field/div[2]");
-				
-		     //driver.findElement(time_number).click() ;
 		     	
-
-	     	//Select date_birth = new Select (driver.findElement(By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form/div/div[2]/div/div[6]/div/vaadin-date-picker//vaadin-text-field//div/div[1]/slot[2]/input")));
-	                  
-	     	//date_birth.selectByVisibleText("5");
-	     	
-
 			By mobile_number = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form/div/div[2]/div/div[7]/div/input");
 			driver.findElement(mobile_number).sendKeys( mobileNum) ;
 			
 
-	     	JavascriptExecutor java1 = (JavascriptExecutor) driver;
-			java1.executeScript("scroll(0,10000)");
 			
+			JavascriptExecutor jse = (JavascriptExecutor)driver; 
+			 jse.executeScript("arguments[0].scrollTop = arguments[1];",driver.findElement(By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]")), 1200);
 			
 			// citizen checkbox
 			
@@ -126,10 +105,6 @@ public class Register_Patient extends Page_Base  {
 			By address1 = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form/div/div[2]/div/div[12]/div/input");
 			driver.findElement(address1).sendKeys(address) ;
-			
-			JavascriptExecutor java2 = (JavascriptExecutor) driver;
-			java2.executeScript("scroll(0,80000)");
-			
 					
 		
       /*   // selecting cash and credit checkboxes
@@ -161,8 +136,11 @@ public class Register_Patient extends Page_Base  {
 			driver.findElement(billing_group).sendKeys("Cash Patient");
 			
 			By cash_text = By.xpath(
-					"/div");
+	"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form/div/div[5]/div/div[2]/div/div[3]/div/a");
+						
 			driver.findElement(cash_text).click();
+			
+			Thread.sleep(3000);
 			
 			
 			
@@ -177,4 +155,7 @@ public class Register_Patient extends Page_Base  {
 		}
 	}
 
-	 }
+	 
+
+
+}

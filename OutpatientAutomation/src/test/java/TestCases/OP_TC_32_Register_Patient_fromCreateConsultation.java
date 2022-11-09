@@ -7,21 +7,23 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import Register_Patient.Register_From_Book_Appointment;
+import Register_Patient.Register_From_Create_Consultation;
 import Register_Patient.Register_Patient;
 import Utilities.Read_Excel_Register_Patient;
 import opd_authentication.Authentication;
 
 
-public class OP_TC_02_Register_patient extends Test_Base {
+public class OP_TC_32_Register_Patient_fromCreateConsultation extends Test_Base {
 	
-	Register_Patient registerobject;
+	Register_From_Create_Consultation register_App_object;
 	Authentication loginobj;
 	   
 	   @Test(priority=1)
 		public void  user_login_success()
 		{
 	            
-	    	loginobj = new Authentication(driver);
+	    	loginobj = new Authentication (driver);
 			 loginobj.login_HP("CMOOPD02", "egy123");
 
 		}
@@ -52,9 +54,9 @@ public void  User_Register_patient()
 
 {
 	 	
-	  registerobject = new Register_Patient(driver) ; 
+	register_App_object = new Register_From_Create_Consultation(driver) ; 
 	 
-	 registerobject.Register_Form("waleed", "taher", "01123456789", "11223344556677", "Giza,Cairo");
+	register_App_object.UserRegisterFromConsultationForm("waleed", "taher", "01123456789", "11223344556677", "12345678190", "giza,cairo");
 	 
 }
 

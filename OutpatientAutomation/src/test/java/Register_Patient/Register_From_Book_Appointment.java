@@ -16,10 +16,10 @@ public class Register_From_Book_Appointment extends Page_Base {
 		super(driver);
 	}
 
-	public void UserRegisterFromBookAppintment(String firstname, String familyname, String mobileNum, String natioID,  String Pass, String add) {
+	public void User_Register_FromBookAppintment(String firstname, String familyname, String mobileNum, String natioID,  String Pass, String add) {
 
 		try {
-
+ 
 			Thread.sleep(3000);
 
 			By actions_btn = By.xpath(

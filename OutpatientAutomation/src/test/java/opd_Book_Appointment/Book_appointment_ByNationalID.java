@@ -1,4 +1,4 @@
-package Register_Patient;
+package opd_Book_Appointment;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -18,7 +18,7 @@ public class Book_appointment_ByNationalID extends Page_Base {
 		// TODO Auto-generated constructor stub
 	}
 
-	public void UserBookAppintmentByNationalID(String department , String natID) {
+	public void Book_Appoint_ByNationalID(String department , String natID) {
 
 		try {
 
@@ -113,7 +113,7 @@ public class Book_appointment_ByNationalID extends Page_Base {
 			By reschedule_btn = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[3]/div[2]/button[2]");
 			driver.findElement(reschedule_btn).click();
-			
+			 
 			By close_btn = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[3]/div[2]/button");
 			driver.findElement(close_btn).click();

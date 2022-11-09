@@ -1,4 +1,4 @@
-package Register_Patient;
+package opd_Book_Appointment;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -11,14 +11,13 @@ public class CMO_Preview_Appointments extends Page_Base {
 	
 	public CMO_Preview_Appointments(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
 	}
 
-	public void search_for_patient() {
+	public void CMO_Preview_Doctor_Appointments() {
 
 		try {
 
-			Thread.sleep(5000); 
+			Thread.sleep(3000); 
 
 			By search_bar = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-crm-header/div/div/div[1]/input");

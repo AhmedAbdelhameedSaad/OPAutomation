@@ -10,20 +10,22 @@ import org.testng.annotations.Test;
 import Register_Patient.Register_From_Book_Appointment;
 import Register_Patient.Register_Patient;
 import Utilities.Read_Excel_Register_Patient;
+import opd_Book_Appointment.Book_appointment;
+import opd_Book_Appointment.Book_appointment_ByNationalID;
 import opd_authentication.Authentication;
 
 
-public class OP_TC_03_Register_Patient_FromBookAppointment extends Test_Base {
+public class OP_TC_38_Book_Appointment_ByNationalID extends Test_Base {
 	
-	Register_From_Book_Appointment register_App_object;
-	Authentication loginobj;
+	Book_appointment_ByNationalID bookAppointByNaionalID;
+	Authentication loginobject2;
 	   
 	   @Test(priority=1)
-		public void  user_login_success()
+		public void  user_login_()
 		{
 	            
-	    	loginobj = new Authentication(driver);
-			 loginobj.login_HP("CMOOPD02", "egy123");
+	    	loginobject2 = new Authentication (driver);
+			 loginobject2.login_HP("CMOOPD02", "egy123");
 
 		}
 	
@@ -48,14 +50,14 @@ public class OP_TC_03_Register_Patient_FromBookAppointment extends Test_Base {
 }
 */
 
-@Test(priority=2  )
-public void  User_Register_patient()
+@Test(priority=2 )
+public void  UserBookAppointmentByNationalID()
 
 {
 	 	
-	register_App_object = new Register_From_Book_Appointment(driver) ; 
+	bookAppointByNaionalID = new Book_appointment_ByNationalID(driver) ; 
 	 
-	register_App_object.UserRegisterFromBookAppintment("waleed", "taher", "01123456789", "11223344556677", "12345678190", "giza,cairo");
+	bookAppointByNaionalID.UserBookAppintmentByNationalID( "Family Medicine",  "76753243200989");
 	 
 }
 

@@ -22,7 +22,7 @@ public class Register_From_Create_Consultation extends Page_Base {
 
 			Thread.sleep(3000);
 
-			By actions_btn = By.xpath(
+			By actions_btn = By.xpath( 
 					"/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[1]/div[2]/div/div[2]");
 			driver.findElement(actions_btn).click() ;
 			
