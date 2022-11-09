@@ -1,4 +1,4 @@
-package TestCases;
+package testCases;
 
 import java.io.IOException;
 import org.openqa.selenium.WebDriver;
@@ -7,26 +7,24 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
+import Register_Patient.Register_From_Book_Appointment;
+import Register_Patient.Register_From_Create_Consultation;
+import Register_Patient.Register_Patient;
 import Utilities.Read_Excel_Register_Patient;
-import opd_Book_Appointment.Book_appointment;
-import opd_Book_Appointment.Book_appointment_ByNationalID;
-import opd_Register_Patient.Register_From_Book_Appointment;
-import opd_Register_Patient.Register_Patient;
 import opd_authentication.Authentication;
 
 
-public class OP_TC_38_Book_Appointment_ByNationalID extends Test_Base {
+public class OP_TC_04_Register_Patient_fromCreateConsultation extends Test_Base {
 	
-	Book_appointment_ByNationalID bookAppointByNaionalID;
-	Authentication loginobject2;
+	Register_From_Create_Consultation register_App_object;
+	Authentication loginobj;
 	   
 	   @Test(priority=1)
-		public void  user_login_()
+		public void  user_login_success()
 		{
 	            
-	    	loginobject2 = new Authentication (driver);
-			 loginobject2.login_HP("CMOOPD02", "egy123");
+	    	loginobj = new Authentication (driver);
+			 loginobj.login_HP("CMOOPD02", "egy123");
 
 		}
 	
@@ -51,14 +49,14 @@ public class OP_TC_38_Book_Appointment_ByNationalID extends Test_Base {
 }
 */
 
-@Test(priority=2 )
-public void  UserBookAppointmentByNationalID()
+@Test(priority=2  )
+public void  User_Register_patient()
 
 {
 	 	
-	bookAppointByNaionalID = new Book_appointment_ByNationalID(driver) ; 
+	register_App_object = new Register_From_Create_Consultation(driver) ; 
 	 
-	bookAppointByNaionalID.UserBookAppintmentByNationalID( "Family Medicine",  "76753243200989");
+	register_App_object.UserRegisterFromConsultationForm("waleed", "taher", "01123456789", "11223344556677", "12345678190", "giza,cairo");
 	 
 }
 

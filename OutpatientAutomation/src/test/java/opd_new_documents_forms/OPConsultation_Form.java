@@ -71,7 +71,7 @@ public class OPConsultation_Form extends Page_Base {
 		}
 	}
 
-	public void consultation_internal_esternal_referral() {
+	public void consultation_internal_external_referral() {
 
 			try {
 				
