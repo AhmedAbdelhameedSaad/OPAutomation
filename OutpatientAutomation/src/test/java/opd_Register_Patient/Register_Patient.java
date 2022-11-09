@@ -15,6 +15,7 @@ public class Register_Patient extends Page_Base  {
 	
 
 	public Register_Patient(WebDriver driver) { 
+		
 		super(driver);
 	}
 
