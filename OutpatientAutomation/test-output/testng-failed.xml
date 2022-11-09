@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.OP_TC_160_Nurse_View_EMR">
+      <class name="testCases.OP_TC_061_Create_ClinicalDiary_Visit">
         <methods>
           <include name="setup"/>
-          <include name="preview_appointments"/>
+          <include name="create"/>
         </methods>
-      </class> <!-- testCases.OP_TC_160_Nurse_View_EMR -->
+      </class> <!-- testCases.OP_TC_061_Create_ClinicalDiary_Visit -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
