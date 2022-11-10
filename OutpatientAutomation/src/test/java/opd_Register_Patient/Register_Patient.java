@@ -45,28 +45,17 @@ public class Register_Patient extends Page_Base  {
 				driver.findElement(register_btn).click(); 
 			
 			
-			By first_name = By.name("FName");
-				
+			By first_name = By.name("FName");		
 			driver.findElement(first_name).sendKeys(firstname);
 
 			Thread.sleep(3000);
             
 			By family_name = By.name("FAName");
-					
 			driver.findElement(family_name).sendKeys(familyname); 
-
-	     	//By male_gender_checkbox = By.id("SX_M");
-					
-	     	// driver.findElement(male_gender_checkbox).click() ;
-	     	
-	     	//By female_gender_checkbox = By.id("SX_F");
-			
-	     	//driver.findElement(female_gender_checkbox).click() ;
 	     	
 	     // date of birth drop down list
 	     	
-	     	By dob_txtbox = By.id("vaadin-dp");      
-	     	
+	     	By dob_txtbox = By.id("vaadin-dp");      	     	
 	     	driver.findElement (dob_txtbox).sendKeys("6-11-2022"+ Keys.ENTER);
 	     	
 		
@@ -74,84 +63,50 @@ public class Register_Patient extends Page_Base  {
 					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form/div/div[2]/div/div[7]/div/input");
 			driver.findElement(mobile_number).sendKeys( mobileNum) ;
 			
-
-			
-			 JavascriptExecutor jse = (JavascriptExecutor)driver;
-			 jse.executeScript("arguments[0].scrollTop = arguments[1];",driver.findElement(By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form")), 1300);
-			
-			// citizen checkbox
-			
-          /* By no_citizen_checkbox = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form/div/div[2]/div/div[9]/div/div[2]/div[2]/input");
-           
-           Thread.sleep(2000);
-			
-	     	driver.findElement(no_citizen_checkbox).click();
-	     	
-			
-            By yes_citizen_checkbox = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form/div/div[2]/div/div[9]/div/div[2]/div[1]/input");
-			
-	     	driver.findElement(yes_citizen_checkbox).click() ;  */
-			
 			
 	     	By national_id = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form/div/div[2]/div/div[10]/div/input");
 			driver.findElement(national_id).sendKeys(natioID);
 			
-		//Disable passport
-			//By passport = By.xpath(
-			//		"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form/div/div[2]/div/div[11]/div/input");
-			//driver.findElement(passport).sendKeys (pass);
-			  		
-
-			By address1 = By.xpath(
-					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form/div/div[2]/div/div[12]/div/input");
-			driver.findElement(address1).sendKeys(address) ;
-					
-		
-      /*   // selecting cash and credit checkboxes
-			By cash = By.xpath(
-					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form/div/div[5]/div/div[1]/div/div[2]/div[1]/input");
-			driver.findElement(cash).click(); 
-			
-			By credit = By.xpath(
-					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form/div/div[5]/div/div[1]/div/div[2]/div[3]/input");
-			driver.findElement(credit).click(); 
-			
-			// insurance
-			
-			By insurance = By.xpath(
-					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form/div/div[5]/div/div[1]/div/div[2]/div[3]/input");
-			driver.findElement(insurance).click(); 
-			
-			By non_insurance_txtbox = By.xpath(
-					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form/div/div[5]/div/div[3]/div/div[2]/input");
-			driver.findElement(non_insurance_txtbox).sendKeys("fffdd"); */
-			
-			By billing_group_txtbox = By.xpath(
-					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form/div/div[5]/div/div[4]/div/div[2]/div/div/div/input");
-			driver.findElement(billing_group_txtbox).sendKeys("fffdd");
-			
+			Thread.sleep(3000);
+				By address1 = By.xpath(
+						"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form/div/div[2]/div/div[12]/div/input");
+				driver.findElement(address1).sendKeys(address) ;
+				
+				Thread.sleep(3000);			
 
 			By billing_group = By.xpath(
-					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[2]/div[2]/button");
+					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form/div/div[5]/div/div[2]/div/div[2]/input\r\n"
+					+ "");
 			driver.findElement(billing_group).sendKeys("Cash Patient");
 			
 			By cash_text = By.xpath(
-	"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form/div/div[5]/div/div[2]/div/div[3]/div/a");
-						
+	"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form/div/div[5]/div/div[2]/div/div[3]/div/a");						
 			driver.findElement(cash_text).click();
 			
+			Thread.sleep(2000);
+				By reg_btn = By.xpath(
+						"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[2]/div[2]/button\r\n");
+				driver.findElement(reg_btn).click();
+				
 			Thread.sleep(3000);
 			
-			
-			
-			/*By close_btn = By.xpath(
-					"/html/body/app-root/app-crm/div/div/app-clinical-diary/div[2]/app-find-patient-detail/div/div/app-flash-card/div/div/div[1]/div/div/div[1]/img");
-			driver.findElement(close_btn).click();*/
 
-		} catch (InterruptedException ex) {
-			Logger.getLogger(Register_Patient.class.getName()).log(Level.SEVERE, null, ex);
+			Thread.sleep(2000);
+			By reg_btn2 = By.xpath(
+					"html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[2]/div[2]/div/button[2]");
+			driver.findElement(reg_btn2).click();
 			
+		Thread.sleep(3000);
+		
+		By close = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/div[2]/app-find-patient-detail/div/div/app-flash-card/div/div/div[2]/div/div[1]/div[1]/img");
+		driver.findElement(close).click();
+		
+		Thread.sleep(3000);
+			JavascriptExecutor java = (JavascriptExecutor) driver;
+			java.executeScript("scroll(0,1000)");
+		} catch (InterruptedException ex) {
+			Logger.getLogger(Register_Patient.class.getName()).log(Level.SEVERE, null, ex);			
 			
 		}
 	}

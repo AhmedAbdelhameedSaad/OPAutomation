@@ -24,8 +24,15 @@ public class OP_TC_29_Register_patient extends Test_Base {
 	            
 	    	loginobj = new Authentication(driver); 
 			 loginobj.login_HP("CMOOPD02", "egy123");
+	   	 	
+	   	  registerobject = new Register_Patient(driver) ; 
+	   	 
+	   	 registerobject.CMO_Register_Patient("waleed", "tarek2", "01155456789", "23456339871234", "Giza,Cairo");
+	   	 
+	   }
 
-		}
+	   }
+
 	
 /*	@DataProvider(name = "Excel Data")
 	public Object[][] Register_Data() throws Throwable {
@@ -47,18 +54,6 @@ public class OP_TC_29_Register_patient extends Test_Base {
 }
 */
 
-@Test(priority=2  )
-public void  User_Register_patient()
-
-{
-	 	
-	  registerobject = new Register_Patient(driver) ; 
-	 
-	 registerobject.CMO_Register_Patient("waleed", "taher", "01123456789", "11223344556677", "Giza,Cairo");
-	 
-}
-
-}
 
 
 //dataProvider = "Excel Data"
