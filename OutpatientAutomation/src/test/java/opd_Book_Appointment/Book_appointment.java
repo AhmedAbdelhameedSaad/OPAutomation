@@ -18,7 +18,7 @@ public class Book_appointment extends Page_Base {
 	Action_Menu_Items actionMenuObject;
 	
 	public Book_appointment(WebDriver driver) {
-		super(driver); 
+		super(driver);  
 	} 
 
 
@@ -150,20 +150,22 @@ public class Book_appointment extends Page_Base {
 		
 		 
 		
-		// choose practitioner , visit type
+		// choose practitioner , visit type 
 		Thread.sleep(5000); 
 		
 		 JavascriptExecutor jse = (JavascriptExecutor)driver;
 		 jse.executeScript("arguments[0].scrollTop = arguments[1];",driver.findElement(By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]")), 900);
 	                                                                                            			
-		By khaled_zend = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-practitioner/div[2]/div[4]/div/div[11]/div[2]/div[1]/span");
+		By amr_moez = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-practitioner/div[2]/div[4]/div/div[3]/div[2]/div[3]/span");
 		
-		driver.findElement(khaled_zend).click() ;
+		driver.findElement(amr_moez).click() ;
+		
+		Thread.sleep(3000); 
 		
 		By new_visit_rb = By.xpath(
 				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-practitioner/div[3]/app-ex-schedule-appointment/div/div[2]/div/app-visittype/div/div/div[4]/input");
 		driver.findElement(new_visit_rb).click();
-		
+		 
 		
 		By new_rad = By.xpath(
 				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-practitioner/div[3]/app-ex-schedule-appointment/div/div[2]/div/app-visittype/div/div/div[2]/label");
@@ -192,9 +194,13 @@ public class Book_appointment extends Page_Base {
 		
 		driver.findElement(identity_txtbox).sendKeys(nationalID + Keys.ENTER);
 		
+		Thread.sleep(3000);
+		
 		By patient_name = By.xpath(
 				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-ex-identify-patient/div[2]/app-find-patient-detail/div/div/app-flash-card/div/div/div[1]/div/div/div[2]/div[2]/div[2]/div/div/div[1]/p");
-		driver.findElement(patient_name).click();
+		driver.findElement(patient_name).click(); 
+		
+		Thread.sleep(3000);
 		
 		// click anywhere and confirm appointment
 		
@@ -202,20 +208,19 @@ public class Book_appointment extends Page_Base {
 				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-book-appoinment-patientdtls/div/div[1]");
 		driver.findElement(confirm_headline).click();
 		
+		
 		 // click on confirmation button then close button
          
 		By confirm_btn = By.xpath(
-				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[3]/div[2]/button[1]");
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[3]/div[2]/button");
 		driver.findElement(confirm_btn).click();
 		
-		// reschedule and create visit button
-		By reschedule_btn = By.xpath(
-				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[3]/div[2]/button[2]");
-		driver.findElement(reschedule_btn).click();
+		Thread.sleep(3000);
 		
+				
 		By close_btn = By.xpath(
 				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[3]/div[2]/button");
-		driver.findElement(close_btn).click();
+		driver.findElement(close_btn).click(); 
 	}
 	
 }

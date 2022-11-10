@@ -19,7 +19,7 @@ import testBase.HP_Test_Base;
 import testBase.Page_Base;
 
 
-public class OP_TC_47_CMO_Preview_Appointment extends HP_Test_Base {
+public class OP_TC_50_CMO_Reschedule_Appointment extends HP_Test_Base {
 
 	Authentication loginobj;
 	CMO_Preview_Reschedule_Cancel_Appointment previewObj;
@@ -36,14 +36,13 @@ public class OP_TC_47_CMO_Preview_Appointment extends HP_Test_Base {
 	 
    
 	
-   @SuppressWarnings("deprecation")
-@Test(priority=2)
+   @Test(priority=2)
   	public void  CMO_Preview_DoctorAppointment()
   	{
               
       	previewObj = new CMO_Preview_Reschedule_Cancel_Appointment(driver);
   		
-      	previewObj.CMO_Preview_Doctor_Appointments("Family Medicine"); 
+      	previewObj.CMO_Reschedule_Doctor_Appointments("Family Medicine"); 
       	
       	
       	assertEquals(true, previewObj.khaled_txt.isDisplayed());
