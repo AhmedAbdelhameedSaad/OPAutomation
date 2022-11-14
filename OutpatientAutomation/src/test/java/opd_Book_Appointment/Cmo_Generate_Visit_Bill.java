@@ -13,16 +13,16 @@ import opd_HP_Menus.Action_Menu_Items;
 import testBase.Page_Base;
 
 
-public class Check_FirstVisit_MustBe_AnnualCheck extends Page_Base {
+public class Cmo_Generate_Visit_Bill extends Page_Base {
 	
 	Action_Menu_Items actionMenuObject;
 	
-	public Check_FirstVisit_MustBe_AnnualCheck(WebDriver driver) {
+	public Cmo_Generate_Visit_Bill(WebDriver driver) {
 		super(driver);  
 	} 
 
 
-	public void CMO_Check_FirstVisit_MustBe_AnnualVisit(String department , String insuranceID) throws InterruptedException {
+	public void Cmo_Generate_VisitBill(String department , String insuranceID) throws InterruptedException {
 		
 		Thread.sleep(3000); 
 		
@@ -56,13 +56,13 @@ public class Check_FirstVisit_MustBe_AnnualCheck extends Page_Base {
 		JavascriptExecutor java = (JavascriptExecutor) driver;
 		java.executeScript("scroll(0,1200)");
 		
-          By amr_moez = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-practitioner/div[2]/div[4]/div/div[3]/div[2]/div[3]/span");
+         By amr_moez = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-practitioner/div[2]/div[4]/div/div[3]/div[2]/div[3]/span");
 		
 		driver.findElement(amr_moez).click() ;
 		
-	/*	By new_visit_rb = By.xpath(
+		By new_visit_rb = By.xpath(
 				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-practitioner/div[3]/app-ex-schedule-appointment/div/div[2]/div/app-visittype/div/div/div[4]/input");
-		driver.findElement(new_visit_rb).click(); */
+		driver.findElement(new_visit_rb).click();
 		
 		
 		By new_rad = By.xpath(
@@ -70,13 +70,13 @@ public class Check_FirstVisit_MustBe_AnnualCheck extends Page_Base {
 		driver.findElement(new_rad).click();
 		  		
 		
-	/*	By student_visit = By.xpath(
+		By student_visit = By.xpath(
 				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-practitioner/div[3]/app-ex-schedule-appointment/div/div[2]/div/app-visittype/div/div/div[4]/label");
 		driver.findElement(student_visit).click();
 		
 		By student_follow = By.xpath(
 				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-practitioner/div[3]/app-ex-schedule-appointment/div/div[2]/div/app-visittype/div/div/div[5]/label");
-		driver.findElement(student_follow).click(); */
+		driver.findElement(student_follow).click();
 		
 					
 // choose visit time
@@ -87,14 +87,14 @@ public class Check_FirstVisit_MustBe_AnnualCheck extends Page_Base {
 
        // search for identity patient
 		
-		By identity_txtbox = By.xpath(
+		By identity_txtbox = By.xpath( 
 				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-ex-identify-patient/div/div[2]/div/input");
 		
 		driver.findElement(identity_txtbox).sendKeys(insuranceID + Keys.ENTER);
 		
 		By patient_name = By.xpath(
 				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-ex-identify-patient/div[2]/app-find-patient-detail/div/div/app-flash-card/div/div/div[1]/div/div/div[2]/div[2]/div[2]/div/div/div[1]/p");
-		driver.findElement(patient_name).click(); 
+		driver.findElement(patient_name).click();
 		
 		// click anywhere and confirm appointment
 		
@@ -108,10 +108,6 @@ public class Check_FirstVisit_MustBe_AnnualCheck extends Page_Base {
 				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[3]/div[2]/button[1]");
 		driver.findElement(confirm_btn).click();
 		
-		By new_visit_rb = By.xpath(
-				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-practitioner/div[3]/app-ex-schedule-appointment/div/div[2]/div/app-visittype/div/div/div[4]/input");
-		driver.findElement(new_visit_rb).click();
-		
 		// reschedule and create visit button
 		By reschedule_btn = By.xpath(
 				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[3]/div[2]/button[2]");
@@ -124,5 +120,3 @@ public class Check_FirstVisit_MustBe_AnnualCheck extends Page_Base {
 
 	
 }
-
-

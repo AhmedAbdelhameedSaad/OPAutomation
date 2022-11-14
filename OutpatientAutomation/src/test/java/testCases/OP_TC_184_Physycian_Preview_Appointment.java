@@ -31,23 +31,23 @@ public class OP_TC_184_Physycian_Preview_Appointment extends HP_Test_Base {
             
     	loginobj = new Authentication(driver);
 		
-		 loginobj.login_HP("CMOOPD02", "egy123"); 		  
+		 loginobj.login_HP("DOCUAT5", "egy123"); 		  
 	}
 	 
    
-	
-   @SuppressWarnings("deprecation")
+
 @Test(priority=2)
   	public void  CMO_Preview_DoctorAppointment()
   	{
               
       	previewObj = new CMO_Preview_Reschedule_Cancel_Appointment(driver);
   		
-      	previewObj.CMO_Preview_Doctor_Appointments("Family Medicine"); 
+      	previewObj.Physician_Preview_Doctor_Appointments("Family Medicine"); 
       	
       	
-      	assertEquals(true, previewObj.khaled_txt.isDisplayed());
-
+    //  	assertEquals(true, previewObj.orderForApproval_txt.isDisplayed());
+      	
+      	
   	}
    
    

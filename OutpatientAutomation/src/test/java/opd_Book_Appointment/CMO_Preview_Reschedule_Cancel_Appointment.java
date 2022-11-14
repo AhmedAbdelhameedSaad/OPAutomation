@@ -11,7 +11,9 @@ import testBase.Page_Base;
 
 public class CMO_Preview_Reschedule_Cancel_Appointment extends Page_Base {
 	
-	public WebElement khaled_txt;
+	public WebElement appoint_button ;
+	
+	public WebElement orderForApproval_txt ;
 	
 	public CMO_Preview_Reschedule_Cancel_Appointment(WebDriver driver) {
 		super(driver);
@@ -244,50 +246,32 @@ public void CMO_Cancel_Doctor_Appointments(String clinicName) {
 public void Physician_Preview_Doctor_Appointments(String clinicName) {
 
 	try {
+		
 
 		Thread.sleep(3000);  
+		
+		By clinician_checkbx = By.xpath("/html/body/app-root/app-common-login/div/div[2]/div[2]/div[2]/div/div/div/div[1]/input");
 		 
-         //click on clinical diary icon
+		driver.findElement(clinician_checkbx).click(); 
 		
-		By clinical_diary = By.xpath("/html/body/app-root/app-crm/div/app-navigation/div/div[2]/div/img");
+		By continue_btn = By.xpath("/html/body/app-root/app-common-login/div/div[2]/div[2]/div[3]/button");
 		 
-		driver.findElement(clinical_diary).click(); 
+		driver.findElement(continue_btn).click(); 
 		
-		// search clinic
-
-		By search_button = By.id("clinic-btn");
-		
-		driver.findElement(search_button).click();
-
-		Thread.sleep(2000);
-        
-		By search_textbox = By.xpath(
-				"/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[1]/div[2]/div[1]/input");
-		driver.findElement(search_textbox).sendKeys(clinicName);
-	
-
-			By familymedicine_btn = By.xpath(
-				"/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[1]/div[2]/div[2]/div");
-		
-		driver.findElement(familymedicine_btn).click();  
-		
-/*		By generalSurgery_btn = By.xpath( 
-				"/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[1]/div[2]/div[2]/div[1]/div[2]");
-		driver.findElement(generalSurgery_btn).click();  */
-
 		Thread.sleep(3000);
 		
+		By tasks_icon = By.xpath("/html/body/app-root/app-crm/div/app-navigation/div/div[1]/div/img");
+		 
+		driver.findElement(tasks_icon).click();
+	
+	
+		Thread.sleep(3000);
 		
-		By amr_moez_checkbox = By.xpath( 
-				"/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[2]/div[1]/app-crm-quick-filters/div/div/div[2]/div[9]/div[4]/input");
-		driver.findElement(amr_moez_checkbox).click() ;
-
-
-      By amr_text_middleOfthePage = By.xpath(
-    			"/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[2]/div[2]/app-appointments-calendar-view/div/div/div/div[1]/div[2]/div/span");
-
-      	driver.findElement(amr_text_middleOfthePage);
-				
+		By orderForApproval_txt = By.xpath("/html/body/app-root/app-crm/div/div/app-crm-dairy/div/div[2]/div[2]/app-crm-task-list/app-activity-modal/div[1]/div[2]/app-flash-card/div/div/div[1]/div/div/div[2]/div[2]/app-task-detail-grid/div/div[2]/div[2]/div/div[1]/span");
+		
+		
+		Thread.sleep(2000);
+       		
 
 	} catch (InterruptedException ex) {
 		Logger.getLogger(CMO_Preview_Reschedule_Cancel_Appointment.class.getName()).log(Level.SEVERE, null, ex);
