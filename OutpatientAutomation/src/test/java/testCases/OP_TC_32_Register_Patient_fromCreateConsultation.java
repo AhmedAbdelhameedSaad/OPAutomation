@@ -11,9 +11,10 @@ import org.testng.annotations.Test;
 import Utilities.Read_Excel_Register_Patient;
 import opd_Register_Patient.Register_Patient;
 import opd_authentication.Authentication;
+import testBase.HP_Test_Base;
 
 
-public class OP_TC_32_Register_Patient_fromCreateConsultation extends Test_Base {
+public class OP_TC_32_Register_Patient_fromCreateConsultation extends HP_Test_Base {
 	
 	Register_Patient register_App_object;
 	Authentication loginobj;
@@ -23,7 +24,7 @@ public class OP_TC_32_Register_Patient_fromCreateConsultation extends Test_Base 
 		{
 	            
 	    	loginobj = new Authentication (driver);
-			 loginobj.login_HP("CMOOPD02", "egy123");
+			 loginobj.login_HP("CMOOPD02", "egy123"); 
 
 		}
 	
@@ -49,13 +50,13 @@ public class OP_TC_32_Register_Patient_fromCreateConsultation extends Test_Base 
 */
 
 @Test(priority=2  )
-public void  User_Register_patient()
+public void  User_Register_patient() 
 
 {
 	 	
 	register_App_object = new Register_Patient(driver) ; 
 	 
-	register_App_object.CMO_Register_FromConsultationForm("waleed", "taher", "01123456789", "11223344556677", "12345678190", "giza,cairo");
+	register_App_object.CMO_Register_FromConsultationForm("Ali", "Assem", "01223456708", "44673344996677", "12345678560", "Manyal,Giza");
 	 
 }
 

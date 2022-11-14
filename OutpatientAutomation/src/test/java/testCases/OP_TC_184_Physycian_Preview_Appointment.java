@@ -19,7 +19,7 @@ import testBase.HP_Test_Base;
 import testBase.Page_Base;
 
 
-public class OP_TC_51_CMO_Cancel_Appointment extends HP_Test_Base {
+public class OP_TC_184_Physycian_Preview_Appointment extends HP_Test_Base {
 
 	Authentication loginobj;
 	CMO_Preview_Reschedule_Cancel_Appointment previewObj;
@@ -29,22 +29,23 @@ public class OP_TC_51_CMO_Cancel_Appointment extends HP_Test_Base {
 	public void  user_login_success()
 	{
             
-    	loginobj = new Authentication(driver); 
+    	loginobj = new Authentication(driver);
 		
 		 loginobj.login_HP("CMOOPD02", "egy123"); 		  
 	}
 	 
    
 	
-   @Test(priority=2)
+   @SuppressWarnings("deprecation")
+@Test(priority=2)
   	public void  CMO_Preview_DoctorAppointment()
   	{
               
       	previewObj = new CMO_Preview_Reschedule_Cancel_Appointment(driver);
   		
-      	previewObj.CMO_Cancel_Doctor_Appointments("Family Medicine"); 
+      	previewObj.CMO_Preview_Doctor_Appointments("Family Medicine"); 
       	
-      	 
+      	
       	assertEquals(true, previewObj.khaled_txt.isDisplayed());
 
   	}

@@ -56,9 +56,9 @@ public class Book_appointment extends Page_Base {
 		JavascriptExecutor java = (JavascriptExecutor) driver;
 		java.executeScript("scroll(0,1200)");
 		
-		By khaled_zend = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-practitioner/div[2]/div[4]/div/div[11]/div[2]/div[1]/span");
+         By amr_moez = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-practitioner/div[2]/div[4]/div/div[3]/div[2]/div[3]/span");
 		
-		driver.findElement(khaled_zend).click() ;
+		driver.findElement(amr_moez).click() ;
 		
 		By new_visit_rb = By.xpath(
 				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-practitioner/div[3]/app-ex-schedule-appointment/div/div[2]/div/app-visittype/div/div/div[4]/input");
@@ -87,7 +87,7 @@ public class Book_appointment extends Page_Base {
 
        // search for identity patient
 		
-		By identity_txtbox = By.xpath(
+		By identity_txtbox = By.xpath( 
 				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-ex-identify-patient/div/div[2]/div/input");
 		
 		driver.findElement(identity_txtbox).sendKeys(insuranceID + Keys.ENTER);
