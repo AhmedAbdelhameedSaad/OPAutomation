@@ -19,7 +19,7 @@ public class CMO_Preview_Reschedule_Cancel_Appointment extends Page_Base {
 		super(driver);
 	}
 
-	public void CMO_Preview_Doctor_Appointments(String clinicName) {
+	public void CMO_Preview_Doctor_Appointments(String clinicName) { 
 
 		try {
 

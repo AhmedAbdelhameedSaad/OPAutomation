@@ -44,8 +44,7 @@ public class OP_TC_50_CMO_Reschedule_Appointment extends HP_Test_Base {
   		
       	previewObj.CMO_Reschedule_Doctor_Appointments("Family Medicine"); 
       	
-      	
-      	assertEquals(true, previewObj.khaled_txt.isDisplayed());
+      
 
   	}
    

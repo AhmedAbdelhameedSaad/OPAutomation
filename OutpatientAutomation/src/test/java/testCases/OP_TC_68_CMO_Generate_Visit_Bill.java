@@ -52,15 +52,15 @@ public class OP_TC_68_CMO_Generate_Visit_Bill extends HP_Test_Base {
 */
 
 @Test(priority=2 )
-public void  UserBookAppointmentByNationalID() throws InterruptedException
+public void  UserBookAppointmentByNationalID() throws InterruptedException 
 
 {
 	 	
 	bookAppointByNaionalID = new Cmo_Generate_Visit_Bill(driver) ; 
 	 
-	bookAppointByNaionalID.Cmo_Generate_VisitBill( "Family Medicine",  "76753243200989");
+	bookAppointByNaionalID.Cmo_Generate_VisitBill("A100072502" , "166.25");  
 	 
-}
+} 
 
 }
 

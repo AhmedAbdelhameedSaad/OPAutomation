@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.OP_TC_51_CMO_Cancel_Appointment">
+      <class name="testCases.OP_TC_68_CMO_Generate_Visit_Bill">
         <methods>
-          <include name="CMO_Preview_DoctorAppointment"/>
           <include name="setup"/>
+          <include name="UserBookAppointmentByNationalID"/>
         </methods>
-      </class> <!-- testCases.OP_TC_51_CMO_Cancel_Appointment -->
+      </class> <!-- testCases.OP_TC_68_CMO_Generate_Visit_Bill -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

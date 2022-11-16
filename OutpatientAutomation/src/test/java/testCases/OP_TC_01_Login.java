@@ -8,10 +8,11 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import opd_authentication.Authentication;
+import testBase.HP_Test_Base;
 import testBase.Page_Base;
 
 
-public class OP_TC_01_Login extends Test_Base {
+public class OP_TC_01_Login extends HP_Test_Base {
 
  
 	Authentication loginobj;
@@ -21,7 +22,7 @@ public class OP_TC_01_Login extends Test_Base {
 	public void  user_login_success()
 	{
             
-    	loginobj = new Authentication(driver);
+    	loginobj = new Authentication(driver); 
 		
 		 loginobj.login_HP("CMOOPD02", "egy123");
 

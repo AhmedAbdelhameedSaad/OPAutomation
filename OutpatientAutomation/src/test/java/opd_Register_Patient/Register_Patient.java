@@ -16,7 +16,7 @@ public class Register_Patient extends Page_Base  {
 
 	public Register_Patient(WebDriver driver) { 
 		
-		super(driver);  
+		super(driver);   
 	}
 
 	
@@ -92,7 +92,7 @@ public class Register_Patient extends Page_Base  {
 			Thread.sleep(3000);
 			
 
-			Thread.sleep(2000); 
+		
 			By reg_btn2 = By.xpath(
 					"html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[2]/div[2]/div/button[2]");
 			driver.findElement(reg_btn2).click();

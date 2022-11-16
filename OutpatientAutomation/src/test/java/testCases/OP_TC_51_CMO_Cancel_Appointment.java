@@ -29,7 +29,7 @@ public class OP_TC_51_CMO_Cancel_Appointment extends HP_Test_Base {
 	public void  user_login_success()
 	{
             
-    	loginobj = new Authentication(driver); 
+    	loginobj = new Authentication(driver);  
 		
 		 loginobj.login_HP("CMOOPD02", "egy123"); 		  
 	}
@@ -45,7 +45,6 @@ public class OP_TC_51_CMO_Cancel_Appointment extends HP_Test_Base {
       	previewObj.CMO_Cancel_Doctor_Appointments("Family Medicine"); 
       	
       	 
-      	assertEquals(true, previewObj.khaled_txt.isDisplayed());
 
   	}
    

@@ -22,101 +22,205 @@ public class Cmo_Generate_Visit_Bill extends Page_Base {
 	} 
 
 
-	public void Cmo_Generate_VisitBill(String department , String insuranceID) throws InterruptedException {
+	public void Cmo_Generate_VisitBill(String patientNationalID, String bill_value ) throws InterruptedException {
 		
 		Thread.sleep(3000); 
-		
-		//click on clinical diary icon
 		
 		By clinical_diary = By.xpath("/html/body/app-root/app-crm/div/app-navigation/div/div[2]/div/img");
 		 
 		driver.findElement(clinical_diary).click(); 
 		
+		Thread.sleep(2000); 
+		
 		
 		actionMenuObject = new Action_Menu_Items(driver);
-		actionMenuObject.select_book_appointment_item();
-
+		actionMenuObject.select_manage_bills_option();
+		
+		Thread.sleep(3000); 
+		
 		By search_txt = By.xpath(
-				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-clinic/div/div[2]/div/input");
-		driver.findElement(search_txt).sendKeys(department) ;
-		//driver.findElement(search_txt).sendKeys("General Surgery" or "Family Medicine") ;
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-manage-bills/div/div[2]/div/div[2]/div[2]/div[2]/div/app-ex-identify-patient/div/div[2]/div/input");
+		driver.findElement(search_txt).sendKeys(patientNationalID + Keys.ENTER) ;
 		
 		
-		By familymedicine_text = By.xpath(
-				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-clinic/div/div[3]/div/div/p");
-		driver.findElement(familymedicine_text).click() ;
+		Thread.sleep(2000);
 		
-		By generalsurgery_text = By.xpath(
-				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-clinic/div/div[3]/div/div[3]/p");
-		driver.findElement(generalsurgery_text).click() ;
+		By patientname_text = By.xpath(
+			"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-manage-bills/div/div[2]/div/div[2]/div[2]/div[2]/div/app-ex-identify-patient/div[2]/app-find-patient-detail/div/div/app-flash-card/div/div/div[1]/div/div/div[2]/div[2]/div[2]/div/div/div[1]/p");
+		driver.findElement(patientname_text).click();
 		
-		
-		// choose practitioner , visit type
-		
-		JavascriptExecutor java = (JavascriptExecutor) driver;
-		java.executeScript("scroll(0,1200)");
-		
-         By amr_moez = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-practitioner/div[2]/div[4]/div/div[3]/div[2]/div[3]/span");
-		
-		driver.findElement(amr_moez).click() ;
-		
-		By new_visit_rb = By.xpath(
-				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-practitioner/div[3]/app-ex-schedule-appointment/div/div[2]/div/app-visittype/div/div/div[4]/input");
-		driver.findElement(new_visit_rb).click();
-		
-		
-		By new_rad = By.xpath(
-				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-practitioner/div[3]/app-ex-schedule-appointment/div/div[2]/div/app-visittype/div/div/div[2]/label");
-		driver.findElement(new_rad).click();
+		Thread.sleep(2000);
+	
+		By bill_tab = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-manage-bills/div/div[2]/div/div[2]/div[2]/div[2]/div/app-ex-identify-patient/div/div[2]/div[2]/table/tbody/tr[1]/td[2]");
+		driver.findElement(bill_tab).click(); 
 		  		
+		Thread.sleep(2000);  
 		
-		By student_visit = By.xpath(
-				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-practitioner/div[3]/app-ex-schedule-appointment/div/div[2]/div/app-visittype/div/div/div[4]/label");
-		driver.findElement(student_visit).click();
+		By unSetteled_tab = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-manage-bills/div/div[2]/div/div[2]/div[2]/div[2]/div/app-ex-visit-charges/div[1]/div[2]/div[1]/div[2]");
 		
-		By student_follow = By.xpath(
-				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-practitioner/div[3]/app-ex-schedule-appointment/div/div[2]/div/app-visittype/div/div/div[5]/label");
-		driver.findElement(student_follow).click();
+		          driver.findElement(unSetteled_tab).click();
 		
-					
-// choose visit time
-
-		By visit_three_pm = By.xpath(
-				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-practitioner/div[3]/app-ex-schedule-appointment/div/div[2]/app-practitioner-slot/div/div/div/div/div/div[4]/div");
-		driver.findElement(visit_three_pm).click();
-
-       // search for identity patient
+	/*		By unbilled_tab = By.xpath(
+		 "/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-manage-bills/div/div[2]/div/div[2]/div[2]/div[2]/div/app-ex-visit-charges/div[1]/div[2]/div[1]/div[1]");
+           driver.findElement(unbilled_tab).click(); */
+		          
+		   By bill_tab1 = By.xpath(
+		    "/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-manage-bills/div/div[2]/div/div[2]/div[2]/div[2]/div/app-ex-visit-charges/div[1]/div[2]/div[2]/table/tbody/tr/td[2]");
+		   driver.findElement(bill_tab1).click(); 
+		   
+		   Thread.sleep(2000); 
 		
-		By identity_txtbox = By.xpath( 
-				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-ex-identify-patient/div/div[2]/div/input");
+		By payment_btn = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-manage-bills/div/div[2]/div/div[3]/div[2]/button");
+		driver.findElement(payment_btn).click();
 		
-		driver.findElement(identity_txtbox).sendKeys(insuranceID + Keys.ENTER);
 		
-		By patient_name = By.xpath(
-				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-ex-identify-patient/div[2]/app-find-patient-detail/div/div/app-flash-card/div/div/div[1]/div/div/div[2]/div[2]/div[2]/div/div/div[1]/p");
-		driver.findElement(patient_name).click();
+		By money_txtbox = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-manage-bills/div/div[2]/div/div[2]/div[2]/div[2]/div/app-ex-visit-payment-details/div/div[2]/div[1]/div/div/input");
+		driver.findElement(money_txtbox).sendKeys(bill_value);
 		
-		// click anywhere and confirm appointment
+		 Thread.sleep(2000); 
 		
-		By confirm_headline = By.xpath(
-				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-book-appoinment-patientdtls/div/div[1]");
-		driver.findElement(confirm_headline).click();
+		By continue_btn = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-manage-bills/div/div[2]/div/div[3]/div[2]/button");
+		driver.findElement(continue_btn).click();
 		
-		 // click on confirmation button then close button
-         
-		By confirm_btn = By.xpath(
-				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[3]/div[2]/button[1]");
-		driver.findElement(confirm_btn).click();
+		Thread.sleep(2000); 
 		
-		// reschedule and create visit button
-		By reschedule_btn = By.xpath(
-				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[3]/div[2]/button[2]");
-		driver.findElement(reschedule_btn).click();
+		By done_btn = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-manage-bills/div/div[2]/div/div[3]/div[2]/button[2]");
+		driver.findElement(done_btn).click(); 
 		
-		By close_btn = By.xpath(
-				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[3]/div[2]/button");
-		driver.findElement(close_btn).click();
+	
 	}
 
+
+public void CMO_Generate_Bill_Practioner_Agenda(String clinicName, String NationalID, String bill_value) { 
+
+	try {
+		
+		Thread.sleep(3000); 
+		 
+         //click on clinical diary icon 
+		
+		By clinical_diary = By.xpath("/html/body/app-root/app-crm/div/app-navigation/div/div[2]/div/img");
+		 
+		driver.findElement(clinical_diary).click(); 
+		
+		// search clinic
+
+		By search_button = By.id("clinic-btn");
+		
+		driver.findElement(search_button).click();
+
+		Thread.sleep(2000);
+        
+		By search_textbox = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[1]/div[2]/div[1]/input");
+		driver.findElement(search_textbox).sendKeys(clinicName);
 	
+
+			By Dialysis_btn = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[1]/div[2]/div[2]/div[5]");
+		
+		driver.findElement(Dialysis_btn).click();  
+		
+/*		By generalSurgery_btn = By.xpath( 
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[1]/div[2]/div[2]/div[1]/div[2]");
+		driver.findElement(generalSurgery_btn).click();  */
+
+		Thread.sleep(3000);
+		
+		By OHC_Testing_checkbox = By.xpath( "/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[2]/div[1]/app-crm-quick-filters/div/div/div[2]/div[2]/div[4]/input"
+				);
+		driver.findElement(OHC_Testing_checkbox).click() ;
+		
+
+		
+		
+		
+
+         By calender_btn = By.xpath("");
+		
+		driver.findElement(calender_btn).click() ;
+		
+		Thread.sleep(2000);
+		
+		 By fifteen_date_btn = By.xpath("");
+			
+		driver.findElement( fifteen_date_btn).click() ;
+		
+		Thread.sleep(2000);
+
+		 By update_btn = By.xpath("");
+				
+		driver.findElement( update_btn).click() ;
+		
+		Thread.sleep(3000);
+		By fivePM_appoint_btn = By.xpath("");
+
+		driver.findElement(fivePM_appoint_btn).click() ;
+		
+		Thread.sleep(3000);
+		
+        By manageBills_btn = By.xpath("");
+
+		driver.findElement(manageBills_btn).click() ;
+	
+      	
+      	
+      	
+      	
+      	
+      	By bill_tab = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-manage-bills/div/div[2]/div/div[2]/div[2]/div[2]/div/app-ex-identify-patient/div/div[2]/div[2]/table/tbody/tr[1]/td[2]");
+		driver.findElement(bill_tab).click(); 
+		  		
+		Thread.sleep(2000);  
+		
+	/*	By unSetteled_tab = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-manage-bills/div/div[2]/div/div[2]/div[2]/div[2]/div/app-ex-visit-charges/div[1]/div[2]/div[1]/div[2]");
+		
+		          driver.findElement(unSetteled_tab).click();  */
+		          
+		
+			By unbilled_tab = By.xpath(
+		 "/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-manage-bills/div/div[2]/div/div[2]/div[2]/div[2]/div/app-ex-visit-charges/div[1]/div[2]/div[1]/div[1]");
+           driver.findElement(unbilled_tab).click(); 
+		          
+		   By bill_tab1 = By.xpath(
+		    "/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-manage-bills/div/div[2]/div/div[2]/div[2]/div[2]/div/app-ex-visit-charges/div[1]/div[2]/div[2]/table/tbody/tr/td[2]");
+		   driver.findElement(bill_tab1).click(); 
+		   
+		   Thread.sleep(2000); 
+		
+		By payment_btn = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-manage-bills/div/div[2]/div/div[3]/div[2]/button");
+		driver.findElement(payment_btn).click();
+		
+		
+		By money_txtbox = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-manage-bills/div/div[2]/div/div[2]/div[2]/div[2]/div/app-ex-visit-payment-details/div/div[2]/div[1]/div/div/input");
+		driver.findElement(money_txtbox).sendKeys(bill_value);
+		
+		 Thread.sleep(2000); 
+		
+		By continue_btn = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-manage-bills/div/div[2]/div/div[3]/div[2]/button");
+		driver.findElement(continue_btn).click();
+		
+		Thread.sleep(2000); 
+		
+		By done_btn = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-manage-bills/div/div[2]/div/div[3]/div[2]/button[2]");
+		driver.findElement(done_btn).click(); 
+		
+				
+
+	} catch (InterruptedException ex) {
+		Logger.getLogger(CMO_Preview_Reschedule_Cancel_Appointment.class.getName()).log(Level.SEVERE, null, ex);
+	}
+}
 }

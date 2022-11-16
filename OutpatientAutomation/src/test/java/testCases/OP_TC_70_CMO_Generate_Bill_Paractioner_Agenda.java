@@ -14,15 +14,16 @@ import org.testng.annotations.Test;
 
 import junit.framework.Assert;
 import opd_Book_Appointment.CMO_Preview_Reschedule_Cancel_Appointment;
+import opd_Book_Appointment.Cmo_Generate_Visit_Bill;
 import opd_authentication.Authentication;
 import testBase.HP_Test_Base;
 import testBase.Page_Base;
 
 
-public class OP_TC_47_CMO_Preview_Appointment extends HP_Test_Base {
+public class OP_TC_70_CMO_Generate_Bill_Paractioner_Agenda extends HP_Test_Base {
 
 	Authentication loginobj;
-	CMO_Preview_Reschedule_Cancel_Appointment previewObj;
+	 Cmo_Generate_Visit_Bill GenerateBillObj;
    Page_Base pageobject;
   
    @Test(priority=1)
@@ -36,17 +37,16 @@ public class OP_TC_47_CMO_Preview_Appointment extends HP_Test_Base {
 	 
    
 	
-   @SuppressWarnings("deprecation")
+   
 @Test(priority=2)
   	public void  CMO_Preview_DoctorAppointment()
   	{
               
-      	previewObj = new CMO_Preview_Reschedule_Cancel_Appointment(driver);
+	   GenerateBillObj = new Cmo_Generate_Visit_Bill(driver);
   		
-      	previewObj.CMO_Preview_Doctor_Appointments("Family Medicine"); 
+	   GenerateBillObj.CMO_Generate_Bill_Practioner_Agenda("Family Medicine","A100072502","60"); 
       	
       	
-  
 
   	}
    
