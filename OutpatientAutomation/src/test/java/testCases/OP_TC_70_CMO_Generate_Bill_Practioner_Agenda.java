@@ -12,18 +12,16 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import junit.framework.Assert;
 import opd_Book_Appointment.CMO_Preview_Reschedule_Cancel_Appointment;
-import opd_Book_Appointment.Cmo_Generate_Visit_Bill;
 import opd_authentication.Authentication;
 import testBase.HP_Test_Base;
 import testBase.Page_Base;
 
 
-public class OP_TC_70_CMO_Generate_Bill_Paractioner_Agenda extends HP_Test_Base {
+public class OP_TC_70_CMO_Generate_Bill_Practioner_Agenda extends HP_Test_Base {
 
 	Authentication loginobj;
-	 Cmo_Generate_Visit_Bill GenerateBillObj;
+	opd_Generate_Visit_Bill.Cmo_Generate_Visit_Bill GenerateBillPractionerObj;
    Page_Base pageobject;
   
    @Test(priority=1)
@@ -39,12 +37,12 @@ public class OP_TC_70_CMO_Generate_Bill_Paractioner_Agenda extends HP_Test_Base 
 	
    
 @Test(priority=2)
-  	public void  CMO_Preview_DoctorAppointment()
+  	public void  CMO_Generate_VisitBill_PractionerAgenda()
   	{
               
-	   GenerateBillObj = new Cmo_Generate_Visit_Bill(driver);
+	GenerateBillPractionerObj = new  opd_Generate_Visit_Bill.Cmo_Generate_Visit_Bill(driver);
   		
-	   GenerateBillObj.CMO_Generate_Bill_Practioner_Agenda("Family Medicine","A100072502","60"); 
+	GenerateBillPractionerObj.CMO_Generate_Bill_Practioner_Agenda("Family Medicine","A100072502","60"); 
       	
       	
 

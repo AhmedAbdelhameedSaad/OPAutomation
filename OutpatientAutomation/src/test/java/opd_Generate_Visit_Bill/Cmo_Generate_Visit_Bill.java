@@ -1,4 +1,4 @@
-package opd_Book_Appointment;
+package opd_Generate_Visit_Bill;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -140,7 +140,6 @@ public void CMO_Generate_Bill_Practioner_Agenda(String clinicName, String Nation
 
 		
 		
-		
 
          By calender_btn = By.xpath("");
 		
@@ -220,7 +219,7 @@ public void CMO_Generate_Bill_Practioner_Agenda(String clinicName, String Nation
 				
 
 	} catch (InterruptedException ex) {
-		Logger.getLogger(CMO_Preview_Reschedule_Cancel_Appointment.class.getName()).log(Level.SEVERE, null, ex);
+		Logger.getLogger(Cmo_Generate_Visit_Bill.class.getName()).log(Level.SEVERE, null, ex);
 	}
 }
 }
