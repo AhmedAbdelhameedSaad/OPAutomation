@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-11-15T14:44:44 EET" name="Default suite" finished-at="2022-11-15T14:45:14 EET" duration-ms="30196">
+  <suite started-at="2022-11-20T14:54:46 EET" name="Default suite" finished-at="2022-11-20T14:55:24 EET" duration-ms="37778">
     <groups>
     </groups>
-    <test started-at="2022-11-15T14:44:44 EET" name="Default test" finished-at="2022-11-15T14:45:14 EET" duration-ms="30196">
-      <class name="testCases.OP_TC_68_CMO_Generate_Visit_Bill">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.OP_TC_68_CMO_Generate_Visit_Bill@114a85c2]" started-at="2022-11-15T14:44:21 EET" name="setup" finished-at="2022-11-15T14:44:44 EET" duration-ms="22881" status="PASS">
+    <test started-at="2022-11-20T14:54:46 EET" name="Default test" finished-at="2022-11-20T14:55:24 EET" duration-ms="37778">
+      <class name="testCases.OP_TC_93_CMO_Cancel_Unsettled_Visit_Bill2">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.OP_TC_93_CMO_Cancel_Unsettled_Visit_Bill2@114a85c2]" started-at="2022-11-20T14:54:21 EET" name="setup" finished-at="2022-11-20T14:54:46 EET" duration-ms="24786" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="user_login_()[pri:1, instance:testCases.OP_TC_68_CMO_Generate_Visit_Bill@114a85c2]" started-at="2022-11-15T14:44:44 EET" name="user_login_" finished-at="2022-11-15T14:44:44 EET" duration-ms="397" status="PASS">
+        <test-method signature="user_login_()[pri:1, instance:testCases.OP_TC_93_CMO_Cancel_Unsettled_Visit_Bill2@114a85c2]" started-at="2022-11-20T14:54:46 EET" name="user_login_" finished-at="2022-11-20T14:54:46 EET" duration-ms="210" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- user_login_ -->
-        <test-method signature="UserBookAppointmentByNationalID()[pri:2, instance:testCases.OP_TC_68_CMO_Generate_Visit_Bill@114a85c2]" started-at="2022-11-15T14:44:44 EET" name="UserBookAppointmentByNationalID" finished-at="2022-11-15T14:45:14 EET" duration-ms="29700" status="PASS">
+        <test-method signature="CMO_Cancel_Settled_Bill()[pri:2, instance:testCases.OP_TC_93_CMO_Cancel_Unsettled_Visit_Bill2@114a85c2]" started-at="2022-11-20T14:54:46 EET" name="CMO_Cancel_Settled_Bill" finished-at="2022-11-20T14:55:24 EET" duration-ms="37238" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- UserBookAppointmentByNationalID -->
-      </class> <!-- testCases.OP_TC_68_CMO_Generate_Visit_Bill -->
+        </test-method> <!-- CMO_Cancel_Settled_Bill -->
+      </class> <!-- testCases.OP_TC_93_CMO_Cancel_Unsettled_Visit_Bill2 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

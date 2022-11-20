@@ -14,7 +14,7 @@ public class Authentication extends Page_Base {
 	}
 	
 
-	public void login_HP(String username, String password) {
+	public void login_HP(String username, String password) { 
 		By username_element = By.id("user-id");
 		driver.findElement(username_element).sendKeys(username);
 		By password_element = By.id("his-password");
