@@ -9,17 +9,19 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">21,744</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">33,328</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testCases.OP_TC_254_Physician_Preview_PatientsVitals</td><td><a href="#m0">Preview_patient_vitals</a></td><td rowspan="1">1668914381460</td><td rowspan="1">21645</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testCases.OP_TC_254_Physician_Preview_PatientsVitals</td><td><a href="#m0">Preview_patient_vitals</a></td><td rowspan="1">1668915988246</td><td rowspan="1">33141</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">testCases.OP_TC_254_Physician_Preview_PatientsVitals#Preview_patient_vitals</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;div _ngcontent-c28=&quot;&quot; apppopover=&quot;&quot; class=&quot;new-actions pointer ng-tns-c28-3 ng-star-inserted&quot;&gt;...&lt;/div&gt; is not clickable at point (1261, 76). Other element would receive the click: &lt;div _ngcontent-c1=&quot;&quot; class=&quot;loader ng-star-inserted&quot;&gt;...&lt;/div&gt;
+<h2>Default test</h2><h3 id="m0">testCases.OP_TC_254_Physician_Preview_PatientsVitals#Preview_patient_vitals</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/div/div[2]/div[2]/div[1]/input&quot;}
   (Session info: MicrosoftEdge=107.0.1418.52)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-41S85J5&apos;, ip: &apos;192.168.8.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.1&apos;
 Driver info: org.openqa.selenium.edge.EdgeDriver
-Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 107.0.1418.52, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:55318}, msedge: {msedgedriverVersion: 106.0.1370.52 (dc5b94d8835a..., userDataDir: C:\Users\REHABE~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 6139a1c24a344b5f904f0fa86660ed35
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 107.0.1418.52, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:59639}, msedge: {msedgedriverVersion: 106.0.1370.52 (dc5b94d8835a..., userDataDir: C:\Users\REHABE~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4d61b9a6c3dc1b95467d483e5fee1f6e
+*** Element info: {Using=xpath, value=/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/div/div[2]/div[2]/div[1]/input}
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
@@ -29,9 +31,11 @@ Session ID: 6139a1c24a344b5f904f0fa86660ed35
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at opd_HP_Menus.NewDocument_Menu_Items.select_patient_vitals(NewDocument_Menu_Items.java:56)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at opd_HP_Menus.NewDocument_Menu_Items.select_patient_vitals(NewDocument_Menu_Items.java:68)
 	at testCases.OP_TC_254_Physician_Preview_PatientsVitals.Preview_patient_vitals(OP_TC_254_Physician_Preview_PatientsVitals.java:28)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)

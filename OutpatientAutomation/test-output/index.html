@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Rehab Elhag\AppData\Local\Temp\testng-eclipse-1250448310\testng-customsuite.xml</span>
+                    <span>C:\Users\Rehab Elhag\AppData\Local\Temp\testng-eclipse-2058101361\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -130,13 +130,15 @@
                   <a name="Preview_patient_vitals">
                   </a> <!-- Preview_patient_vitals -->
                   <span class="method-name">Preview_patient_vitals</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;div _ngcontent-c28=&quot;&quot; apppopover=&quot;&quot; class=&quot;new-actions pointer ng-tns-c28-3 ng-star-inserted&quot;&gt;...&lt;/div&gt; is not clickable at point (1261, 76). Other element would receive the click: &lt;div _ngcontent-c1=&quot;&quot; class=&quot;loader ng-star-inserted&quot;&gt;...&lt;/div&gt;
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/div/div[2]/div[2]/div[1]/input&quot;}
   (Session info: MicrosoftEdge=107.0.1418.52)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-41S85J5&apos;, ip: &apos;192.168.8.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.1&apos;
 Driver info: org.openqa.selenium.edge.EdgeDriver
-Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 107.0.1418.52, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:55318}, msedge: {msedgedriverVersion: 106.0.1370.52 (dc5b94d8835a..., userDataDir: C:\Users\REHABE~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 6139a1c24a344b5f904f0fa86660ed35
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 107.0.1418.52, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:59639}, msedge: {msedgedriverVersion: 106.0.1370.52 (dc5b94d8835a..., userDataDir: C:\Users\REHABE~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4d61b9a6c3dc1b95467d483e5fee1f6e
+*** Element info: {Using=xpath, value=/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/div/div[2]/div[2]/div[1]/input}
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
@@ -146,9 +148,11 @@ Session ID: 6139a1c24a344b5f904f0fa86660ed35
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at opd_HP_Menus.NewDocument_Menu_Items.select_patient_vitals(NewDocument_Menu_Items.java:56)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at opd_HP_Menus.NewDocument_Menu_Items.select_patient_vitals(NewDocument_Menu_Items.java:68)
 	at testCases.OP_TC_254_Physician_Preview_PatientsVitals.Preview_patient_vitals(OP_TC_254_Physician_Preview_PatientsVitals.java:28)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
@@ -185,7 +189,7 @@ Session ID: 6139a1c24a344b5f904f0fa86660ed35
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Rehab Elhag\AppData\Local\Temp\testng-eclipse-1250448310\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Rehab Elhag\AppData\Local\Temp\testng-eclipse-2058101361\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -238,12 +242,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Preview_patient_vitals')
 data.setCell(0, 2, 'testCases.OP_TC_254_Physician_Preview_PatientsVitals')
-data.setCell(0, 3, 21645);
+data.setCell(0, 3, 33141);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 21 seconds</span>
+              <span class="suite-total-time">Total running time: 33 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -278,7 +282,7 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">Preview_patient_vitals</span>
-                <span class="method-start">41036 ms</span>
+                <span class="method-start">32178 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

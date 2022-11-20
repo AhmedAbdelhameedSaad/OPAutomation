@@ -18,7 +18,7 @@ public class SelectPatientOP extends Page_Base{
 	public void NUR_DOC_selectpatient ()
 	{
 		try {
-			Thread.sleep(7000);
+			Thread.sleep(15000);
 			By selectpatient = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-crm-leads/div[2]/div/div[2]/div/div/app-crm-patients-list/div/div[2]/div/div[1]/div[1]");
 			driver.findElement(selectpatient).click();
