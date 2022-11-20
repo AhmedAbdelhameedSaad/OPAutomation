@@ -1,4 +1,4 @@
-package opd_Book_Appointment;
+package opd_appointment;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;

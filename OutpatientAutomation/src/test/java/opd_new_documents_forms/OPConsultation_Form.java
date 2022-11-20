@@ -31,9 +31,14 @@ public class OPConsultation_Form extends Page_Base {
 			By click_ICD11_Diagnosis = By.xpath("//*[@id=\"OPCONSULT#0#PASTMEDICAL\"]/div/div/app-directive-linked/div/div[2]/input");
 			driver.findElement(click_ICD11_Diagnosis).click();
 
-			By searchtext_Diagnosis = By.xpath("//*[@id=\"asdfasdf\"]");
-			driver.findElement(searchtext_Diagnosis).sendKeys("MD12 Cough" + Keys.ENTER);
+			By searchtext_Diagnosis = By.xpath("//*[@id=\"icd11search\"]");
+			driver.findElement(searchtext_Diagnosis).sendKeys("Cough" + Keys.ENTER);
 			
+			Thread.sleep(2000);
+			By select_element = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-consultation-note/div/div/div[1]/div[2]/app-consultation-note-section/div/div/div[1]/div[2]/div[1]/div/div[1]/p");
+			driver.findElement(select_element).click();
+			
+			Thread.sleep(2000);
 			By select_Diagnosis = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-consultation-note/div/div/div[1]/div[2]/app-consultation-note-section/div/div/div[1]/div[2]/div[2]/div/div");
 			driver.findElement(select_Diagnosis).click();
 			
@@ -48,15 +53,17 @@ public class OPConsultation_Form extends Page_Base {
 			By select_Accuracy = By
 					.xpath("//*[@id=\"MD12#0#DIAGACCU\"]/div/div/app-segment/div/div/div[2]/div[1]/div/input");
 			driver.findElement(select_Accuracy).click();
-
-			Select Onset_Since_dropdown = new Select(
+			
+			/*Select Onset_Since_dropdown = new Select(
 			driver.findElement(By.xpath("//*[@id=\"MD12#0#DIAGONSET\"]/div/div/app-timeperiod/div/select")));
 			Onset_Since_dropdown.selectByVisibleText("Days");
 
+			Thread.sleep(2000);	
 			Select enter_Onset_Since = new Select(
-					driver.findElement(By.xpath("//*[@id=\"MD12#0#DIAGONSET\"]/div/div/app-timeperiod/div/input")));
-			enter_Onset_Since.selectByVisibleText("5");
+			driver.findElement(By.xpath("//*[@id=\\\"MD12#0#DIAGONSET\\\"]/div/div/app-timeperiod/div/input")));
+			enter_Onset_Since.selectByVisibleText("5");*/
 			
+			Thread.sleep(2000);
 			By Submit_icon = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-consultation-note/div/div/div[1]/div[2]/app-consultation-note-section/div/div/div[2]/div/div/div/img[1]");
 			driver.findElement(Submit_icon).click();
 			
@@ -76,7 +83,6 @@ public class OPConsultation_Form extends Page_Base {
 			try {
 				
 				// Internal / External referral
-				// Need to check scroll amount ?
 				
 				JavascriptExecutor java = (JavascriptExecutor) driver;
 				java.executeScript("scroll(0,250)");
@@ -117,7 +123,6 @@ public class OPConsultation_Form extends Page_Base {
 				
 				TimeUnit.MINUTES.sleep(1);
 				
-				//check scroll amount ?
 				
 				JavascriptExecutor java1 = (JavascriptExecutor) driver;
 				java1.executeScript("scroll(0,250)");
@@ -125,7 +130,6 @@ public class OPConsultation_Form extends Page_Base {
 				By Facility_check = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-consultation-note/div/div/div[1]/div[2]/app-consultation-note-section/div/div/app-consultation-note-referral/div/div[2]/div/app-external-referral-facility/div/div/div[1]/div[2]/div/div[23]/div[1]");
 				driver.findElement(Facility_check).click();
 
-				//check scroll amount ?
 				
 				JavascriptExecutor java2 = (JavascriptExecutor) driver;
 				java2.executeScript("scroll(0,250)");
@@ -211,28 +215,30 @@ public class OPConsultation_Form extends Page_Base {
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
 		try {
-		// Need to check scroll amount ?	
-		//	JavascriptExecutor java1 = (JavascriptExecutor) driver;
-		//	java1.executeScript("scroll(0,250)");
-			
+				
 			// Place Lab Order
 			
 			By Investigations = By.xpath("//*[@id=\"OPCONSULT#0#INVESTIGATIONS\"]/div/div/app-directive-linked/div/div[2]/input");
 			driver.findElement(Investigations).click();
 			
+			Thread.sleep(3000);
 			By search_Lab_order = By.xpath("//*[@id=\"asdfasdf\"]");
 			driver.findElement(search_Lab_order).sendKeys("cbc" + Keys.ENTER);
 			
+			Thread.sleep(3000);
 			By Select_Lab_order = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-consultation-note/div/div/div[1]/div[2]/app-consultation-note-section/div/div/div[1]/div[2]/div[3]/div/div");
 			driver.findElement(Select_Lab_order).click();
 			
-			By Submit_icon1 = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-consultation-note/div/div/div[1]/div[2]/app-consultation-note-section/div/div/div[2]/div/div[1]/div[2]/div/img[1]");
+			Thread.sleep(3000);
+			By Submit_icon1 = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-consultation-note/div/div/div[1]/div[2]/app-consultation-note-section/div/div/div[2]/div/div[1]/div/img[1]");
 			driver.findElement(Submit_icon1).click();
 
 			By Close_Button1 = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-consultation-note/div/div/div[2]/button[3]");
 			driver.findElement(Close_Button1).click();
 
 			Thread.sleep(5000);
+			JavascriptExecutor java1 = (JavascriptExecutor) driver;
+			java1.executeScript("scroll(0,250)");
 
 		} catch (InterruptedException ex) {
 			Logger.getLogger(OPConsultation_Form.class.getName()).log(Level.SEVERE, null, ex); 
@@ -240,23 +246,23 @@ public class OPConsultation_Form extends Page_Base {
 	}
  
 	public void consultaion_place_rad_order() {
+		
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+
 		try {
 
-			Thread.sleep(3000);
-			
-			// Need to check scroll amount ?
-			//	JavascriptExecutor java1 = (JavascriptExecutor) driver;
-			//	java1.executeScript("scroll(0,250)");
 			// Place Rad_Order
 			
-			By Investigations = By.xpath("//*[@id=\"OPCONSULT#0#INVESTIGATIONS\"]/div/div/app-directive-linked/div/div[2]/input");
+			Thread.sleep(1000);
+			By Investigations = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-clinicalform/div/div[2]/div[1]/div/div/div/div/div/div[9]/app-section/div/div/app-directive-linked/div/div[1]");
 			driver.findElement(Investigations).click();
 			
+			Thread.sleep(2000);
 			Select Investigations_drobdown = new Select(
 			driver.findElement(By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-consultation-note/div/div/div[1]/div[2]/app-consultation-note-section/div/div/div[1]/div[2]/div[2]/select")));
 			Investigations_drobdown.selectByVisibleText("Radiology Orders");
 
+			Thread.sleep(2000);
 			By search_Rad_Order = By.xpath("//*[@id=\"asdfasdf\"]");
 			driver.findElement(search_Rad_Order).sendKeys("Chest x-ray. One view" + Keys.ENTER);
 
@@ -267,13 +273,15 @@ public class OPConsultation_Form extends Page_Base {
 
 			Thread.sleep(1000);
 
-			By Submit_icon1 = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-consultation-note/div/div/div[1]/div[2]/app-consultation-note-section/div/div/div[2]/div/div[1]/div/img[1]");
+			By Submit_icon1 = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-consultation-note/div/div/div[1]/div[2]/app-consultation-note-section/div/div/div[2]/div[2]/div[1]/div/img[1]");
 			driver.findElement(Submit_icon1).click();
 
 			By Close_Button1 = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-consultation-note/div/div/div[2]/button[3]");
 			driver.findElement(Close_Button1).click();
 
 			Thread.sleep(4000);
+			JavascriptExecutor java1 = (JavascriptExecutor) driver;
+			java1.executeScript("scroll(0,250)");
 			
 		} catch (InterruptedException ex) {
 			Logger.getLogger(OPConsultation_Form.class.getName()).log(Level.SEVERE, null, ex);

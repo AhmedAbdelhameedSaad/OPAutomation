@@ -9,7 +9,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import Utilities.Read_Excel_Register_Patient;
-import opd_Register_Patient.Register_Patient;
+import opd_patient.Register_Patient;
 import opd_authentication.Authentication;
 import testBase.HP_Test_Base;
 

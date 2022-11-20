@@ -13,7 +13,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import junit.framework.Assert;
-import opd_Book_Appointment.CMO_Preview_Reschedule_Cancel_Appointment;
+import opd_appointment.CMO_Preview_Reschedule_Cancel_Appointment;
 import opd_authentication.Authentication;
 import testBase.HP_Test_Base;
 import testBase.Page_Base;
