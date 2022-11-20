@@ -18,11 +18,11 @@ public class Cmo_Generate_Visit_Bill extends Page_Base {
 	Action_Menu_Items actionMenuObject;
 	
 	public Cmo_Generate_Visit_Bill(WebDriver driver) {
-		super(driver);  
+		super(driver);    
 	} 
 
 
-	public void Cmo_Generate_VisitBill(String patientNationalID, String bill_value ) throws InterruptedException {
+   public void Cmo_Generate_VisitBill(String patientNationalID, String bill_value ) throws InterruptedException {
 		
 		Thread.sleep(3000); 
 		
@@ -101,7 +101,7 @@ public void CMO_Generate_Bill_Practioner_Agenda(String clinicName, String Nation
 
 	try {
 		
-		Thread.sleep(3000); 
+		Thread.sleep(3000);  
 		 
          //click on clinical diary icon 
 		
@@ -121,27 +121,35 @@ public void CMO_Generate_Bill_Practioner_Agenda(String clinicName, String Nation
 				"/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[1]/div[2]/div[1]/input");
 		driver.findElement(search_textbox).sendKeys(clinicName);
 	
-
-			By Dialysis_btn = By.xpath(
+		Thread.sleep(3000);
+		
+		/*		By Dialysis_btn = By.xpath(
 				"/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[1]/div[2]/div[2]/div[5]");
 		
 		driver.findElement(Dialysis_btn).click();  
 		
-/*		By generalSurgery_btn = By.xpath( 
+		By generalSurgery_btn = By.xpath( 
 				"/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[1]/div[2]/div[2]/div[1]/div[2]");
 		driver.findElement(generalSurgery_btn).click();  */
 
+		
+		
+	/*	By OHC_Testing_checkbox = By.xpath( "/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[2]/div[1]/app-crm-quick-filters/div/div/div[2]/div[2]/div[4]/input"
+				);
+		driver.findElement(OHC_Testing_checkbox).click() ; */
+		
+		By familyMedicine_btn = By.xpath( 
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[1]/div[2]/div[2]/div[1]");
+		driver.findElement(familyMedicine_btn).click();
+		
 		Thread.sleep(3000);
 		
-		By OHC_Testing_checkbox = By.xpath( "/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[2]/div[1]/app-crm-quick-filters/div/div/div[2]/div[2]/div[4]/input"
-				);
-		driver.findElement(OHC_Testing_checkbox).click() ;
+		By AmrMoez_btn = By.xpath( 
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[2]/div[1]/app-crm-quick-filters/div/div/div[2]/div[9]/div[4]/input");
+		driver.findElement(AmrMoez_btn).click();
 		
 
-		
-		
-
-         By calender_btn = By.xpath("");
+     /*    By calender_btn = By.xpath("");
 		
 		driver.findElement(calender_btn).click() ;
 		
@@ -155,24 +163,25 @@ public void CMO_Generate_Bill_Practioner_Agenda(String clinicName, String Nation
 
 		 By update_btn = By.xpath("");
 				
-		driver.findElement( update_btn).click() ;
+		driver.findElement( update_btn).click() ; */
 		
-		Thread.sleep(3000);
-		By fivePM_appoint_btn = By.xpath("");
+		Thread.sleep(3000); 
+		By fourPM_appoint_btn = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[2]/div[2]/app-appointments-calendar-view/div/div/div/div[2]/div[7]/div[2]/div/div/div/div/span[1]");
 
-		driver.findElement(fivePM_appoint_btn).click() ;
+		driver.findElement(fourPM_appoint_btn).click() ;
 		
 		Thread.sleep(3000);
 		
-        By manageBills_btn = By.xpath("");
+		//Scroll down
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,250)"); 
+		
+    /*    By manageBills_btn = By.className("options-itemborder-bottomcursor-pointerng-star-inserted");
 
 		driver.findElement(manageBills_btn).click() ;
 	
-      	
-      	
-      	
-      	
-      	
+ 
       	By bill_tab = By.xpath(
 				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-manage-bills/div/div[2]/div/div[2]/div[2]/div[2]/div/app-ex-identify-patient/div/div[2]/div[2]/table/tbody/tr[1]/td[2]");
 		driver.findElement(bill_tab).click(); 
@@ -182,7 +191,7 @@ public void CMO_Generate_Bill_Practioner_Agenda(String clinicName, String Nation
 	/*	By unSetteled_tab = By.xpath(
 				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-manage-bills/div/div[2]/div/div[2]/div[2]/div[2]/div/app-ex-visit-charges/div[1]/div[2]/div[1]/div[2]");
 		
-		          driver.findElement(unSetteled_tab).click();  */
+		          driver.findElement(unSetteled_tab).click();  
 		          
 		
 			By unbilled_tab = By.xpath(
@@ -214,7 +223,7 @@ public void CMO_Generate_Bill_Practioner_Agenda(String clinicName, String Nation
 		
 		By done_btn = By.xpath(
 				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-manage-bills/div/div[2]/div/div[3]/div[2]/button[2]");
-		driver.findElement(done_btn).click(); 
+		driver.findElement(done_btn).click(); */
 		
 				
 

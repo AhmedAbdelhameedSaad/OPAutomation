@@ -14,20 +14,13 @@ public class Authentication extends Page_Base {
 	}
 	
 
-	public void login_HP(String username, String password) {
-		try {
+	public void login_HP(String username, String password) { 
 		By username_element = By.id("user-id");
 		driver.findElement(username_element).sendKeys(username);
 		By password_element = By.id("his-password");
 		driver.findElement(password_element).sendKeys(password);
 		By login_button = By.xpath("/html/body/app-root/app-common-login/div/div[2]/div[2]/form/button");
 		driver.findElement(login_button).click();
-		
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 
 	}
 

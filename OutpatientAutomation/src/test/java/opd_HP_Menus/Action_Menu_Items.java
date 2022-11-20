@@ -41,7 +41,7 @@ public class Action_Menu_Items extends Page_Base {
 
 		try {
 
-			Thread.sleep(4000);
+			Thread.sleep(4000); 
 			// Click on Action
 			By Action = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[1]/div[2]/div/div[2]");
 			driver.findElement(Action).click();
