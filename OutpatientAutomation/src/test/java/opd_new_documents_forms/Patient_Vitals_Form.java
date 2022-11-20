@@ -80,7 +80,6 @@ public class Patient_Vitals_Form extends Page_Base{
 		Logger.getLogger(Patient_Vitals_Form.class.getName()).log(Level.SEVERE, null, ex);
            }	
          }
-
 	
 	public void submit_vitals()
 	{

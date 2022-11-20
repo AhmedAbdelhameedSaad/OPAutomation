@@ -12,7 +12,7 @@ public class OP_TC_112_Nurse_View_PatientsList extends HP_Test_Base
 {
 
 	@Test
-	public void preview_appointments() {
+	public void Nurse_View_PatientsList() {
 		Authentication auth = new Authentication(driver);
 		auth.login_HP("NUROPD01", "egy123");
 	

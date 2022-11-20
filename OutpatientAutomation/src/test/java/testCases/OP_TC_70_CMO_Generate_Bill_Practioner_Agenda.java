@@ -1,27 +1,18 @@
 package testCases;
 
-import static org.testng.Assert.assertEquals;
 
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.junit.BeforeClass;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import opd_Book_Appointment.CMO_Preview_Reschedule_Cancel_Appointment;
 import opd_authentication.Authentication;
 import testBase.HP_Test_Base;
 import testBase.Page_Base;
+import opd_Generate_Visit_Bill.*;
 
 
 public class OP_TC_70_CMO_Generate_Bill_Practioner_Agenda extends HP_Test_Base {
 
 	Authentication loginobj;
-	opd_Generate_Visit_Bill.Cmo_Generate_Visit_Bill GenerateBillPractionerObj;
+	Cmo_Generate_Visit_Bill GenerateBillPractionerObj;
    Page_Base pageobject;
   
    @Test(priority=1)

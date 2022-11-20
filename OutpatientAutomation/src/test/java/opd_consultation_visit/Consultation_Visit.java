@@ -3,6 +3,7 @@ package opd_consultation_visit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
@@ -85,7 +86,7 @@ public class Consultation_Visit extends Page_Base {
 			
 			Thread.sleep(2000);
 			By click_Done = By.xpath(
-					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-create-visit/div/div[2]/div/div[3]/div[2]/button[3]");
+					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-create-visit/div/div[2]/div/div[3]/div[2]/button[2]");
 			driver.findElement(click_Done).click();
 
 		} catch (InterruptedException ex) {
@@ -257,6 +258,40 @@ public class Consultation_Visit extends Page_Base {
 					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-create-visit/div/div[2]/div/div[3]/div[2]/button[3]");
 			driver.findElement(click_Done).click();
 			
+		}catch (InterruptedException ex) {
+			Logger.getLogger(Consultation_Visit.class.getName()).log(Level.SEVERE, null, ex);
+		}
+	}
+
+	public void cancel_visit_from_clinicalDiary(String patient_id)
+	{
+		try {
+			Thread.sleep(2000);
+			By element = By.xpath("//span[contains(., '"+patient_id+"')]");
+			driver.findElement(element).click();
+			
+			Thread.sleep(2000);
+			By cancel_btn = By.xpath(
+					"/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[2]/div[2]/app-appointments-calendar-view/div/div/div/div[2]/div[3]/div[2]/app-appointment-info/div/div[3]/div[2]");
+			driver.findElement(cancel_btn).click();
+			
+			Thread.sleep(3000);
+			By select_reason = By.xpath("//*[@id=\"reason_02\"]\r\n");
+			driver.findElement(select_reason).click();
+			
+			Thread.sleep(3000);
+			By continue_btn = By.xpath(
+					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-cancel-visit/div/div[2]/div/div[3]/button\r\n");
+			driver.findElement(continue_btn).click();
+			
+			Thread.sleep(2000);
+			By close_btn = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-cancel-visit/div/div[2]/div/div[1]/div/img");
+			driver.findElement(close_btn).click();
+			
+			Thread.sleep(3000);
+			JavascriptExecutor java = (JavascriptExecutor) driver;
+			java.executeScript("scroll(0,1000)");
+		
 		}catch (InterruptedException ex) {
 			Logger.getLogger(Consultation_Visit.class.getName()).log(Level.SEVERE, null, ex);
 		}

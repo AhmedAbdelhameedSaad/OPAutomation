@@ -1,16 +1,10 @@
 package testCases;
 
-import java.io.IOException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.DataProvider;
+
+
 import org.testng.annotations.Test;
 
-import Utilities.Read_Excel_Register_Patient;
-import opd_Book_Appointment.Book_appointment;
-import opd_Register_Patient.Register_Patient;
+import opd_appointment.Book_appointment;
 import opd_authentication.Authentication;
 import testBase.HP_Test_Base;
 
