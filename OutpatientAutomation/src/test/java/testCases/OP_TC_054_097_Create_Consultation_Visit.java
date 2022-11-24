@@ -1,5 +1,6 @@
 package testCases;
 
+import org.openqa.selenium.By;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
@@ -13,7 +14,13 @@ public class OP_TC_054_097_Create_Consultation_Visit extends HP_Test_Base {
 
 	@Test
 	public void create() {
-		
+
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		  Authentication auth = new Authentication(driver);
 		  auth.login_HP("CMOOPD02","egy123");
 		  
@@ -27,10 +34,5 @@ public class OP_TC_054_097_Create_Consultation_Visit extends HP_Test_Base {
 		  consultation_Visit.create("A200000468", "Family Medicine Clinic",
 		  "Mohamed saeed hussin abdraboh");
 		 
-	}
-
-	@AfterTest
-	public void close() {
-//		driver.close();
 	}
 }
