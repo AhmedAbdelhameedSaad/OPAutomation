@@ -24,7 +24,7 @@ public class Cancel_request {
 		By Issue = By.id("jd43");
 		driver.findElement(Issue).click();
 
-		Thread.sleep(500);
+		Thread.sleep(500); 
 
 		By cancelReq = By.id("sd46");
 		driver.findElement(cancelReq).click();
@@ -67,7 +67,7 @@ public class Cancel_request {
 
 		WebElement Remarks = driver.findElement(By.name("img_0"));
 		Remarks.click();
-
+ 
 		String currentWindow = driver.getWindowHandle();
 		Set<String> windows = driver.getWindowHandles();
 		for (String window : windows) {

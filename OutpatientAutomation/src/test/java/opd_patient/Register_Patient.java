@@ -24,13 +24,13 @@ public class Register_Patient extends Page_Base  {
 
 		try {  
 
-			Thread.sleep(3000);   
+			Thread.sleep(3000);    
 			
 			//click on clinical diary icon
 			
 			By clinical_diary = By.xpath("/html/body/app-root/app-crm/div/app-navigation/div/div[2]/div/img");
 			 
-			driver.findElement(clinical_diary).click(); 
+			driver.findElement(clinical_diary).click();  
 			
 			// click on search icon to open register pop up
 			
@@ -93,7 +93,7 @@ public class Register_Patient extends Page_Base  {
 			
 
 		
-			By reg_btn2 = By.xpath(
+			By reg_btn2 = By.xpath( 
 					"html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[2]/div[2]/div/button[2]");
 			driver.findElement(reg_btn2).click();
 			

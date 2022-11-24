@@ -9,15 +9,13 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import Utilities.Read_Excel_Register_Patient;
-import opd_Book_Appointment.Book_appointment;
 import opd_Generate_Visit_Bill.Cmo_Cancel_and_Unsettle_Visit_Bill;
-import opd_Generate_Visit_Bill.Cmo_Generate_Visit_Bill;
-import opd_Register_Patient.Register_Patient;
+import opd_Generate_Visit_Bill.Cmo_Generate_and_Preview_Visit_Bill;
 import opd_authentication.Authentication;
 import testBase.HP_Test_Base;
 
 
-public class OP_TC_93_CMO_Cancel_Unsettled_Visit_Bill2 extends HP_Test_Base {
+public class OP_TC_93_CMO_Cancel_Unsettled_Visit_Bill2 extends HP_Test_Base { 
 	
 	
 	Authentication loginobject2;
@@ -28,7 +26,7 @@ public class OP_TC_93_CMO_Cancel_Unsettled_Visit_Bill2 extends HP_Test_Base {
 		{
 	            
 	    	loginobject2 = new Authentication (driver);
-			 loginobject2.login_HP("CMOOPD02", "egy123");
+			 loginobject2.CMO_login_HP("CMOOPD02", "egy123"); 
 
 		}
 	

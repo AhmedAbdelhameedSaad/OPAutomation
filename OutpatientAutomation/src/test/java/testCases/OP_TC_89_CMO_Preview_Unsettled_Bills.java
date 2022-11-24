@@ -14,7 +14,7 @@ import opd_authentication.Authentication;
 import testBase.HP_Test_Base;
 
 
-public class OP_TC_68_87_CMO_Generate_Visit_Bill_and_Settle_Bills extends HP_Test_Base {
+public class OP_TC_89_CMO_Preview_Unsettled_Bills extends HP_Test_Base {
 	
 	Cmo_Generate_and_Preview_Visit_Bill bookAppointByNaionalID;
 	Authentication loginobject2;
@@ -38,7 +38,7 @@ public void  User_Generate_Visit_Bill() throws InterruptedException
 	 	
 	bookAppointByNaionalID = new Cmo_Generate_and_Preview_Visit_Bill(driver) ; 
 	 
-	bookAppointByNaionalID.Cmo_Generate_VisitBill("A100072502" , "166.25");  
+	bookAppointByNaionalID.Cmo_Preview_Unsettled_Bills("مريض MOH" );  
 	 
 } 
 

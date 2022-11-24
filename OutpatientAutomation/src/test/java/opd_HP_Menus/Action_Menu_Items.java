@@ -4,6 +4,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
 import testBase.*;
@@ -14,7 +15,7 @@ public class Action_Menu_Items extends Page_Base {
 		super(driver);
 		
 		 
-	}
+	} 
  
 	public void select_book_appointment_item() {
 		try {
@@ -79,4 +80,70 @@ public class Action_Menu_Items extends Page_Base {
 			Logger.getLogger(Action_Menu_Items.class.getName()).log(Level.SEVERE, null, ex);
 		}
 	}
+	
+	public void student_checkup_option() { 
+
+
+		try {
+
+			Thread.sleep(2000); 
+			// Click on Action
+			By Action = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/div/div/div[2]/div/div[5]");
+			driver.findElement(Action).click(); 
+
+			Thread.sleep(2000);
+			
+			// Click on new documents
+			
+			By new_documents_btn = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-lead-actions-popover/div/div/div[3]/div");
+			                                 
+			driver.findElement(new_documents_btn).click();
+			
+			Thread.sleep(2000);
+			By search = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/div/div[2]/div[2]/div[1]/input");
+			driver.findElement(search).sendKeys("student");
+					
+			Thread.sleep(3000);
+					
+			By student_checkup_btn = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/div/div[2]/div[2]/div[2]/div[2]");
+			driver.findElement(student_checkup_btn).click();
+			
+
+		} catch (InterruptedException ex) {
+			Logger.getLogger(Action_Menu_Items.class.getName()).log(Level.SEVERE, null, ex);
+		}
+	}
+	
+	public void dental_consultation_option() { 
+
+
+		try {
+
+			Thread.sleep(2000); 
+			// Click on Action
+			By Action = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/div/div/div[2]/div/div[5]");
+			driver.findElement(Action).click(); 
+
+			Thread.sleep(2000);
+			
+			// Click on new documents
+			
+			By new_documents_btn = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-lead-actions-popover/div/div/div[3]/div");
+			driver.findElement(new_documents_btn).click();
+			
+			Thread.sleep(2000);
+			By search = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/div/div[2]/div[2]/div[1]/input");
+					driver.findElement(search).sendKeys("dental");
+					
+		Thread.sleep(2000);
+					
+			By dental_consult_btn = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/div/div[2]/div[2]/div[2]/div[2]");
+			driver.findElement(dental_consult_btn).click();
+				
+
+		} catch (InterruptedException ex) {
+			Logger.getLogger(Action_Menu_Items.class.getName()).log(Level.SEVERE, null, ex);
+		}
+	
+}
 }

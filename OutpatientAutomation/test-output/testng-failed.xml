@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.OP_TC_70_CMO_Generate_Bill_Practioner_Agenda">
+      <class name="testCases.OP_TC_123_NUR_Filter_Patient_By_Type">
         <methods>
+          <include name="search_for_patient"/>
           <include name="setup"/>
-          <include name="CMO_Generate_VisitBill_PractionerAgenda"/>
         </methods>
-      </class> <!-- testCases.OP_TC_70_CMO_Generate_Bill_Practioner_Agenda -->
+      </class> <!-- testCases.OP_TC_123_NUR_Filter_Patient_By_Type -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

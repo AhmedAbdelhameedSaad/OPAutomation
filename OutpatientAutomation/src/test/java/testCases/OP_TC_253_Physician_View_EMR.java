@@ -19,7 +19,7 @@ public class OP_TC_253_Physician_View_EMR extends HP_Test_Base
 	@Test
 	public void view_emr() {
 		Authentication auth = new Authentication(driver);
-		auth.login_HP("DOCUAT5", "egy123");
+		auth.CMO_login_HP("DOCUAT5", "egy123"); 
 		
        try {
 			
