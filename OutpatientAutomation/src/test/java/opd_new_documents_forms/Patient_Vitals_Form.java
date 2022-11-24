@@ -23,7 +23,7 @@ public class Patient_Vitals_Form extends Page_Base{
 			// Fill in the form Patient Vitals
 			Thread.sleep(3000);
 			By enter_Temperature = By.xpath("//*[@id=\"EL000004#0#VB0004\"]/div/div/app-numericinteger/div/input");
-			driver.findElement(enter_Temperature).sendKeys("37");
+			driver.findElement(enter_Temperature).sendKeys("37"); 
 
 			By enter_Heart_Rate = By.xpath("//*[@id=\"EL000004#0#VB0001\"]/div/div/app-numericinteger/div/input");
 			driver.findElement(enter_Heart_Rate).sendKeys("88");

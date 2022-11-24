@@ -14,7 +14,7 @@ public class Authentication extends Page_Base {
 	}
 	
 
-	public void login_HP(String username, String password) { 
+	public void CMO_login_HP(String username, String password) { 
 		By username_element = By.id("user-id");
 		driver.findElement(username_element).sendKeys(username);
 		By password_element = By.id("his-password");
@@ -28,7 +28,7 @@ public class Authentication extends Page_Base {
 
 		try {
 
-			Thread.sleep(15000);
+			Thread.sleep(15000); 
 
 			// User_Profile
 			By User_Profile_icon = By.xpath("//*[@id=\"user-profile-icon\"]/div/div");
@@ -104,6 +104,7 @@ public class Authentication extends Page_Base {
 	}
 
 	public void login_EM(String username, String password) {
+
 		
 		driver.navigate().to("http://10.209.1.5:7777/HIS/eSM/jsp/login.jsp");
 		driver.manage().window().maximize();
@@ -121,4 +122,25 @@ public class Authentication extends Page_Base {
 		driver.findElement(OKButton).click();
 
 	}
+
+
+public void physician_login_HP(String username, String password) throws InterruptedException {
+	
+	By username_element = By.id("user-id");
+	driver.findElement(username_element).sendKeys(username);
+	By password_element = By.id("his-password");
+	driver.findElement(password_element).sendKeys(password);
+	By login_button = By.xpath("/html/body/app-root/app-common-login/div/div[2]/div[2]/form/button");
+	driver.findElement(login_button).click();
+	
+	Thread.sleep(2000);
+	
+	By clinician_radiobtn = By.xpath("/html/body/app-root/app-common-login/div/div[2]/div[2]/div[2]/div/div/div/div[1]/input");
+	driver.findElement(clinician_radiobtn).click();
+	
+	By continue_button = By.xpath("/html/body/app-root/app-common-login/div/div[2]/div[2]/div[3]/button");
+	driver.findElement(continue_button).click();
+
+	
+}
 }

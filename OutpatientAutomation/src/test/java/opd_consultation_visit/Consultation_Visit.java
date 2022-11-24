@@ -13,7 +13,7 @@ public class Consultation_Visit extends Page_Base {
 	public Consultation_Visit(WebDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub
-	}
+	} 
 
 	
 	public void create (String patient_id, String clinic_name, String doctor_name) {

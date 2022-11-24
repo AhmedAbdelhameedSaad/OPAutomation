@@ -12,8 +12,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import opd_Book_Appointment.CMO_Preview_Reschedule_Cancel_Appointment;
-import opd_Generate_Visit_Bill.Cmo_Generate_Visit_Bill;
+import opd_Generate_Visit_Bill.Cmo_Generate_and_Preview_Visit_Bill;
 import opd_HP_Menus.Action_Menu_Items;
 import opd_HP_Menus.Left_Menu_Items;
 import opd_authentication.Authentication;
@@ -25,7 +24,7 @@ import testBase.Page_Base;
 public class OP_TC_70_CMO_Generate_Bill_Practioner_Agenda extends HP_Test_Base {  
 
 	Authentication loginobj;
-	Cmo_Generate_Visit_Bill GenerateBillPractionerObj;
+	Cmo_Generate_and_Preview_Visit_Bill GenerateBillPractionerObj;
    Page_Base pageobject;
    Consultation_Visit consultObj; 
   
@@ -33,9 +32,9 @@ public class OP_TC_70_CMO_Generate_Bill_Practioner_Agenda extends HP_Test_Base {
 	public void  user_login_success()
 	{
             
-    	loginobj = new Authentication(driver); 
+    	loginobj = new Authentication(driver);  
 		
-		 loginobj.login_HP("CMOOPD02", "egy123"); 		  
+		 loginobj.CMO_login_HP("CMOOPD02", "egy123");  		  
 	
 		 /* Left_Menu_Items menuItem = new Left_Menu_Items(driver);
 		  menuItem.select_clinical_diary_item();
@@ -54,7 +53,7 @@ public class OP_TC_70_CMO_Generate_Bill_Practioner_Agenda extends HP_Test_Base {
   	public void  CMO_Generate_VisitBill_PractionerAgenda()
   	{
               
-	GenerateBillPractionerObj = new  Cmo_Generate_Visit_Bill(driver);
+	GenerateBillPractionerObj = new  Cmo_Generate_and_Preview_Visit_Bill(driver);
   		
 	GenerateBillPractionerObj.CMO_Generate_Bill_Practioner_Agenda("Family Medicine","A200000277","60"); 
       	

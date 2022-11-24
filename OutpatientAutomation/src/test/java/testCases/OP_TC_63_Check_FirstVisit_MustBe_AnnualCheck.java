@@ -18,7 +18,7 @@ public class OP_TC_63_Check_FirstVisit_MustBe_AnnualCheck extends HP_Test_Base {
 		{
 	            
 	    	loginobject2 = new Authentication (driver);
-			 loginobject2.login_HP("CMOOPD02", "egy123");
+			 loginobject2.CMO_login_HP("CMOOPD02", "egy123"); 
 
 		}
 	

@@ -17,6 +17,6 @@ public class NUR_View_Patient_list extends Page_Base {
 		JavascriptExecutor java = (JavascriptExecutor) driver;
 		java.executeScript("scroll(0,1500)");
 
-		System.out.println("Nurse view Patient list successfully");
+		System.out.println("Nurse view Patient list successfully"); 
 	}
 }

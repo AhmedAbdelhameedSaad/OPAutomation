@@ -20,7 +20,7 @@ public class OP_TC_47_CMO_Preview_Appointment extends HP_Test_Base {
             
     	loginobj = new Authentication(driver); 
 		
-		 loginobj.login_HP("CMOOPD02", "egy123"); 
+		 loginobj.CMO_login_HP("CMOOPD02", "egy123"); 
 		  Left_Menu_Items menuItem = new Left_Menu_Items(driver);
 		  menuItem.select_clinical_diary_item();
               

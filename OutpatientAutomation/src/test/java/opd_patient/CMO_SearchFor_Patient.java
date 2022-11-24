@@ -14,7 +14,7 @@ public class CMO_SearchFor_Patient extends Page_Base {
 	public CMO_SearchFor_Patient(WebDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub 
-	}
+	} 
 
 	public void search_by_Identifier(String identifier) {
 
