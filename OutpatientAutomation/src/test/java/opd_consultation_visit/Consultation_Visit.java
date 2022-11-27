@@ -16,7 +16,7 @@ public class Consultation_Visit extends Page_Base {
 	} 
 
 	
-	public void create(String patient_id, String clinic_name, String doctor_name) {
+	public void create (String patient_id, String clinic_name, String doctor_name) {
 
 		try {
  

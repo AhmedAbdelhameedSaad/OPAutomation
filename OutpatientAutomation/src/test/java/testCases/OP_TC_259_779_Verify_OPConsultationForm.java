@@ -9,10 +9,10 @@ import org.testng.annotations.Test;
 import opd_HP_Menus.NewDocument_Menu_Items;
 import opd_authentication.Authentication;
 import opd_new_documents_forms.OPConsultation_Form;
-import opd_patient.SelectPatientOP;
+import opd_patient.Physician_SearchFor_Patient;
 import testBase.*;
 
-public class OP_TC_230_Submit_OPConsultationForm extends HP_Test_Base
+public class OP_TC_259_779_Verify_OPConsultationForm extends HP_Test_Base
 
 {
 
@@ -30,25 +30,26 @@ public class OP_TC_230_Submit_OPConsultationForm extends HP_Test_Base
 			driver.findElement(ct).click();
 			
 		}catch (InterruptedException ex) {
-			Logger.getLogger(OP_TC_230_Submit_OPConsultationForm.class.getName()).log(Level.SEVERE, null, ex);
+			Logger.getLogger(OP_TC_259_779_Verify_OPConsultationForm.class.getName()).log(Level.SEVERE, null, ex);
         }
 		
+		Physician_SearchFor_Patient find_patient = new Physician_SearchFor_Patient(driver);
+		find_patient.search_by_Name("Tarek");
 		
-		SelectPatientOP find_patient = new SelectPatientOP(driver);
-		find_patient.NUR_DOC_selectpatient();	
+
 		
 		NewDocument_Menu_Items select_item = new NewDocument_Menu_Items(driver);
 		select_item.select_OP_Consultation_Form();
 
 		OPConsultation_Form form = new OPConsultation_Form(driver);
 		form.consultation_diagnosis();
-		form.consultation_internal_external_referral();
+		//form.consultation_internal_external_referral();
 		form.consultaion_prescribe_medications();
 		form.consultaion_place_lab_order();
 		form.consultaion_place_rad_order();
 		form.submit_consultation_form();
-	
-
+		form.verify_submitted_form();
+	   
 	}
 
 }

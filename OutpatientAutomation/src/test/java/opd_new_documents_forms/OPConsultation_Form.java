@@ -474,4 +474,32 @@ public class OPConsultation_Form extends Page_Base {
 	}
 	
 
+	public void verify_submitted_form()
+	{
+		try {
+
+			Thread.sleep(5000);
+			By close_btn = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/div/div[2]/div[1]/div/div/div[2]/img");
+			driver.findElement(close_btn).click();
+
+			Thread.sleep(3000);
+			
+			driver.navigate().refresh();
+
+	
+			Thread.sleep(3000);
+
+			By open_form = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/div/app-dashboard/div/gridster/gridster-item[1]/app-widget/div/div[1]/app-reports/div[1]/div[2]/div[1]/div[1]/div[2]/div/p[1]");
+			driver.findElement(open_form).click();
+
+			Thread.sleep(5000);
+
+			By close_form = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/div/app-dashboard/app-reports-view-model/div/div[1]/div/div[2]/div[2]/div[2]/img");
+			driver.findElement(close_form).click();
+
+		} catch (InterruptedException ex) {
+			Logger.getLogger(OPConsultation_Form.class.getName()).log(Level.SEVERE, null, ex);
+		}
+	
+	}
 }

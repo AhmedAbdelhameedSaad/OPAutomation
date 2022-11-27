@@ -19,7 +19,7 @@ public class OP_TC_254_Physician_Preview_PatientsVitals extends HP_Test_Base
 	@Test
 	public void Preview_patient_vitals() {
 		Authentication auth = new Authentication(driver);
-		auth.CMO_login_HP("NUROPD02", "egy123");
+		auth.login_HP("NUROPD02", "egy123");
 
 		SelectPatientOP find_patient = new SelectPatientOP(driver);
 		find_patient.NUR_DOC_selectpatient();	
@@ -33,7 +33,7 @@ public class OP_TC_254_Physician_Preview_PatientsVitals extends HP_Test_Base
 		
 		auth.logout_HP();
 		
-		auth.CMO_login_HP("DOCUAT5", "egy123");
+		auth.login_HP("DOCUAT5", "egy123");
 		
 	       try {
 				
