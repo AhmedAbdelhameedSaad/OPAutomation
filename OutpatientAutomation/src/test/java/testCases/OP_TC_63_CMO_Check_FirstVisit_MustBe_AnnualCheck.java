@@ -2,22 +2,23 @@ package testCases;
 
 
 import org.testng.annotations.Test;
-import opd_patient.Register_Patient;
+
+import opd_appointment.Book_appointment;
 import opd_authentication.Authentication;
 import testBase.HP_Test_Base;
 
 
-public class OP_TC_32_Register_Patient_fromCreateConsultation extends HP_Test_Base {
+public class OP_TC_63_CMO_Check_FirstVisit_MustBe_AnnualCheck extends HP_Test_Base {
 	
-	Register_Patient register_App_object;
-	Authentication loginobj;
+	Book_appointment bookAppointByNaionalID;
+	Authentication loginobject2;
 	   
 	   @Test(priority=1)
-		public void  user_login_success()
+		public void  user_login_()
 		{
 	            
-	    	loginobj = new Authentication (driver);
-			 loginobj.CMO_login_HP("CMOOPD02", "egy123"); 
+	    	loginobject2 = new Authentication (driver);
+			 loginobject2.CMO_login_HP("CMOOPD02", "egy123"); 
 
 		}
 	
@@ -42,14 +43,14 @@ public class OP_TC_32_Register_Patient_fromCreateConsultation extends HP_Test_Ba
 }
 */
 
-@Test(priority=2  )
-public void  User_Register_patient() 
+@Test(priority=2 )
+public void  UserBookAppointmentByNationalID() throws InterruptedException
 
 {
 	 	
-	register_App_object = new Register_Patient(driver) ; 
+	bookAppointByNaionalID = new Book_appointment(driver) ; 
 	 
-	register_App_object.CMO_Register_FromConsultationForm("Ali", "Assem", "01223456708", "44673344996677", "12345678560", "Manyal,Giza");
+	bookAppointByNaionalID.Book_Appoint_ByNationalID( "General Surgery",  "76753243200989");
 	 
 }
 

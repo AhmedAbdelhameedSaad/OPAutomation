@@ -23,7 +23,7 @@ public class SelectPatientOP extends Page_Base{
 					"/html/body/app-root/app-crm/div/div/app-crm-leads/div[2]/div/div[2]/div/div/app-crm-patients-list/div/div[2]/div/div[1]/div[1]");
 			driver.findElement(selectpatient).click();
 			
-		}catch (InterruptedException ex) {
+		}catch (InterruptedException ex) { 
 			Logger.getLogger(SelectPatientOP.class.getName()).log(Level.SEVERE, null, ex);
 		}
 		

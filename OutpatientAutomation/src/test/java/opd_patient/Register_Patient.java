@@ -104,12 +104,12 @@ public class Register_Patient extends Page_Base  {
 		
 		Thread.sleep(3000);
 			JavascriptExecutor java = (JavascriptExecutor) driver;
-			java.executeScript("scroll(0,1000)");
+			java.executeScript("scroll(0,1000)"); 
 			
 		} catch (InterruptedException ex) {
 			Logger.getLogger(Register_Patient.class.getName()).log(Level.SEVERE, null, ex);			
 			
-		}
+		} 
 	}
 
 	 
@@ -447,11 +447,96 @@ public class Register_Patient extends Page_Base  {
 		}
 	}
 
+	public void CMO_Register_Arabic_Name_Patient(String firstname, String familyname, String mobileNum, String natioID,  String address ) { 
 
+		try {  
+
+			Thread.sleep(3000);    
+			
+			//click on clinical diary icon
+			
+			By clinical_diary = By.xpath("/html/body/app-root/app-crm/div/app-navigation/div/div[2]/div/img");
+			 
+			driver.findElement(clinical_diary).click();  
+			
+			// click on search icon to open register pop up
+			
+			 By search_icon = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/app-crm-header/div/div/div[1]/img");
+			
+			driver.findElement(search_icon).click();
+			
+			Thread.sleep(2000);
+			
+			 By register_btn = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/div[2]/app-find-patient-detail/div/div/app-flash-card/div/div/div[1]/div/div/div[2]/div[2]/div[2]/div/div/div[3]/button");
+				
+				driver.findElement(register_btn).click(); 
+			
+			
+			By first_name = By.name("FName");		
+			driver.findElement(first_name).sendKeys(firstname);
+
+			Thread.sleep(3000);
+            
+			By family_name = By.name("FAName");
+			driver.findElement(family_name).sendKeys(familyname); 
+	     	
+	     // date of birth drop down list
+	     	
+	     	By dob_txtbox = By.id("vaadin-dp");      	     	 
+	     	driver.findElement (dob_txtbox).sendKeys("13-11-2022"+ Keys.ENTER);
+	     	
+		
+			By mobile_number = By.xpath(
+					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form/div/div[2]/div/div[7]/div/input");
+			driver.findElement(mobile_number).sendKeys( mobileNum) ;
+			
+			
+	     	By national_id = By.xpath(
+					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form/div/div[2]/div/div[10]/div/input");
+			driver.findElement(national_id).sendKeys(natioID);
+			
+			Thread.sleep(3000); 
+				By address1 = By.xpath(
+						"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form/div/div[2]/div/div[12]/div/input");
+				driver.findElement(address1).sendKeys(address) ;
+				
+				Thread.sleep(3000);			
+
+			By billing_group = By.xpath(
+					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form/div/div[5]/div/div[2]/div/div[2]/input"
+					);
+			driver.findElement(billing_group).sendKeys("Cash Patient");
+			
+			By cash_text = By.xpath(
+	"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[1]/div[2]/form/div/div[5]/div/div[2]/div/div[3]/div/a");						
+			driver.findElement(cash_text).click();
+			
+			Thread.sleep(2000);
+				By reg_btn = By.xpath(
+						"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[2]/div[2]/button\r\n");
+				driver.findElement(reg_btn).click();
+				
+			Thread.sleep(3000);
+			
+
+		
+			By reg_btn2 = By.xpath( 
+					"html/body/app-root/app-crm/div/div/app-clinical-diary/app-activity-modal/div[1]/div[2]/div/div[2]/div/app-ex-register-pat/div/div[2]/div[2]/div[2]/div/button[2]");
+			driver.findElement(reg_btn2).click();
+			
+	 	Thread.sleep(3000);
+		
+		By close = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/div[2]/app-find-patient-detail/div/div/app-flash-card/div/div/div[2]/div/div[1]/div[1]/img");
+		driver.findElement(close).click();
+		
+		Thread.sleep(3000);
+			JavascriptExecutor java = (JavascriptExecutor) driver;
+			java.executeScript("scroll(0,1000)"); 
+			
+		} catch (InterruptedException ex) {
+			Logger.getLogger(Register_Patient.class.getName()).log(Level.SEVERE, null, ex);			
+			
+		} 
 	
-	
-	
-	
-	
-	
+}
 }

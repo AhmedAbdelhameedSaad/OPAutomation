@@ -6,7 +6,7 @@ import opd_authentication.Authentication;
 import opd_patient.SelectPatientOP;
 import testBase.*;
 
-public class OP_TC_190_Physician_Search_For_Patient extends HP_Test_Base
+public class OP_TC_190_Physician_Search_For_Patient_Name extends HP_Test_Base
 
 {
 
@@ -17,7 +17,7 @@ public class OP_TC_190_Physician_Search_For_Patient extends HP_Test_Base
 	
 		
 		SelectPatientOP find_patient = new SelectPatientOP(driver);
-		find_patient.NUR_DOC_searchpatient("patient");
+		find_patient.NUR_DOC_searchpatient("patient"); 
 
 
 	}

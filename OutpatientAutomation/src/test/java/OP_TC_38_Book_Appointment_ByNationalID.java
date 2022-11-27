@@ -1,4 +1,5 @@
-package testCases;
+
+
 
 
 import org.testng.annotations.Test;
@@ -8,7 +9,7 @@ import opd_authentication.Authentication;
 import testBase.HP_Test_Base;
 
 
-public class OP_TC_63_Check_FirstVisit_MustBe_AnnualCheck extends HP_Test_Base {
+public class OP_TC_38_Book_Appointment_ByNationalID extends HP_Test_Base {
 	
 	Book_appointment bookAppointByNaionalID;
 	Authentication loginobject2;
@@ -18,7 +19,7 @@ public class OP_TC_63_Check_FirstVisit_MustBe_AnnualCheck extends HP_Test_Base {
 		{
 	            
 	    	loginobject2 = new Authentication (driver);
-			 loginobject2.CMO_login_HP("CMOOPD02", "egy123"); 
+			 loginobject2.CMO_login_HP("CMOOPD02", "egy123");
 
 		}
 	
@@ -50,7 +51,7 @@ public void  UserBookAppointmentByNationalID() throws InterruptedException
 	 	
 	bookAppointByNaionalID = new Book_appointment(driver) ; 
 	 
-	bookAppointByNaionalID.Book_Appoint_ByNationalID( "General Surgery",  "76753243200989");
+	bookAppointByNaionalID.Book_Appoint_ByNationalID( "Family Medicine",  "76753243200989");
 	 
 }
 

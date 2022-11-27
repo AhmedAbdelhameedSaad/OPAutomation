@@ -16,12 +16,7 @@ public class NUR_Filter_Patient_list extends Page_Base {
 
 	public void Nurse_filter_patientlist_ByType() throws InterruptedException {
 
-		
-		
-	/*	Actions act =  new Actions(driver);
-	act.moveToElement(driver.findElement(By.xpath("/html/body/app-root/app-crm/div/div/app-crm-leads/div[2]/div/div[1]/app-crm-quick-filters/div/div/div[2]/div[2]/div[5]/input"))).click().perform(); */
-
-		
+			
 		try {
 			Thread.sleep(4000); 
 			
@@ -38,9 +33,6 @@ public class NUR_Filter_Patient_list extends Page_Base {
 
 
 public void Nurse_filter_patientlist_By_Facility() throws InterruptedException {
-
-	
-
 		
 		try {
 			
@@ -51,12 +43,42 @@ public void Nurse_filter_patientlist_By_Facility() throws InterruptedException {
 		     JavascriptExecutor executor = (JavascriptExecutor) driver;
 		     executor.executeScript("arguments[0].click();", driver.findElement(By.xpath("/html/body/app-root/app-crm/div/div/app-crm-leads/div[2]/div/div[1]/app-crm-quick-filters/div/div/div[2]/div[2]/div[5]/input")));
 		  }
-		
+		                                                                                   
+		Thread.sleep(4000); 
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
 	     executor.executeScript("arguments[0].click();", driver.findElement(By.xpath("/html/body/app-root/app-crm/div/div/app-crm-leads/div[2]/div/div[1]/app-crm-quick-filters/div/div/div[3]/div[2]/div[3]/input")));
 	  
 		
-    Thread.sleep(4000); 
+    Thread.sleep(4000);  
+	 
+}
+
+
+public void Nurse_filter_patientlist_By_CriticalCondition() throws InterruptedException {
 	
+	
+		
+		Thread.sleep(4000); 
+		
+		// select out patient check box
+	     JavascriptExecutor executor = (JavascriptExecutor) driver; 
+	     executor.executeScript("arguments[0].click();", driver.findElement(By.xpath("/html/body/app-root/app-crm/div/div/app-crm-leads/div[2]/div/div[1]/app-crm-quick-filters/div/div/div[2]/div[2]/div[5]/input")));
+	     
+	     //scroll down
+	     Thread.sleep(2000);
+	     JavascriptExecutor java = (JavascriptExecutor) driver;
+			java.executeScript("scroll(0,7000)");
+	Thread.sleep(4000);  
+	     
+	     
+	// select critical condition check box
+	Thread.sleep(2000); 
+	JavascriptExecutor executor1 = (JavascriptExecutor) driver;
+     executor1.executeScript("arguments[0].click();", driver.findElement(By.xpath("/html/body/app-root/app-crm/div/div/app-crm-leads/div[2]/div/div[1]/app-crm-quick-filters/div/div/div[5]/div[4]/div[5]/input")));
+  
+  
+		
+
 }
 }
+

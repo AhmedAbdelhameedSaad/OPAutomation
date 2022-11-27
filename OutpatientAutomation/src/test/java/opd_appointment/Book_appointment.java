@@ -46,9 +46,9 @@ public class Book_appointment extends Page_Base {
 				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-clinic/div/div[3]/div/div/p");
 		driver.findElement(familymedicine_text).click() ;
 		
-		By generalsurgery_text = By.xpath(
+	/*	By generalsurgery_text = By.xpath(
 				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[2]/div[2]/div[2]/div/app-clinic/div/div[3]/div/div[3]/p");
-		driver.findElement(generalsurgery_text).click() ;
+		driver.findElement(generalsurgery_text).click() ; */
 		
 		
 		// choose practitioner , visit type

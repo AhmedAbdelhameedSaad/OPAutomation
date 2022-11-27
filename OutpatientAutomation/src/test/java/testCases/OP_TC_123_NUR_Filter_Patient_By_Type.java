@@ -22,8 +22,8 @@ public class OP_TC_123_NUR_Filter_Patient_By_Type extends HP_Test_Base
 		
 		type = new NUR_Filter_Patient_list (driver);
 	
-		 type.Nurse_filter_patientlist_ByType();
 		
+		 type.Nurse_filter_patientlist_ByType();
 
 	}
 

@@ -24,7 +24,7 @@ public class CMO_Preview_Reschedule_Cancel_Appointment extends Page_Base {
 
 		try {
 
-			Thread.sleep(2000);
+			Thread.sleep(2000); 
 			By select_clinic = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[1]/div[1]");
 			driver.findElement(select_clinic).click();

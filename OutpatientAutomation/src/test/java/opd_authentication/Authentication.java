@@ -5,9 +5,13 @@ import java.util.logging.Logger;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
 import testBase.Page_Base;
 
 public class Authentication extends Page_Base {
+	
+	public WebElement login_button ;
 
 	public Authentication(WebDriver driver) {
 		super(driver);
@@ -19,7 +23,7 @@ public class Authentication extends Page_Base {
 		driver.findElement(username_element).sendKeys(username);
 		By password_element = By.id("his-password");
 		driver.findElement(password_element).sendKeys(password);
-		By login_button = By.xpath("/html/body/app-root/app-common-login/div/div[2]/div[2]/form/button");
+	By login_button = By.xpath("/html/body/app-root/app-common-login/div/div[2]/div[2]/form/button"); 
 		driver.findElement(login_button).click();
 
 	}
@@ -142,5 +146,16 @@ public void physician_login_HP(String username, String password) throws Interrup
 	driver.findElement(continue_button).click();
 
 	
+}
+
+
+public void Physician_login_Empty_Username(String username, String password) { 
+	By username_element = By.id("user-id");
+	driver.findElement(username_element).sendKeys(username);
+	By password_element = By.id("his-password");
+	driver.findElement(password_element).sendKeys(password); 
+ 
+	
+
 }
 }

@@ -14,7 +14,7 @@ import opd_authentication.Authentication;
 import testBase.HP_Test_Base;
 
 
-public class OP_TC_31_Register_Patient_FromBookAppointment extends HP_Test_Base {
+public class OP_TC_31_CMO_Register_Patient_FromBookAppointment extends HP_Test_Base {
 	
 	Register_Patient register_App_object;
 	Authentication loginobj;
