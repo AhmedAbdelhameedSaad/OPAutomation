@@ -4,15 +4,12 @@ package testCases;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-import PCY_Submit_Checkup.Physician_submit_Checkups;
-import opd_EMR_reports.EMR_Reports;
+import opd_new_documents_forms.Physician_submit_Checkups;
 import opd_HP_Menus.Action_Menu_Items;
 import opd_authentication.Authentication;
 import opd_patient.Physician_SearchFor_Patient;
-import opd_patient.SelectPatientOP;
 import testBase.*;
 
 public class OP_TC_368_Physician_Submit_Dental_Consultaion_Form extends HP_Test_Base
@@ -30,7 +27,7 @@ public class OP_TC_368_Physician_Submit_Dental_Consultaion_Form extends HP_Test_
     	   
 
     	   auth.physician_login_HP("DOCUAT5", "egy123"); 
-    	   search.search_by_Name("new patient");  
+    	   search.physician_search_by_Name("new patient");  
     	   
     	   Thread.sleep(2000);
     	  
