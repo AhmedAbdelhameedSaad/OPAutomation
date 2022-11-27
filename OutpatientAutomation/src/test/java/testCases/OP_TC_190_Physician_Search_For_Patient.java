@@ -13,7 +13,7 @@ public class OP_TC_190_Physician_Search_For_Patient extends HP_Test_Base
 	@Test
 	public void search_for_patient() {
 		Authentication auth = new Authentication(driver);
-		auth.CMO_login_HP("Akbar", "egy123");
+		auth.login_HP("Akbar", "egy123");
 	
 		
 		SelectPatientOP find_patient = new SelectPatientOP(driver);

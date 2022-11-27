@@ -18,7 +18,7 @@ public class OP_TC_124_NUR_Filter_Patient_By_Facility extends HP_Test_Base
 	public void search_for_patient() throws InterruptedException {
 		
 		auth = new Authentication(driver);
-		auth.CMO_login_HP("NUROPD02", "egy123");
+		auth.login_HP("NUROPD02", "egy123");
 		
 		type = new NUR_Filter_Patient_list (driver);
 	

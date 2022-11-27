@@ -31,7 +31,7 @@ public class OP_TC_184_Physycian_Preview_Appointment extends HP_Test_Base {
             
     	loginobj = new Authentication(driver);
 		
-		 loginobj.CMO_login_HP("DOCUAT5", "egy123"); 		  
+		 loginobj.login_HP("DOCUAT5", "egy123"); 		  
 	}
 	 
    

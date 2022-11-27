@@ -1,7 +1,5 @@
 package testCases;
 
-import org.openqa.selenium.By;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import opd_HP_Menus.Action_Menu_Items;

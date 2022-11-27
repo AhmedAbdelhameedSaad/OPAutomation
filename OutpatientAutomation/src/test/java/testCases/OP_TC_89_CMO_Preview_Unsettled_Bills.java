@@ -24,7 +24,7 @@ public class OP_TC_89_CMO_Preview_Unsettled_Bills extends HP_Test_Base {
 		{
 	            
 	    	loginobject2 = new Authentication (driver);
-			 loginobject2.CMO_login_HP("CMOOPD02", "egy123");
+			 loginobject2.login_HP("CMOOPD02", "egy123");
 
 		}
 	

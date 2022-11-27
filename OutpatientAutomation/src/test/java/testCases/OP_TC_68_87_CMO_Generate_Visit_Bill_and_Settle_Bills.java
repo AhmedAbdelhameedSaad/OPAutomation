@@ -24,7 +24,7 @@ public class OP_TC_68_87_CMO_Generate_Visit_Bill_and_Settle_Bills extends HP_Tes
 		{
 	            
 	    	loginobject2 = new Authentication (driver);
-			 loginobject2.CMO_login_HP("CMOOPD02", "egy123");
+			 loginobject2.login_HP("CMOOPD02", "egy123");
 
 		}
 	

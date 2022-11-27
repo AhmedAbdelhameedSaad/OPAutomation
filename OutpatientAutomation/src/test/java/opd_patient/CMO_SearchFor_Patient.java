@@ -16,15 +16,23 @@ public class CMO_SearchFor_Patient extends Page_Base {
 		// TODO Auto-generated constructor stub 
 	} 
 
+	public void search_bar()
+	{
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		By search_bar = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-crm-header/div/div/div[1]/input");
+		driver.findElement(search_bar).click();
+	}
+	
 	public void search_by_Identifier(String identifier) {
 
 		try {
 
-			Thread.sleep(3000); 
-
-			By search_bar = By.xpath(
-					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-crm-header/div/div/div[1]/input");
-			driver.findElement(search_bar).click();
 
 			Thread.sleep(3000);
 
@@ -42,14 +50,10 @@ public class CMO_SearchFor_Patient extends Page_Base {
 	public void search_by_ID(String id)
 	{
 		try {
-			Thread.sleep(3000); 
-			By search_bar = By.xpath(
-					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-crm-header/div/div/div[1]/input");
-			driver.findElement(search_bar).click();
-			
+	
 			Thread.sleep(3000); 
 			By patient_id = By.xpath(
-					"/html/body/app-root/app-crm/div/div/app-patient-view/div/app-dashboard/div/gridster/gridster-item[2]/app-widget/div/div[2]/app-clinical-profile-items/div/div[1]/span/img");
+					"/html/body/app-root/app-crm/div/div/app-clinical-diary/div[2]/app-find-patient-detail/div/div/app-flash-card/div/div/div[1]/div/div/div[2]/div[1]/app-crm-quick-filters/div/div/div[1]/div[4]/input");
 			driver.findElement(patient_id).sendKeys(id);
 		}catch (InterruptedException ex) {
 			Logger.getLogger(CMO_SearchFor_Patient.class.getName()).log(Level.SEVERE, null, ex);
@@ -60,10 +64,6 @@ public class CMO_SearchFor_Patient extends Page_Base {
 	public void search_by_FN(String First_Name)
 	{
 		try {
-			Thread.sleep(3000); 
-			By search_bar = By.xpath(
-					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-crm-header/div/div/div[1]/input");
-			driver.findElement(search_bar).click();
 			
 			Thread.sleep(3000); 
 			By first_name = By.xpath(
@@ -79,10 +79,6 @@ public class CMO_SearchFor_Patient extends Page_Base {
 	public void search_by_LN(String Last_Name)
 	{
 		try {
-			Thread.sleep(3000); 
-			By search_bar = By.xpath(
-					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-crm-header/div/div/div[1]/input");
-			driver.findElement(search_bar).click();
 			
 			Thread.sleep(3000); 
 			By last_name = By.xpath(
@@ -98,10 +94,7 @@ public class CMO_SearchFor_Patient extends Page_Base {
 	public void search_by_gender_any()
 	{
 		try {
-			Thread.sleep(3000); 
-			By search_bar = By.xpath(
-					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-crm-header/div/div/div[1]/input");
-			driver.findElement(search_bar).click();
+			
 			
 			Thread.sleep(3000); 
 			By any_gender = By.xpath(
@@ -117,10 +110,6 @@ public class CMO_SearchFor_Patient extends Page_Base {
 	public void search_by_gender_male()
 	{
 		try {
-			Thread.sleep(3000); 
-			By search_bar = By.xpath(
-					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-crm-header/div/div/div[1]/input");
-			driver.findElement(search_bar).click();
 			
 			Thread.sleep(3000); 
 			By gender_male = By.xpath(
@@ -136,10 +125,7 @@ public class CMO_SearchFor_Patient extends Page_Base {
 	public void search_by_gender_female()
 	{
 		try {
-			Thread.sleep(3000); 
-			By search_bar = By.xpath(
-					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-crm-header/div/div/div[1]/input");
-			driver.findElement(search_bar).click();
+			
 			
 			Thread.sleep(3000); 
 			By gender_female = By.xpath(
@@ -155,11 +141,8 @@ public class CMO_SearchFor_Patient extends Page_Base {
 	public void search_by_date()
 	{
 		try {
-			Thread.sleep(3000); 
-			By search_bar = By.xpath(
-					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-crm-header/div/div/div[1]/input");
-			driver.findElement(search_bar).click();
-			
+		
+		
 			Thread.sleep(3000); 
 			JavascriptExecutor jse = (JavascriptExecutor)driver;
 			jse.executeScript("arguments[0].scrollTop = arguments[1];",driver.findElement(By.xpath(

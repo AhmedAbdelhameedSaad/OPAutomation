@@ -31,7 +31,7 @@ public class OP_TC_51_CMO_Cancel_Appointment extends HP_Test_Base {
             
     	loginobj = new Authentication(driver);  
 		
-		 loginobj.CMO_login_HP("CMOOPD02", "egy123");  		  
+		 loginobj.login_HP("CMOOPD02", "egy123");  		  
 	}
 	 
    

@@ -24,7 +24,7 @@ public class OP_TC_31_Register_Patient_FromBookAppointment extends HP_Test_Base 
 		{
 	            
 	    	loginobj = new Authentication(driver);
-			 loginobj.CMO_login_HP("CMOOPD02", "egy123");
+			 loginobj.login_HP("CMOOPD02", "egy123");
 
 		}
 	

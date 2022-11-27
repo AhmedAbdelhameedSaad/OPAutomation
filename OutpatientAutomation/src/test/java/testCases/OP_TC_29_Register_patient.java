@@ -18,7 +18,7 @@ public class OP_TC_29_Register_patient extends HP_Test_Base {
 		{
 	            
 	    	loginobj = new Authentication(driver);  
-			 loginobj.CMO_login_HP("CMOOPD02", "egy123");
+			 loginobj.login_HP("CMOOPD02", "egy123");
 	   	 	
 	   	  registerobject = new Register_Patient(driver) ; 
 	   	 

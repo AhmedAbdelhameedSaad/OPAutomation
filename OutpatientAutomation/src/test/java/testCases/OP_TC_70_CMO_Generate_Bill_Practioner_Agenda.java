@@ -34,7 +34,7 @@ public class OP_TC_70_CMO_Generate_Bill_Practioner_Agenda extends HP_Test_Base {
             
     	loginobj = new Authentication(driver);  
 		
-		 loginobj.CMO_login_HP("CMOOPD02", "egy123");  		  
+		 loginobj.login_HP("CMOOPD02", "egy123");  		  
 	
 		 /* Left_Menu_Items menuItem = new Left_Menu_Items(driver);
 		  menuItem.select_clinical_diary_item();
