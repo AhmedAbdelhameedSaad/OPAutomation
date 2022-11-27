@@ -7,7 +7,7 @@ import opd_authentication.Authentication;
 import opd_patient.CMO_SearchFor_Patient;
 import testBase.*;
 
-public class OP_TC_330_CMO_Search_by_Mobile extends HP_Test_Base
+public class OP_TC_325_CMO_Search_by_Mobile extends HP_Test_Base
 
 {
 
