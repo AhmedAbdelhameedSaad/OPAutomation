@@ -473,7 +473,6 @@ public class OPConsultation_Form extends Page_Base {
 		}
 	}
 	
-
 	public void verify_submitted_form()
 	{
 		try {
