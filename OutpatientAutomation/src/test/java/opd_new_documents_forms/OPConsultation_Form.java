@@ -29,7 +29,7 @@ public class OPConsultation_Form extends Page_Base {
 			JavascriptExecutor java = (JavascriptExecutor) driver;
 			java.executeScript("scroll(0,250)");
 			By click_ICD11_Diagnosis = By.xpath("//*[@id=\"OPCONSULT#0#PASTMEDICAL\"]/div/div/app-directive-linked/div/div[2]/input");
-			driver.findElement(click_ICD11_Diagnosis).click();
+			driver.findElement(click_ICD11_Diagnosis).click(); 
 
 			By searchtext_Diagnosis = By.xpath("//*[@id=\"icd11search\"]");
 			driver.findElement(searchtext_Diagnosis).sendKeys("Cough" + Keys.ENTER);
@@ -212,7 +212,7 @@ public class OPConsultation_Form extends Page_Base {
 
     public void consultaion_place_lab_order() {
 
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS); 
 
 		try {
 				
@@ -499,7 +499,66 @@ public class OPConsultation_Form extends Page_Base {
 
 		} catch (InterruptedException ex) {
 			Logger.getLogger(OPConsultation_Form.class.getName()).log(Level.SEVERE, null, ex);
+			
+			
 		}
 	
 	}
+
+
+
+public void Follow_Up_After_Filling_Diagnosis() {
+
+	try {
+		
+		// ICD11 Diagnosis section
+		
+		
+
+		By searchtext_Diagnosis = By.xpath("//*[@id=\"icd11search\"]");
+		driver.findElement(searchtext_Diagnosis).sendKeys("Cough" + Keys.ENTER);
+		
+		Thread.sleep(2000);
+		By select_element = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-consultation-note/div/div/div[1]/div[2]/app-consultation-note-section/div/div/div[1]/div[2]/div[1]/div/div[1]/p");
+		driver.findElement(select_element).click();
+		
+		Thread.sleep(2000);
+		By select_Diagnosis = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-consultation-note/div/div/div[1]/div[2]/app-consultation-note-section/div/div/div[1]/div[2]/div[2]/div/div");
+		driver.findElement(select_Diagnosis).click();
+		
+		By select_Diagnosis_Classification = By
+				.xpath("//*[@id=\"MD12#0#SYSDIAGCAT\"]/div/div/app-segment/div/div/div[2]/div[1]/div/input");
+		driver.findElement(select_Diagnosis_Classification).click();
+
+		By select_Nature = By
+				.xpath("//*[@id=\"MD12#0#DI00001\"]/div/div/app-segment/div/div/div[2]/div[1]/div/input");
+		driver.findElement(select_Nature).click();
+
+		By select_Accuracy = By
+				.xpath("//*[@id=\"MD12#0#DIAGACCU\"]/div/div/app-segment/div/div/div[2]/div[1]/div/input");
+		driver.findElement(select_Accuracy).click();
+		
+		/*Select Onset_Since_dropdown = new Select(
+		driver.findElement(By.xpath("//*[@id=\"MD12#0#DIAGONSET\"]/div/div/app-timeperiod/div/select")));
+		Onset_Since_dropdown.selectByVisibleText("Days");
+
+		Thread.sleep(2000);	
+		Select enter_Onset_Since = new Select(
+		driver.findElement(By.xpath("//*[@id=\\\"MD12#0#DIAGONSET\\\"]/div/div/app-timeperiod/div/input")));
+		enter_Onset_Since.selectByVisibleText("5");*/
+		
+		Thread.sleep(2000);
+		By Submit_icon = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-consultation-note/div/div/div[1]/div[2]/app-consultation-note-section/div/div/div[2]/div/div/div/img[1]");
+		driver.findElement(Submit_icon).click();
+		
+		By Close_Button = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-consultation-note/div/div/div[2]/button[3]");
+		driver.findElement(Close_Button).click();
+
+		Thread.sleep(3000);
+
+
+	} catch (InterruptedException ex) {
+		Logger.getLogger(OPConsultation_Form.class.getName()).log(Level.SEVERE, null, ex);
+	}
 }
+	}

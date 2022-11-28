@@ -20,7 +20,7 @@ public class OP_TC_828_CMO_Search_From_Actions_Menu extends HP_Test_Base {
 		{
 	            
 	    	loginobject2 = new Authentication (driver);
-			 loginobject2.CMO_login_HP("CMOOPD02", "egy123");
+			 loginobject2.login_HP("CMOOPD02", "egy123");
 
 		}
 	

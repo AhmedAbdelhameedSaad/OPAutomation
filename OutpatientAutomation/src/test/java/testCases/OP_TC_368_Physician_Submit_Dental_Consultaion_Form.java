@@ -30,7 +30,7 @@ public class OP_TC_368_Physician_Submit_Dental_Consultaion_Form extends HP_Test_
     	   
 
     	   auth.physician_login_HP("DOCUAT5", "egy123"); 
-    	   search.search_by_Name("new patient");  
+    	   search.physician_search_by_Name("new patient");   
     	   
     	   Thread.sleep(2000);
     	  

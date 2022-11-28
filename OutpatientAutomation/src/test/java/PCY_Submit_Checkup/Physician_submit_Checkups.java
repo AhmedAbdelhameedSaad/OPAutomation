@@ -13,7 +13,7 @@ import testBase.*;
 public class Physician_submit_Checkups extends Page_Base {
 
 	public Physician_submit_Checkups(WebDriver driver) {
-		super(driver);
+		super(driver); 
 		
 		 
 	}
@@ -22,7 +22,7 @@ public class Physician_submit_Checkups extends Page_Base {
 
 		try {
 			
-			Thread.sleep(3000); 
+			Thread.sleep(3000);  
 			
 			//fill the student check up form
 
