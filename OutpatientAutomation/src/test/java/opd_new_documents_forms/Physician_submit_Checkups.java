@@ -1,19 +1,18 @@
-package PCY_Submit_Checkup;
+package opd_new_documents_forms;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
-import opd_authentication.Authentication;
+
 import testBase.*;
 
 public class Physician_submit_Checkups extends Page_Base {
 
 	public Physician_submit_Checkups(WebDriver driver) {
-		super(driver); 
+		super(driver);
 		
 		 
 	}
@@ -22,7 +21,7 @@ public class Physician_submit_Checkups extends Page_Base {
 
 		try {
 			
-			Thread.sleep(3000);  
+			Thread.sleep(3000); 
 			
 			//fill the student check up form
 
@@ -116,7 +115,7 @@ public class Physician_submit_Checkups extends Page_Base {
 
 
 
-public void physician_submits_Dental_Consultation_Form() {
+   public void physician_submits_Dental_Consultation_Form() {
 
 	try {
 		
