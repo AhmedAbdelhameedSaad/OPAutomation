@@ -43,10 +43,10 @@ public class OP_TC_240_Physician_Book_FollowUP_For_Patient extends HP_Test_Base
    
    		consult.Follow_Up_After_Filling_Diagnosis();
    		
-    	   
+   		consult.preview_form();
 			
 		}catch (InterruptedException ex) {
-			Logger.getLogger(OP_TC_230_Submit_OPConsultationForm.class.getName()).log(Level.SEVERE, null, ex);
+			Logger.getLogger(OP_TC_230_Submit_OPConsultationForm.class.getName()).log(Level.SEVERE, null, ex); 
         }
 		
 		
