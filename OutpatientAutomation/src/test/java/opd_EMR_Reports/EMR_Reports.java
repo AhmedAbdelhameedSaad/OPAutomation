@@ -1,4 +1,4 @@
-package OPD_EMR_Reports;
+package opd_EMR_Reports;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.openqa.selenium.By;
