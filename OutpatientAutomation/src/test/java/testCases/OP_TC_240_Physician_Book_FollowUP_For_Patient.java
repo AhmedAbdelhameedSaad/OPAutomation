@@ -34,7 +34,7 @@ public class OP_TC_240_Physician_Book_FollowUP_For_Patient extends HP_Test_Base
     	   auth.physician_login_HP("DOCUAT5", "egy123"); 
     	   Thread.sleep(2000); 
     	  
-    	   search.physician_search_by_Name("new patient");  
+    	   search.physician_search_by_Name("Mohamed Magdy");  
     	 
     	   Thread.sleep(2000); 
     	 
@@ -42,8 +42,10 @@ public class OP_TC_240_Physician_Book_FollowUP_For_Patient extends HP_Test_Base
    		action.op_consultation_form();
    
    		consult.Follow_Up_After_Filling_Diagnosis();
-   		
+   		consult.consultation_internal_external_referral();
+   		consult.referral_feedback_form();
    		consult.preview_form();
+   		consult.submit_consultation_form();
 			
 		}catch (InterruptedException ex) {
 			Logger.getLogger(OP_TC_230_Submit_OPConsultationForm.class.getName()).log(Level.SEVERE, null, ex); 

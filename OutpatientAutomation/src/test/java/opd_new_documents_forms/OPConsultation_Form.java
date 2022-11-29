@@ -83,14 +83,16 @@ public class OPConsultation_Form extends Page_Base {
 
 		try {
 			
+			Thread.sleep(3000);
 			// Internal / External referral
 			
 			JavascriptExecutor java = (JavascriptExecutor) driver;
 			java.executeScript("scroll(0,250)");
 			
-			By select_Internal_External_referral = By.xpath("//*[@id=\"OPCONSULT#0#EXTFER\"]/div/div/app-directive-linked/div/div[2]/input");
-			driver.findElement(select_Internal_External_referral).click();
-
+	/*		By select_Internal_External_referral = By.xpath("//*[@id=\"OPCONSULT#0#EXTFER\"]/div/div/app-directive-linked/div/div[2]/input");
+			driver.findElement(select_Internal_External_referral).click(); */
+			
+			Thread.sleep(3000);
 			By search_Internal_External_referral_Text = By.xpath("//*[@id=\"cns-ref-search\"]");
 			driver.findElement(search_Internal_External_referral_Text).sendKeys("General Surgery");
 
@@ -118,7 +120,9 @@ public class OPConsultation_Form extends Page_Base {
 
 			By Notes = By.xpath("//*[@id=\"EXTREF#0#REFNOTESNEW\"]/div/div/app-text/div/div[2]/input");
 			driver.findElement(Notes).sendKeys("Test");
-
+			
+			Thread.sleep(2000);
+			
 			By Search_button = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-consultation-note/div/div/div[1]/div[2]/app-consultation-note-section/div/div/app-consultation-note-referral/div/div[2]/div/app-external-referral-facility/div/div/div[1]/div/span");
 			driver.findElement(Search_button).click();
 			
@@ -160,7 +164,9 @@ public class OPConsultation_Form extends Page_Base {
 	}
 	
 	public void referral_feedback_form() throws InterruptedException {
-
+		
+		Thread.sleep(3000); 
+		
 		By no_radiobtn = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-consultation-note/div/div/div[1]/div[2]/app-consultation-note-section/div/div/app-clinicalform/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/app-section/div/div/app-segment/div/div/div[2]/div[2]/div/input");
 		driver.findElement(no_radiobtn).click();
 
@@ -168,9 +174,6 @@ public class OPConsultation_Form extends Page_Base {
 		By next_Button = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-consultation-note/div/div/div[2]/button[1]");
 		driver.findElement(next_Button).click();
 		
-		
-		By close_Button = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-consultation-note/div/div/div[2]/button[3]");
-		driver.findElement(next_Button).click();
 	}
 		
 
@@ -490,6 +493,7 @@ public class OPConsultation_Form extends Page_Base {
 	}
 	
 	public void verify_submitted_form()
+
 	{
 		try {
 
@@ -568,11 +572,7 @@ public void Follow_Up_After_Filling_Diagnosis() {
 		By next5_btn = By
 				.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-consultation-note/div/div/div[2]/button[1]");
 		driver.findElement(next3_btn).click();
-		
-		Thread.sleep(2000);
-		By next6_btn = By
-				.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-consultation-note/div/div/div[2]/button[1]");
-		driver.findElement(next6_btn).click();
+
 		
 		Thread.sleep(2000);
 		By searchtext_Diagnosis = By.xpath("//*[@id=\"icd11search\"]");
@@ -626,58 +626,17 @@ public void Follow_Up_After_Filling_Diagnosis() {
 		By twodays_radiobtn = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-consultation-note/div/div/div[1]/div[2]/app-consultation-note-section/div/div/app-clinicalform/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/app-section/div/div/app-composite-field/div/div[2]/span[2]/input");
 		driver.findElement(twodays_radiobtn).click();
 		
-		By eightAm_btn = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-consultation-note/div/div/div[1]/div[2]/app-consultation-note-section/div/div/app-clinicalform/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/app-section/div/div/app-composite-field/div/app-appointment-slot/div/div[1]/div[3]/div[2]/span[33]");
-		driver.findElement(eightAm_btn).click();
+		Thread.sleep(4000);
+		By nineAm_btn = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-consultation-note/div/div/div[1]/div[2]/app-consultation-note-section/div/div/app-clinicalform/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/app-section/div/div/app-composite-field/div/app-appointment-slot/div/div/div[3]/div[2]/span[36]");
+		driver.findElement(nineAm_btn).click();
 		
+		Thread.sleep(2000);
 		By confirm_radiobtn = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-consultation-note/div/div/div[1]/div[2]/app-consultation-note-section/div/div/app-clinicalform/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/app-section/div/div/app-composite-field/div/app-appointment-slot/div/div[2]/div/div/div/button[2]");
 		driver.findElement(confirm_radiobtn).click();
 		
-		By eightAm_radiobtn = By.xpath("");
-		driver.findElement(eightAm_radiobtn).click();
-		
-		By eightAm_radiobtn = By.xpath("");
-		driver.findElement(eightAm_radiobtn).click();
-		
-		By eightAm_radiobtn = By.xpath("");
-		driver.findElement(eightAm_radiobtn).click();
-		
-		By eightAm_radiobtn = By.xpath("");
-		driver.findElement(eightAm_radiobtn).click();
-		
-		By eightAm_radiobtn = By.xpath("");
-		driver.findElement(eightAm_radiobtn).click();
-		
-		By eightAm_radiobtn = By.xpath("");
-		driver.findElement(eightAm_radiobtn).click();
-		
-		By eightAm_radiobtn = By.xpath("");
-		driver.findElement(eightAm_radiobtn).click();
-		
-		By eightAm_radiobtn = By.xpath("");
-		driver.findElement(eightAm_radiobtn).click();
-		
-		By eightAm_radiobtn = By.xpath("");
-		driver.findElement(eightAm_radiobtn).click();
-		
-		By eightAm_radiobtn = By.xpath("");
-		driver.findElement(eightAm_radiobtn).click();
-		
-		By eightAm_radiobtn = By.xpath("");
-		driver.findElement(eightAm_radiobtn).click();
-		
-		By eightAm_radiobtn = By.xpath("");
-		driver.findElement(eightAm_radiobtn).click();
-		
-		
-		
-		
-		By Close_Button = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-consultation-note/div/div/div[2]/button[3]");
-		driver.findElement(Close_Button).click();
-		
-		
 		Thread.sleep(2000);
-		By Submit_icon = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-consultation-note/div/div/div[1]/div[2]/app-consultation-note-section/div/div/div[2]/div/div/div/img[1]");
-		driver.findElement(Submit_icon).click();
+		By next_radiobtn = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-consultation-note/div/div/div[2]/button[1]");
+		driver.findElement(next_radiobtn).click();
 		
 		
 
