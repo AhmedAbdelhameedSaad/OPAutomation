@@ -1,4 +1,4 @@
-package testCases;
+package TestCases;
 
 import static org.testng.Assert.assertEquals;
 

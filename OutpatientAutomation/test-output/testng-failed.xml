@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.OP_TC_240_Physician_Book_FollowUP_For_Patient">
+      <class name="TestCases.OP_TC_113_Nurse_View_OrdersSummary">
         <methods>
-          <include name="physician_submits_student_checkup"/>
+          <include name="nurse_view_ordersSummary"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- testCases.OP_TC_240_Physician_Book_FollowUP_For_Patient -->
+      </class> <!-- TestCases.OP_TC_113_Nurse_View_OrdersSummary -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

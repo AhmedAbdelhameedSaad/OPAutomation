@@ -1,4 +1,4 @@
-package testCases;
+package TestCases;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.junit.BeforeClass;

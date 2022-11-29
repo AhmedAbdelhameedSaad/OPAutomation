@@ -1,4 +1,4 @@
-package testCases;
+package TestCases;
 
 
 import org.testng.annotations.Test;
@@ -18,7 +18,7 @@ public class OP_TC_21_CMO_Register_patient_Arabic_Language extends HP_Test_Base 
 		{
 	            
 	    	loginobj = new Authentication(driver);  
-			 loginobj.CMO_login_HP("CMOOPD02", "egy123"); 
+			 loginobj.login_HP("CMOOPD02", "egy123"); 
 	   	 	
 	   	  registerobject = new Register_Patient(driver) ; 
 	   	 

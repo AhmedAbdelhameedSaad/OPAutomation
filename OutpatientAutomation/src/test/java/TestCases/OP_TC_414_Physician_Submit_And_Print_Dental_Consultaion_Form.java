@@ -1,4 +1,4 @@
-package testCases;
+package TestCases;
 
 
 import java.util.logging.Level;
@@ -6,7 +6,6 @@ import java.util.logging.Logger;
 
 import org.testng.annotations.Test;
 
-import opd_EMR_reports.EMR_Reports;
 import opd_new_documents_forms.Physician_submit_Checkups;
 import opd_HP_Menus.Action_Menu_Items;
 import opd_authentication.Authentication;

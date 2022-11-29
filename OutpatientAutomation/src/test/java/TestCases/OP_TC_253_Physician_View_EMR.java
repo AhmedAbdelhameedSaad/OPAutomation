@@ -1,4 +1,4 @@
-package testCases;
+package TestCases;
 
 
 import java.util.logging.Level;
@@ -7,7 +7,7 @@ import java.util.logging.Logger;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-import opd_EMR_reports.EMR_Reports;
+import OPD_EMR_Reports.EMR_Reports;
 import opd_authentication.Authentication;
 import opd_patient.SelectPatientOP;
 import testBase.*;

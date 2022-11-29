@@ -1,4 +1,4 @@
-package testCases;
+package TestCases;
 
 import org.testng.annotations.Test;
 import opd_HP_Menus.Left_Menu_Items;

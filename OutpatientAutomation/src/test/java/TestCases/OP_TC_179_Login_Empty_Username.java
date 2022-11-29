@@ -1,4 +1,4 @@
-package testCases;
+package TestCases;
 
 
 import java.util.logging.Level;
