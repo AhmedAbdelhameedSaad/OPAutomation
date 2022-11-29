@@ -1,0 +1,63 @@
+package testCases;
+
+
+import org.testng.annotations.Test;
+import opd_patient.Register_Patient;
+import opd_authentication.Authentication;
+import testBase.HP_Test_Base;
+
+
+public class OP_TC_CMO_32_Register_Patient_fromCreateConsultation extends HP_Test_Base {
+	
+	Register_Patient register_App_object;
+	Authentication loginobj;
+	   
+	   @Test(priority=1)
+		public void  user_login_success()
+		{
+	            
+	    	loginobj = new Authentication (driver);
+			 loginobj.CMO_login_HP("CMOOPD02", "egy123"); 
+
+		}
+	
+/*	@DataProvider(name = "Excel Data")
+	public Object[][] Register_Data() throws Throwable {
+		
+		
+
+		// get data from excel register patient class
+		
+		Read_Excel_Register_Patient ER = new Read_Excel_Register_Patient();
+		
+		try {
+			return ER.getExcelData();
+			
+		} catch (Throwable e) {	
+			
+			System.out.println("Error occured");
+		}
+		return ER.getExcelData();			
+	
+}
+*/
+
+@Test(priority=2  )
+public void  User_Register_patient() 
+
+{
+	 	
+	register_App_object = new Register_Patient(driver) ; 
+	 
+	register_App_object.CMO_Register_FromConsultationForm("Ali", "Assem", "01223456708", "44673344996677", "12345678560", "Manyal,Giza");
+	 
+}
+
+}
+
+
+//dataProvider = "Excel Data"
+
+
+
+

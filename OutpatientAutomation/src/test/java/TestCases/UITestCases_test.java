@@ -1,4 +1,4 @@
-package TestCases;
+package testCases;
 
 import java.awt.EventQueue;
 import javax.swing.JFrame;
@@ -636,7 +636,7 @@ public class UITestCases_test {
 				} else if (rdbtnNewRadioButton_9_1_5_1_2.isSelected()) {
 					TestListenerAdapter tla = new TestListenerAdapter();
 					TestNG testng = new TestNG();
-					testng.setTestClasses(new Class[] { IP_TC_519.class });
+					testng.setTestClasses(new Class[] { OP_TC_054_097_Create_Consultation_Visit.class });
 					testng.addListener(tla);
 					testng.run();
 				} else if (rdbtnNewRadioButton_10.isSelected()) {

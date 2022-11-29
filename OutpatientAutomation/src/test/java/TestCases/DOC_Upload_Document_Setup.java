@@ -1,4 +1,4 @@
-package TestCases;
+package testCases;
 
 import java.io.IOException;
 
@@ -10,9 +10,9 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import DOC_Upload_Document.*;
-import OPD_OPConsultation.DOC_SelectPatientOP;
 import Utilities.read_excel_data_HP;
+import opd_new_documents_forms.DOC_SelectPatientOP;
+import opd_upload_document.*;
 
 public class DOC_Upload_Document_Setup {
 
@@ -38,7 +38,7 @@ public class DOC_Upload_Document_Setup {
 	//	DOC_Login_HP Login = new DOC_Login_HP();
 		//Login.login_Edge(driver);
 
-		DOC_SelectPatientOP select_patient = new DOC_SelectPatientOP();
+		SelectPatientOP select_patient = new SelectPatientOP();
 		select_patient.selectpatientOP(driver, Patient_ID);
 
 		SelectForm Form = new SelectForm();
