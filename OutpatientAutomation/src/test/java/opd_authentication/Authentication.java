@@ -11,7 +11,7 @@ import testBase.Page_Base;
 
 public class Authentication extends Page_Base {
 	
-	public WebElement login_button ;
+	public WebElement login_button = driver.findElement(By.xpath("/html/body/app-root/app-common-login/div/div[2]/div[2]/form/button"));
 
 	public Authentication(WebDriver driver) {
 		super(driver);
@@ -30,6 +30,7 @@ public class Authentication extends Page_Base {
 		driver.findElement(username_element).sendKeys(username);
 		By password_element = By.id("his-password");
 		driver.findElement(password_element).sendKeys(password);
+		
 	By login_button = By.xpath("/html/body/app-root/app-common-login/div/div[2]/div[2]/form/button"); 
 		driver.findElement(login_button).click();
 
@@ -216,13 +217,4 @@ public class Authentication extends Page_Base {
 }
 
 
-public void Physician_login_Empty_Username(String username, String password) { 
-	By username_element = By.id("user-id");
-	driver.findElement(username_element).sendKeys(username);
-	By password_element = By.id("his-password");
-	driver.findElement(password_element).sendKeys(password); 
- 
-	
-
-}
 }
