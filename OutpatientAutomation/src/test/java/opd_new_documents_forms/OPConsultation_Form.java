@@ -668,23 +668,7 @@ public void Follow_Up_After_Filling_Diagnosis() {
 		By eightAm_radiobtn = By.xpath("");
 		driver.findElement(eightAm_radiobtn).click();
 		
-		By eightAm_radiobtn = By.xpath("");
-		driver.findElement(eightAm_radiobtn).click();
 		
-		By eightAm_radiobtn = By.xpath("");
-		driver.findElement(eightAm_radiobtn).click();
-		
-		By eightAm_radiobtn = By.xpath("");
-		driver.findElement(eightAm_radiobtn).click();
-		
-		By eightAm_radiobtn = By.xpath("");
-		driver.findElement(eightAm_radiobtn).click();
-		
-		By eightAm_radiobtn = By.xpath("");
-		driver.findElement(eightAm_radiobtn).click();
-		
-		By eightAm_radiobtn = By.xpath("");
-		driver.findElement(eightAm_radiobtn).click();
 		
 		
 		By Close_Button = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-consultation-note/div/div/div[2]/button[3]");

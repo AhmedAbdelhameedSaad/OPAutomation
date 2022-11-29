@@ -17,7 +17,7 @@ public class OP_TC_CMO_32_Register_Patient_fromCreateConsultation extends HP_Tes
 		{
 	            
 	    	loginobj = new Authentication (driver);
-			 loginobj.CMO_login_HP("CMOOPD02", "egy123"); 
+			 loginobj.login_HP("CMOOPD02", "egy123"); 
 
 		}
 	

@@ -18,7 +18,7 @@ public class OP_TC_128_NUR_Filter_Patient_By_CriticalCondition extends HP_Test_B
 	public void Nurse_Filter_Patient_By_CriticalCondition() throws InterruptedException {
 		
 		auth = new Authentication(driver);
-		auth.CMO_login_HP("NUROPD02", "egy123");
+		auth.login_HP("NUROPD02", "egy123");
 		
 		type = new NUR_Filter_Patient_list (driver);
 	

@@ -9,34 +9,35 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class Fill {
+public class Allocate {
 
-	public void fill(WebDriver driver, String Patient_ID) {
+	public void allocate(WebDriver driver, String Patient_ID) {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		try {
 
-			By Dispense_Medication = By.id("sd1");
+			By Dispense_Medication = By.id("sd3");
 			driver.findElement(Dispense_Medication).click();
 
 			String Current_window = driver.getWindowHandle();
 			for (String WindowID : driver.getWindowHandles()) {
 				String Title = driver.switchTo().window(WindowID).getTitle();
-//				System.out.println(Title);
+				//				System.out.println(Title);
 				if (Title.equals("Dispensing Medication Login")) {
-//					System.out.println(driver.getCurrentUrl());
+					//					System.out.println(driver.getCurrentUrl());
 
 					WebElement pass = driver.findElement(By.name("password"));
 					pass.sendKeys("egy123");
 
-					WebElement Dispense_Location = driver.findElement(By.name("disp_locn"));
-					Dispense_Location.click();
-					Dispense_Location.sendKeys(Keys.ARROW_DOWN);
-					Dispense_Location.sendKeys(Keys.TAB);
+					//WebElement Dispense_Location = driver.findElement(By.name("disp_locn"));
+					//	Dispense_Location.click();
+					//	Dispense_Location.sendKeys(Keys.ARROW_DOWN);
+					//	Dispense_Location.sendKeys(Keys.TAB);
 
 					WebElement Dispense_Stages = driver.findElement(By.name("disp_stage"));
 					Dispense_Stages.click();
-					Dispense_Stages.sendKeys(Keys.ARROW_DOWN);
+					Dispense_Stages.sendKeys(Keys.ARROW_UP);
+					Dispense_Stages.sendKeys(Keys.ARROW_UP);
 					Dispense_Stages.sendKeys(Keys.TAB);
 
 					WebElement OkBtn = driver.findElement(By.xpath("//input[@value='OK']"));
@@ -71,8 +72,8 @@ public class Fill {
 					driver.switchTo().frame("DispMedicationPatDetFrame_3");
 					driver.switchTo().frame("f_disp_medication_header");
 
-					WebElement Fill_button = driver.findElement(By.name("btnFill"));
-					Fill_button.click();
+					WebElement allocate_button = driver.findElement(By.name("alloc_but"));
+					allocate_button.click();
 
 					String currentWindow = driver.getWindowHandle();
 					Set<String> windows = driver.getWindowHandles();
@@ -80,7 +81,7 @@ public class Fill {
 						driver.switchTo().window(window);
 						System.out.println(driver.getTitle());
 
-						if (driver.getTitle().contains("Fill / Refill")) {
+						if (driver.getTitle().contains("Allocate / Reallocate")) {
 
 							Thread.sleep(500);
 
@@ -95,8 +96,8 @@ public class Fill {
 							driver.switchTo().defaultContent();
 							driver.switchTo().frame("f_buttons");
 
-							By Fill_for_Drug = By.name("stock_alloc_butt");
-							driver.findElement(Fill_for_Drug).click();
+							By Allocate_for_Drug = By.name("stock_alloc_butt");
+							driver.findElement(Allocate_for_Drug).click();
 
 							Thread.sleep(300);
 
@@ -114,8 +115,8 @@ public class Fill {
 							driver.switchTo().frame("DispMedicationPatDetFrame_3");
 							driver.switchTo().frame("f_disp_medication_all_stages_legends");
 
-							WebElement Complete_Fill = driver.findElement(By.id("filling_butt"));
-							Complete_Fill.click();
+							WebElement Complete_Allocate = driver.findElement(By.id("filling_butt"));
+							Complete_Allocate.click();
 
 							String currentWindow2 = driver.getWindowHandle();
 							Set<String> windows2 = driver.getWindowHandles();
@@ -130,19 +131,19 @@ public class Fill {
 
 									Thread.sleep(500);
 
-//									String CurrentWindowp = driver.getWindowHandle();
-//									for (String Windowp : driver.getWindowHandles()) {
-//										String Title2 = driver.switchTo().window(Windowp).getTitle();
-//										System.out.println(Title2);
-//										if (Title.equals("Print/Edit Label")) {
-//
-//											driver.switchTo().defaultContent();
-//											driver.switchTo().frame("buttonFrame");
-//
-//											WebElement Cancel = driver.findElement(By.name("btnCancel"));
-//							         		Cancel.click();
-//
-//											Thread.sleep(300);
+									//									String CurrentWindowp = driver.getWindowHandle();
+									//									for (String Windowp : driver.getWindowHandles()) {
+									//										String Title2 = driver.switchTo().window(Windowp).getTitle();
+									//										System.out.println(Title2);
+									//										if (Title.equals("Print/Edit Label")) {
+									//
+									//											driver.switchTo().defaultContent();
+									//											driver.switchTo().frame("buttonFrame");
+									//
+									//											WebElement Cancel = driver.findElement(By.name("btnCancel"));
+									//							         		Cancel.click();
+									//
+									//											Thread.sleep(300);
 
 									System.out.println(" PCY Fill Medications successfully ");
 
@@ -155,8 +156,8 @@ public class Fill {
 
 		} catch (
 
-		InterruptedException ex) {
-			Logger.getLogger(Fill.class.getName()).log(Level.SEVERE, null, ex);
+				InterruptedException ex) {
+			Logger.getLogger(Allocate.class.getName()).log(Level.SEVERE, null, ex);
 		}
 	}
 }

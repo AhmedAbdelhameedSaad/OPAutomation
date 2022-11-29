@@ -3,7 +3,7 @@ package testCases;
 
 import org.testng.annotations.Test;
 
-import opd_EMR_reports.EMR_Reports;
+import OPD_EMR_Reports.EMR_Reports;
 import opd_authentication.Authentication;
 import opd_patient.SelectPatientOP;
 import testBase.*;

@@ -7,7 +7,6 @@ import java.util.logging.Logger;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-import opd_EMR_reports.EMR_Reports;
 import opd_HP_Menus.Action_Menu_Items;
 import opd_HP_Menus.Left_Menu_Items;
 import opd_HP_Menus.NewDocument_Menu_Items;
@@ -43,10 +42,10 @@ public class OP_TC_240_Physician_Book_FollowUP_For_Patient extends HP_Test_Base
    
    		consult.Follow_Up_After_Filling_Diagnosis();
    		
-    	   
+   		consult.preview_form();
 			
 		}catch (InterruptedException ex) {
-			Logger.getLogger(OP_TC_230_Submit_OPConsultationForm.class.getName()).log(Level.SEVERE, null, ex);
+			Logger.getLogger(OP_TC_230_Submit_OPConsultationForm.class.getName()).log(Level.SEVERE, null, ex); 
         }
 		
 		
