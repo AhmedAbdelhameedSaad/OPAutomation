@@ -155,7 +155,7 @@ public void op_consultation_form() {
 
 		Thread.sleep(2000); 
 		// Click on Action 
-		By Action = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/div/div/div[2]/div/div[5]");
+		By Action = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/div/div/div[2]/div/div[4]");
 		driver.findElement(Action).click(); 
 
 		Thread.sleep(2000);

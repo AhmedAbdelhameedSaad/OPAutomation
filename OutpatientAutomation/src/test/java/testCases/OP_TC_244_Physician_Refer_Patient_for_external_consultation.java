@@ -6,7 +6,7 @@ import java.util.logging.Logger;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-import OPD_EMR_Reports.EMR_Reports;
+import opd_EMR_Reports.EMR_Reports;
 import opd_HP_Menus.NewDocument_Menu_Items;
 import opd_authentication.Authentication;
 import opd_new_documents_forms.OPConsultation_Form;

@@ -24,7 +24,7 @@ public class NUR_View_Uploaded_documents_Setup {
 		// Initialize Edge Driver
 		driver = new EdgeDriver();
 		driver.navigate().to("http://10.209.1.140/healthplug/#/user/leads");
-		driver.manage().window().maximize();
+		driver.manage().window().maximize(); 
 	}
 
 	@Test(dataProvider = "test_data")

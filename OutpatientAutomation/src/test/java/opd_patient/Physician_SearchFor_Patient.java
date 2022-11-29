@@ -38,7 +38,7 @@ public class Physician_SearchFor_Patient extends Page_Base {
 			
 			Thread.sleep(3000);  
 			
-			By encounter_btn = By.xpath("/html/body/app-root/app-crm/div/div/app-crm-leads/div[2]/div/div[2]/div[2]/div/app-crm-leads-list/div[3]/div[2]/div[2]/div[2]/p[1]"); 
+			By encounter_btn = By.xpath("/html/body/app-root/app-crm/div/div/app-crm-leads/div[2]/div/div[2]/div[2]/div/app-crm-leads-list/div[3]/div[2]/div[2]/div[3]"); 
 			
 			driver.findElement(encounter_btn).click();
 			

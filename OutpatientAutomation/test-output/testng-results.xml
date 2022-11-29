@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-11-29T12:09:57 EET" name="Default suite" finished-at="2022-11-29T12:10:03 EET" duration-ms="6556">
+  <suite started-at="2022-11-29T13:48:55 EET" name="Default suite" finished-at="2022-11-29T13:51:29 EET" duration-ms="153505">
     <groups>
     </groups>
-    <test started-at="2022-11-29T12:09:57 EET" name="Default test" finished-at="2022-11-29T12:10:03 EET" duration-ms="6556">
-      <class name="testCases.OP_TC_180_Login_Empty_Password">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.OP_TC_180_Login_Empty_Password@6eda5c9]" started-at="2022-11-29T12:09:42 EET" name="setup" finished-at="2022-11-29T12:09:57 EET" duration-ms="15000" status="PASS">
+    <test started-at="2022-11-29T13:48:55 EET" name="Default test" finished-at="2022-11-29T13:51:29 EET" duration-ms="153505">
+      <class name="testCases.OP_TC_240_Physician_Book_FollowUP_For_Patient">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.OP_TC_240_Physician_Book_FollowUP_For_Patient@7caa550]" started-at="2022-11-29T13:47:48 EET" name="setup" finished-at="2022-11-29T13:48:55 EET" duration-ms="66697" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="login_empty_password()[pri:0, instance:testCases.OP_TC_180_Login_Empty_Password@6eda5c9]" started-at="2022-11-29T12:09:57 EET" name="login_empty_password" finished-at="2022-11-29T12:10:03 EET" duration-ms="6487" status="PASS">
+        <test-method signature="physician_submits_student_checkup()[pri:0, instance:testCases.OP_TC_240_Physician_Book_FollowUP_For_Patient@7caa550]" started-at="2022-11-29T13:48:55 EET" name="physician_submits_student_checkup" finished-at="2022-11-29T13:51:29 EET" duration-ms="153361" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login_empty_password -->
-      </class> <!-- testCases.OP_TC_180_Login_Empty_Password -->
+        </test-method> <!-- physician_submits_student_checkup -->
+      </class> <!-- testCases.OP_TC_240_Physician_Book_FollowUP_For_Patient -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
