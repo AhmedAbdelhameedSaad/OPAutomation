@@ -36,8 +36,8 @@ public class IP_TC_843 {
 		Login_EM_IPD_Pharmacist login = new Login_EM_IPD_Pharmacist();
 		login.login(driver);
 
-		Fill dispense2 = new Fill();
-		dispense2.fill(driver, Patient_ID);
+		Allocate dispense2 = new Allocate();
+		dispense2.allocate(driver, Patient_ID);
 
 	}
 

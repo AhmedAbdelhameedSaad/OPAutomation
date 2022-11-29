@@ -13,7 +13,7 @@ import OP_Consultation_Sections.Prescribe_Medications;
 //import DOC_Prescribe_Medications.Prescribe_Medications;
 import Outpatient_OP_consultation.SelectForm;
 import PCY_Dispense_Medication.Deliver;
-import PCY_Dispense_Medication.Fill;
+import PCY_Dispense_Medication.Allocate;
 import PCY_Dispense_Medication.Verification;
 import PCY_Pages.Login_EM_IPD_Pharmacist;
 import PCY_Pages.Login_EM_Pharmacy_Management;
@@ -117,7 +117,7 @@ public class GroupM {
 		Login_EM_IPD_Pharmacist login = new Login_EM_IPD_Pharmacist();
 		login.login(driver);
 
-		Fill dispense2 = new Fill();
+		Allocate dispense2 = new Allocate();
 		dispense2.fill(driver, Patient_ID);
 
 //		driver.quit();
