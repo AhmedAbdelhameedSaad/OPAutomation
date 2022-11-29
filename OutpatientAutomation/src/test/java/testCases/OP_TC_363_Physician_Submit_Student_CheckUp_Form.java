@@ -6,6 +6,7 @@ import java.util.logging.Logger;
 
 import org.testng.annotations.Test;
 
+import opd_EMR_reports.EMR_Reports;
 import opd_new_documents_forms.Physician_submit_Checkups;
 import opd_HP_Menus.Action_Menu_Items;
 import opd_authentication.Authentication;
@@ -18,7 +19,7 @@ public class OP_TC_363_Physician_Submit_Student_CheckUp_Form extends HP_Test_Bas
 
 	@Test
 	public void physician_submits_student_checkup() throws InterruptedException {
-		Authentication auth = new Authentication(driver);  
+		Authentication auth = new Authentication(driver);   
 		Action_Menu_Items action = new Action_Menu_Items(driver);
 		Physician_SearchFor_Patient search = new Physician_SearchFor_Patient(driver);
 		Physician_submit_Checkups submit = new Physician_submit_Checkups (driver);
@@ -33,6 +34,11 @@ public class OP_TC_363_Physician_Submit_Student_CheckUp_Form extends HP_Test_Bas
     	   
     	   action.student_checkup_option();
     	   submit.physician_submits_student_Checkup_Form();
+    	    submit.click_on_Submit_button();
+    	   
+    	   EMR_Reports report = new EMR_Reports(driver);
+   		report.display_last_report() ; 
+   	
     	   
 			
 		}catch (InterruptedException ex) {

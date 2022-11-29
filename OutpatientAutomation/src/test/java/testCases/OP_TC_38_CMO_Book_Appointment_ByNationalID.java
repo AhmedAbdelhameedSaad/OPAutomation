@@ -19,7 +19,7 @@ public class OP_TC_38_CMO_Book_Appointment_ByNationalID extends HP_Test_Base {
 		{
 	            
 	    	loginobject2 = new Authentication (driver);
-			 loginobject2.login_HP("CMOOPD02", "egy123"); 
+			 loginobject2.login_HP("CMOOPD02", "egy123");  
 
 		}
 	

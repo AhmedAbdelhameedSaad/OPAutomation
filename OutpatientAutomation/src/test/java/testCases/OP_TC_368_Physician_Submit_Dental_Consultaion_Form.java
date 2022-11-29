@@ -6,6 +6,7 @@ import java.util.logging.Logger;
 
 import org.testng.annotations.Test;
 
+import opd_EMR_reports.EMR_Reports;
 import opd_new_documents_forms.Physician_submit_Checkups;
 import opd_HP_Menus.Action_Menu_Items;
 import opd_authentication.Authentication;
@@ -34,6 +35,12 @@ public class OP_TC_368_Physician_Submit_Dental_Consultaion_Form extends HP_Test_
     	   
     	   action.dental_consultation_option();
     	   submit.physician_submits_Dental_Consultation_Form();
+    	   
+    	   submit.click_on_Submit_button();
+    	   
+    	   EMR_Reports report = new EMR_Reports(driver);
+   		report.display_last_report() ;
+   	
 			
 		
 			

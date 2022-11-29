@@ -257,7 +257,7 @@ public class EMR_Reports extends Page_Base {
 					"/html/body/app-root/app-crm/div/div/app-patient-view/div/app-dashboard/div/gridster/gridster-item[1]/app-widget/div/div[1]/app-reports/div[1]/div[1]/img[2]");
 			driver.findElement(Reports).click();
 
-			Thread.sleep(2000);
+			Thread.sleep(2000); 
 
 			// click report
 
@@ -302,4 +302,39 @@ public class EMR_Reports extends Page_Base {
 			Logger.getLogger(EMR_Reports.class.getName()).log(Level.SEVERE, null, ex);
 		}
 	}
+
+
+
+
+public void display_last_report() throws InterruptedException {
+
+	Thread.sleep(2000);
+
+	By close_icon = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/div/div[2]/div[1]/div/div/div[2]/img");
+	
+	driver.findElement(close_icon).click();
+	
+	driver.navigate().refresh();
+	
+		Thread.sleep(2000);
+
+		// Open Reports
+		By Reports = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/div/app-dashboard/div/gridster/gridster-item[1]/app-widget/div/div[1]/app-reports/div[1]/div[2]/div[1]/div[1]/div[2]/div/p[1]/span[1]");
+		
+		driver.findElement(Reports).click();
+		
+		
+		Thread.sleep(5000); 
+		
+By exit_icon = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/div/app-dashboard/app-reports-view-model/div/div[1]/div/div[2]/div[2]/div[2]/img");
+		
+		driver.findElement(exit_icon).click();
+	
 }
+
+}
+
+
+
+
+

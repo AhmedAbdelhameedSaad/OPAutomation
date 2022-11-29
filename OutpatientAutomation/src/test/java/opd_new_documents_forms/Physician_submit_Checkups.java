@@ -21,7 +21,7 @@ public class Physician_submit_Checkups extends Page_Base {
 
 		try {
 			
-			Thread.sleep(3000); 
+			Thread.sleep(3000);   
 			
 			//fill the student check up form
 
@@ -104,8 +104,7 @@ public class Physician_submit_Checkups extends Page_Base {
 			driver.findElement(close_btn).click();
 		
 			
-			By submit_btn = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-clinicalform/div/div[2]/div[2]/div[2]/button[4]");
-			driver.findElement(submit_btn).click();
+			
 			
 			
 		} catch (InterruptedException ex) {
@@ -221,16 +220,37 @@ public class Physician_submit_Checkups extends Page_Base {
 		driver.findElement(close_btn).click();
 	
 		
-		By submit_btn = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-clinicalform/div/div[2]/div[2]/div[2]/button[4]");
-		driver.findElement(submit_btn).click();
-		
 	
 	} catch (InterruptedException ex) {
 		Logger.getLogger(Physician_submit_Checkups.class.getName()).log(Level.SEVERE, null, ex);
 	}
 }
 
+
+   public void click_on_Submit_button() 
+   {
+By submit_btn = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-clinicalform/div/div[2]/div[2]/div[2]/button[4]");
+driver.findElement(submit_btn).click();
+
+   }
+   
+   
+   public void click_on_Submit_And_print_button() 
+   {
+By submit_Print_btn = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-clinicalform/div/div[2]/div[2]/div[2]/button[5]");
+driver.findElement(submit_Print_btn).click();
+
+   }
+   
+   
+   
+   
 }
+
+
+
+
+
 
 
 

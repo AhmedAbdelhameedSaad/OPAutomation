@@ -20,7 +20,7 @@ public class Consultation_Visit extends Page_Base {
 
 		try {
  
-			Thread.sleep(4000); 
+			Thread.sleep(4000);   
 			// ٍsearch for patient
 			By search_Text = By.xpath( 
 					"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-create-visit/div/div[2]/div/div[2]/div[2]/div[2]/div/app-ex-identify-patient/div/div[2]/div/input");

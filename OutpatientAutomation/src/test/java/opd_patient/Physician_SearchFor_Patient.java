@@ -19,7 +19,7 @@ public class Physician_SearchFor_Patient extends Page_Base {
 	public void physician_search_by_Name(String First_Name) 
 	{
 		try {
-			Thread.sleep(4000); 
+			Thread.sleep(4000);  
 			By find_patient_btn = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-crm-leads/div[1]/div[2]/div[1]/div[1]");
 			driver.findElement(find_patient_btn).click();
