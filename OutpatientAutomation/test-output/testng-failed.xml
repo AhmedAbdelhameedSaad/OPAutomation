@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.OP_TC_179_Login_Empty_Username">
+      <class name="testCases.OP_TC_180_Login_Empty_Password">
         <methods>
           <include name="setup"/>
           <include name="login_empty_username"/>
         </methods>
-      </class> <!-- testCases.OP_TC_179_Login_Empty_Username -->
+      </class> <!-- testCases.OP_TC_180_Login_Empty_Password -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
