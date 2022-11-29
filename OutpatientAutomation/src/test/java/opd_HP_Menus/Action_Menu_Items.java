@@ -20,7 +20,7 @@ public class Action_Menu_Items extends Page_Base {
 	public void select_book_appointment_item() {
 		try {
 
-			Thread.sleep(5000); 
+			Thread.sleep(5000);  
 
 			By actions_btn = By
 					.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[1]/div[2]/div/div[2]");
@@ -84,7 +84,7 @@ public class Action_Menu_Items extends Page_Base {
 	public void student_checkup_option() { 
 
 
-		try {
+		try { 
 
 			Thread.sleep(2000); 
 			// Click on Action
@@ -146,4 +146,41 @@ public class Action_Menu_Items extends Page_Base {
 		}
 	
 }
+
+
+public void op_consultation_form() { 
+
+
+	try {
+
+		Thread.sleep(2000); 
+		// Click on Action 
+		By Action = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/div/div/div[2]/div/div[5]");
+		driver.findElement(Action).click(); 
+
+		Thread.sleep(2000);
+		
+		// Click on new documents
+		
+		By new_documents_btn = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-lead-actions-popover/div/div/div[3]/div");
+		driver.findElement(new_documents_btn).click();
+		
+		Thread.sleep(2000);
+		By search = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/div/div[2]/div[2]/div[1]/input");
+				driver.findElement(search).sendKeys("op consultation");
+				
+	Thread.sleep(2000);
+				
+		By op_consultation_btn = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/div/div[2]/div[2]/div[2]/div[2]");
+		driver.findElement(op_consultation_btn).click();
+		
+		
+			
+
+	} catch (InterruptedException ex) {
+		Logger.getLogger(Action_Menu_Items.class.getName()).log(Level.SEVERE, null, ex);
+	}
+
 }
+}
+

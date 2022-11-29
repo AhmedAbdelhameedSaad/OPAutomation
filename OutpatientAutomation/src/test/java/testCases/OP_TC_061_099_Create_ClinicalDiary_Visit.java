@@ -25,7 +25,7 @@ public class OP_TC_061_099_Create_ClinicalDiary_Visit extends HP_Test_Base {
 		 Consultation_Visit consultation_Visit = new Consultation_Visit(driver);
 		 consultation_Visit.create_from_clinicalDiary("Family Medicine Clinic","Mohamed saeed hussin abdraboh");
 		 
-	}
+	} 
 
 	
 }

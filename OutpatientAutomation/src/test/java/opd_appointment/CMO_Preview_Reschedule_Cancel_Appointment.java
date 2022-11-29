@@ -4,6 +4,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebElement;
@@ -29,7 +30,7 @@ public class CMO_Preview_Reschedule_Cancel_Appointment extends Page_Base {
 					"/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[1]/div[1]");
 			driver.findElement(select_clinic).click();
 			
-			Thread.sleep(3000);
+			Thread.sleep(3000); 
 			//family medicine clinic
 			By search_clinic = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[1]/div[2]/div[1]/input");
@@ -61,9 +62,9 @@ public void CMO_Reschedule_Doctor_Appointments(String clinicName) {
 
 	try {
 
-		Thread.sleep(3000); 
+		Thread.sleep(4000); 
 		
-         //click on clinical diary icon
+         //click on clinical diary icon 
 		
 		By clinical_diary = By.xpath("/html/body/app-root/app-crm/div/app-navigation/div/div[2]/div/img");
 		 
@@ -198,7 +199,7 @@ public void CMO_Cancel_Doctor_Appointments(String clinicName) {
 				
 		driver.findElement( update_btn).click() ;
 		
-		Thread.sleep(3000);
+		Thread.sleep(3000); 
 		By eightnAM_appoint_btn = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[2]/div[2]/app-appointments-calendar-view/div/div/div/div[2]/div[1]/div[2]/div/div/div/div/span[1]");
 
 		driver.findElement(eightnAM_appoint_btn).click() ;
@@ -261,4 +262,137 @@ public void Physician_Preview_Doctor_Appointments(String clinicName) {
 		Logger.getLogger(CMO_Preview_Reschedule_Cancel_Appointment.class.getName()).log(Level.SEVERE, null, ex);
 	}
 }
+
+
+
+public void CMO_Book_visit_and_Check_Out(String patient_id, String clinic_name, String doctor_name ) { 
+
+	try {
+		
+	Thread.sleep(4000);   
+		// ٍsearch for patient
+		By search_Text = By.xpath( 
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-create-visit/div/div[2]/div/div[2]/div[2]/div[2]/div/app-ex-identify-patient/div/div[2]/div/input");
+		driver.findElement(search_Text).sendKeys(patient_id + Keys.ENTER);
+
+		Thread.sleep(2000); 
+
+		// Select patient
+		By Select_patient = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-create-visit/div/div[2]/div/div[2]/div[2]/div[2]/div/app-ex-identify-patient/div[2]/app-find-patient-detail/div/div/app-flash-card/div/div/div[1]/div/div/div[2]/div[2]/div[2]/div/div/div[1]");
+		driver.findElement(Select_patient).click();
+
+		Thread.sleep(2000);
+
+		// Choose a lost
+		By Choose_a_lost = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-create-visit/div/div[2]/div/div[2]/div[2]/div[2]/div/app-ex-identify-patient/div/div[2]/div[2]/div/div[2]/div");
+		driver.findElement(Choose_a_lost).click();
+
+		Thread.sleep(2000);
+
+		// ٍChoose Clinic
+		By search_Text_Clinic = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-create-visit/div/div[2]/div/div[2]/div[2]/div[2]/div/app-clinic/div/div[2]/div/input");
+		driver.findElement(search_Text_Clinic).sendKeys(clinic_name);
+
+		// Select Clinic
+		By Select_Clinic = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-create-visit/div/div[2]/div/div[2]/div[2]/div[2]/div/app-clinic/div/div[3]/div/div/p");
+		driver.findElement(Select_Clinic).click();
+
+		Thread.sleep(2000);
+
+		// ٍChoose practitioner
+		By search_Text_practitioner = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-create-visit/div/div[2]/div/div[2]/div[2]/div[2]/div/app-ex-choose-practitioner/div/div[2]/div/input");
+		driver.findElement(search_Text_practitioner).sendKeys(doctor_name);
+
+		Thread.sleep(2000);
+
+		// Select practitioner
+		By Select_practitioner = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-create-visit/div/div[2]/div/div[2]/div[2]/div[2]/div/app-ex-choose-practitioner/div/div[3]/div/div/div/div[1]");
+		driver.findElement(Select_practitioner).click();
+
+		Thread.sleep(2000);
+
+		// Select a slot time 8 AM 
+		By Select_time = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-create-visit/div/div[2]/div/div[2]/div[2]/div[2]/div/app-ex-choose-practitioner/div[2]/app-practitioner-slot/div/div[2]/div/div/div/div[1]/div");
+		driver.findElement(Select_time).click(); 
+		
+
+		Thread.sleep(2000);
+		
+		By newVisit_checkbox = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-create-visit/div/div[2]/div/div[2]/div[2]/div[2]/div/app-ex-schedule-appointment/div/div[2]/app-visittype/div/div/div[1]/input");
+		driver.findElement(newVisit_checkbox).click();
+
+		By click_Continue = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-create-visit/div/div[2]/div/div[3]/div[2]/button");
+		driver.findElement(click_Continue).click();
+		
+		Thread.sleep(2000);
+
+		By click_Create_Visit = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-create-visit/div/div[2]/div/div[3]/div[2]/button");
+		driver.findElement(click_Create_Visit).click();
+		
+		Thread.sleep(2000);
+		By click_Done = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-create-visit/div/div[2]/div/div[3]/div[2]/button[3]");
+		driver.findElement(click_Done).click();
+		
+		Thread.sleep(2000); 
+		
+		
+		driver.navigate().refresh();
+		
+		
+			Thread.sleep(3000); 
+		
+		By select_clinic = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[1]/div[1]");
+		driver.findElement(select_clinic).click();
+		
+		Thread.sleep(3000); 
+		//family medicine clinic
+		By search_clinic = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[1]/div[2]/div[1]/input");
+		driver.findElement(search_clinic).sendKeys(clinic_name);
+		
+		Thread.sleep(2000);
+		By select_clinic_element = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[1]/div[2]/div[2]/div");
+		driver.findElement(select_clinic_element).click();
+		
+		// choose Amr Moez
+		
+		Thread.sleep(2000); 
+		
+		By select_doctor = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[2]/div[1]/app-crm-quick-filters/div/div/div[2]/div[9]/div[4]/input");
+		driver.findElement(select_doctor).click();
+		
+			
+		Thread.sleep(3000);
+		By appoint_icon = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[2]/div[2]/app-appointments-calendar-view/div/div/div/div[2]/div[1]/div[2]/div/div/div/div/span[1]");
+		driver.findElement(appoint_icon).click();
+		
+		Thread.sleep(2000);
+		By check_out = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[2]/div[2]/app-appointments-calendar-view/div/div/div/div[2]/div[1]/div[2]/app-appointment-info/div/div[3]/div[1]");
+		driver.findElement(check_out).click();
+		
+ 
+		
+
+	} catch (InterruptedException ex) {
+		Logger.getLogger(CMO_Preview_Reschedule_Cancel_Appointment.class.getName()).log(Level.SEVERE, null, ex);
+	}
 }
+
+}
+
+
+

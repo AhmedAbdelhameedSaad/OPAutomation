@@ -13,7 +13,7 @@ import opd_authentication.Authentication;
 import opd_patient.Physician_SearchFor_Patient;
 import testBase.*;
 
-public class OP_TC_363_Physician_Submit_Student_CheckUp_Form extends HP_Test_Base 
+public class OP_TC_413_Physician_Submit_And_Print_Student_CheckUp_Form extends HP_Test_Base 
 
 {
 
@@ -34,10 +34,9 @@ public class OP_TC_363_Physician_Submit_Student_CheckUp_Form extends HP_Test_Bas
     	   
     	   action.student_checkup_option();
     	   submit.physician_submits_student_Checkup_Form();
-    	    submit.click_on_Submit_button();
     	   
-    	   EMR_Reports report = new EMR_Reports(driver);
-   		report.display_last_report() ; 
+    	   submit.click_on_Submit_And_print_button();
+    	   
    	
     	   
 			

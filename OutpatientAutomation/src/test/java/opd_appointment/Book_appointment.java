@@ -33,7 +33,7 @@ public class Book_appointment extends Page_Base {
 		driver.findElement(clinical_diary).click(); 
 		
 		
-		actionMenuObject = new Action_Menu_Items(driver);
+		actionMenuObject = new Action_Menu_Items(driver); 
 		actionMenuObject.select_book_appointment_item();
 
 		By search_txt = By.xpath(

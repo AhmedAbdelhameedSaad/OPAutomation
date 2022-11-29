@@ -15,7 +15,7 @@ public class OP_TC_054_097_Create_Consultation_Visit extends HP_Test_Base {
 
 		try {
 			Thread.sleep(5000);
-		} catch (InterruptedException e) {
+		} catch (InterruptedException e) { 
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -23,7 +23,7 @@ public class OP_TC_054_097_Create_Consultation_Visit extends HP_Test_Base {
 		  auth.login_HP("CMOOPD02","egy123");
 		  
 		  Left_Menu_Items menuItem = new Left_Menu_Items(driver);
-		  menuItem.select_clinical_diary_item(); 
+		  menuItem.select_clinical_diary_item();  
 		  
 		  Action_Menu_Items menu = new Action_Menu_Items(driver);
 		  menu.select_consultation_visit_item(); 

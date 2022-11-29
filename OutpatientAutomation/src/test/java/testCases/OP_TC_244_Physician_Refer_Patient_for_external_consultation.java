@@ -6,21 +6,23 @@ import java.util.logging.Logger;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
+import opd_EMR_reports.EMR_Reports;
 import opd_HP_Menus.NewDocument_Menu_Items;
 import opd_authentication.Authentication;
 import opd_new_documents_forms.OPConsultation_Form;
-
+import opd_patient.Physician_SearchFor_Patient;
 import opd_patient.SelectPatientOP;
 import testBase.*;
 
-public class OP_TC_234_Submit_OPConsultationForm_Investigations extends HP_Test_Base
+public class OP_TC_244_Physician_Refer_Patient_for_external_consultation extends HP_Test_Base
 
 {
 
 	@Test
-	public void OPConsultationForm() {
+	public void OPConsultationForm() throws InterruptedException {
 		Authentication auth = new Authentication(driver);
 		auth.login_HP("DOCUAT5", "egy123"); 
+		
 		try {
 			
 			Thread.sleep(2000);
@@ -30,21 +32,30 @@ public class OP_TC_234_Submit_OPConsultationForm_Investigations extends HP_Test_
 			driver.findElement(ct).click();
 			
 		}catch (InterruptedException ex) {
-			Logger.getLogger(OP_TC_234_Submit_OPConsultationForm_Investigations.class.getName()).log(Level.SEVERE, null, ex);
+			Logger.getLogger(OP_TC_244_Physician_Refer_Patient_for_external_consultation.class.getName()).log(Level.SEVERE, null, ex);
         }
 		
 		
-		SelectPatientOP find_patient = new SelectPatientOP(driver);
-		find_patient.NUR_DOC_selectpatient();	
+		
+		
+		Physician_SearchFor_Patient search = new Physician_SearchFor_Patient(driver);
+		
+		search.physician_search_by_Name("tarek test");
 		
 		NewDocument_Menu_Items select_item = new NewDocument_Menu_Items(driver);
+		
 		select_item.select_OP_Consultation_Form();
 
 		OPConsultation_Form form = new OPConsultation_Form(driver);
 		form.consultation_diagnosis();
-		form.consultaion_place_lab_order();
-		form.consultaion_place_rad_order();
+		
+		form.consultation_internal_external_referral();
+		form. referral_feedback_form();
+		form.preview_form();
 		form.submit_consultation_form();
+		
+		EMR_Reports report = new EMR_Reports(driver);
+		report.display_last_report() ;
 	
 
 	}
