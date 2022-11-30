@@ -12,28 +12,25 @@ import org.testng.annotations.Test;
 import opd_authentication.Authentication;
 import testBase.*;
 
-public class OP_TC_167_Nurse_ChangePassword_InvalidData extends HP_Test_Base
+public class OP_TC_104_CMO_ChangePassword_InvalidData extends HP_Test_Base
 
 {
-	
 
 	@Test
-	public void invalid_change_pass() {
-		
-		
+	public void change_pass() {
 		Authentication auth = new Authentication(driver);
-		try {
-
-		auth.login_HP("NUROPD02", "egy123");
-		auth.change_invalidPassword_HP("egy123","egy123", "egy123");
+   try {
+		auth.login_HP("CMOOPD02", "egy123");
+		auth.cmo_change_invalidPassword_HP("egy123","egy123","egy123");
 		
 		Thread.sleep(3000); 
 		
-		String error_msg = driver.findElement(By.xpath("/html/body/app-root/app-crm/div/div/app-crm-leads/app-crm-header/app-profile/div/div[2]/div/div[2]/div[2]/div/div/div/div/div[2]/div[2]/span\r\n"
-  		 		+ "")).getText();
+		String error_msg = driver.findElement(By.xpath("/html/body/app-root/app-crm/div/div/app-teams/div/app-crm-header/app-profile/div/div[2]/div/div[2]/div[2]/div/div/div/div/div[2]/div[2]/span\r\n"
+				+ "")).getText();
          System.out.println("\n------------\n"+ error_msg +"\n------------");
 		 
-		WebElement update_btn = driver.findElement(By.xpath("/html/body/app-root/app-crm/div/div/app-crm-leads/app-crm-header/app-profile/div/div[2]/div/div[2]/div[2]/div/div/div/div/div[2]/div[4]"));
+		WebElement update_btn = driver.findElement(By.xpath("/html/body/app-root/app-crm/div/div/app-teams/div/app-crm-header/app-profile/div/div[2]/div/div[2]/div[2]/div/div/div/div/div[2]/div[4]\r\n"
+				+ ""));
 
   	    Assert.assertEquals(true, update_btn.getAttribute("class").contains("disable-btn"));
   	    
@@ -41,8 +38,8 @@ public class OP_TC_167_Nurse_ChangePassword_InvalidData extends HP_Test_Base
   	   
 		}catch (InterruptedException ex) {
 			Logger.getLogger(OP_TC_167_Nurse_ChangePassword_InvalidData.class.getName()).log(Level.SEVERE, null, ex);
-      }
+
 
 	}
-
+	}
 }

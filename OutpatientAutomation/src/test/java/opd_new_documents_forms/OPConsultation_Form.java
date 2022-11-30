@@ -163,9 +163,14 @@ public class OPConsultation_Form extends Page_Base {
 		}
 	}
 	
-	public void referral_feedback_form() throws InterruptedException {
+	public void referral_feedback_form() {
 		
-		Thread.sleep(3000); 
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
 		
 		By no_radiobtn = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-consultation-note/div/div/div[1]/div[2]/app-consultation-note-section/div/div/app-clinicalform/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/app-section/div/div/app-segment/div/div/div[2]/div[2]/div/input");
 		driver.findElement(no_radiobtn).click();
@@ -524,9 +529,7 @@ public class OPConsultation_Form extends Page_Base {
 	
 	}
 
-
-
-public void Follow_Up_After_Filling_Diagnosis() {
+    public void Follow_Up_After_Filling_Diagnosis() {
 
 	try {
 		
@@ -646,8 +649,7 @@ public void Follow_Up_After_Filling_Diagnosis() {
 	}
 }
 	
-
-public void preview_form()
+    public void preview_form()
 {
 	try {
 	Thread.sleep(4000);

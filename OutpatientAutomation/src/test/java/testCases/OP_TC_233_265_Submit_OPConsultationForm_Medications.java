@@ -12,12 +12,12 @@ import opd_new_documents_forms.OPConsultation_Form;
 import opd_patient.SelectPatientOP;
 import testBase.*;
 
-public class OP_TC_231_Submit_OPConsultationForm_Diagnosis extends HP_Test_Base
+public class OP_TC_233_265_Submit_OPConsultationForm_Medications extends HP_Test_Base
 
 {
 
 	@Test
-	public void OPConsultationForm() {
+	public void OPConsultationForm_Medications() {
 		Authentication auth = new Authentication(driver);
 		auth.login_HP("DOCUAT5", "egy123");
 		try {
@@ -29,7 +29,7 @@ public class OP_TC_231_Submit_OPConsultationForm_Diagnosis extends HP_Test_Base
 			driver.findElement(ct).click();
 			
 		}catch (InterruptedException ex) {
-			Logger.getLogger(OP_TC_231_Submit_OPConsultationForm_Diagnosis.class.getName()).log(Level.SEVERE, null, ex);
+			Logger.getLogger(OP_TC_233_265_Submit_OPConsultationForm_Medications.class.getName()).log(Level.SEVERE, null, ex);
         }
 		
 		
@@ -41,6 +41,7 @@ public class OP_TC_231_Submit_OPConsultationForm_Diagnosis extends HP_Test_Base
 
 		OPConsultation_Form form = new OPConsultation_Form(driver);
 		form.consultation_diagnosis();
+		form.consultaion_prescribe_medications();
 		form.submit_consultation_form();
 	
 
