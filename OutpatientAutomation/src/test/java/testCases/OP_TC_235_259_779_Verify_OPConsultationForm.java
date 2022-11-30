@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import opd_HP_Menus.NewDocument_Menu_Items;
 import opd_authentication.Authentication;
 import opd_new_documents_forms.OPConsultation_Form;
-import opd_patient.Physician_SearchFor_Patient;
+import opd_patient.Physician_Nurse_SearchFor_Patient;
 import testBase.*;
 
 public class OP_TC_235_259_779_Verify_OPConsultationForm extends HP_Test_Base
@@ -33,8 +33,8 @@ public class OP_TC_235_259_779_Verify_OPConsultationForm extends HP_Test_Base
 			Logger.getLogger(OP_TC_235_259_779_Verify_OPConsultationForm.class.getName()).log(Level.SEVERE, null, ex);
         }
 		
-		Physician_SearchFor_Patient find_patient = new Physician_SearchFor_Patient(driver);
-		find_patient.physician_search_by_Name("Tarek");
+		Physician_Nurse_SearchFor_Patient find_patient = new Physician_Nurse_SearchFor_Patient(driver);
+		find_patient.search_by_Name("Tarek");
 		
 
 		

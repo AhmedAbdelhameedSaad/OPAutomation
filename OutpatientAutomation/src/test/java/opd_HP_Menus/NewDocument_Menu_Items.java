@@ -162,4 +162,37 @@ public class NewDocument_Menu_Items extends Page_Base{
 			Logger.getLogger(NewDocument_Menu_Items.class.getName()).log(Level.SEVERE, null, ex);
 		}
 	}
+
+
+
+public void select_Allergy_Form() {
+
+	try {
+
+		Thread.sleep(4000);
+		// Click on Action
+		By Action = By.xpath("//div[text()='Actions ']");
+		driver.findElement(Action).click();
+
+		// Select New Document
+		By newDocument = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-patient-view/app-lead-actions-popover/div/div/div[3]/div");
+		driver.findElement(newDocument).click();
+
+		Thread.sleep(3000);
+
+		// Search for Form
+		By searchFormText = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/div/div[2]/div[2]/div[1]/input");
+		driver.findElement(searchFormText).sendKeys("Allergy" + Keys.ENTER);
+
+		// Select The Form
+		By selectform = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/div/div[2]/div[2]/div[2]/div[2]");
+		driver.findElement(selectform).click();
+
+	} catch (InterruptedException ex) {
+		Logger.getLogger(NewDocument_Menu_Items.class.getName()).log(Level.SEVERE, null, ex);
+	}
+}
 }

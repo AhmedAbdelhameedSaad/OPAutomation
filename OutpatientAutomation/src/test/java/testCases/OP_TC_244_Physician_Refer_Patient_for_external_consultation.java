@@ -10,11 +10,11 @@ import opd_EMR_Reports.EMR_Reports;
 import opd_HP_Menus.NewDocument_Menu_Items;
 import opd_authentication.Authentication;
 import opd_new_documents_forms.OPConsultation_Form;
-import opd_patient.Physician_SearchFor_Patient;
+import opd_patient.Physician_Nurse_SearchFor_Patient;
 import opd_patient.SelectPatientOP;
 import testBase.*;
 
-public class OP_TC_244_Physician_Refer_Patient_for_external_consultation extends HP_Test_Base
+public class OP_TC_244_Physician_Refer_Patient_for_external_consultation extends HP_Test_Base 
 
 {
 
@@ -38,9 +38,9 @@ public class OP_TC_244_Physician_Refer_Patient_for_external_consultation extends
 		
 		
 		
-		Physician_SearchFor_Patient search = new Physician_SearchFor_Patient(driver);
+		Physician_Nurse_SearchFor_Patient search = new Physician_Nurse_SearchFor_Patient(driver);
 		
-		search.physician_search_by_Name("tarek test");
+		search.search_by_Name("tarek test");
 		
 		NewDocument_Menu_Items select_item = new NewDocument_Menu_Items(driver);
 		

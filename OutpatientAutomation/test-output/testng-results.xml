@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-11-29T13:48:55 EET" name="Default suite" finished-at="2022-11-29T13:51:29 EET" duration-ms="153505">
+  <suite started-at="2022-11-30T17:50:11 EET" name="Default suite" finished-at="2022-11-30T17:51:17 EET" duration-ms="65826">
     <groups>
     </groups>
-    <test started-at="2022-11-29T13:48:55 EET" name="Default test" finished-at="2022-11-29T13:51:29 EET" duration-ms="153505">
-      <class name="testCases.OP_TC_240_Physician_Book_FollowUP_For_Patient">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.OP_TC_240_Physician_Book_FollowUP_For_Patient@7caa550]" started-at="2022-11-29T13:47:48 EET" name="setup" finished-at="2022-11-29T13:48:55 EET" duration-ms="66697" status="PASS">
+    <test started-at="2022-11-30T17:50:11 EET" name="Default test" finished-at="2022-11-30T17:51:17 EET" duration-ms="65826">
+      <class name="testCases.OP_TC_156_Nurse_Save_Patient_Allergies">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.OP_TC_156_Nurse_Save_Patient_Allergies@f415a95]" started-at="2022-11-30T17:49:34 EET" name="setup" finished-at="2022-11-30T17:50:11 EET" duration-ms="36483" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="physician_submits_student_checkup()[pri:0, instance:testCases.OP_TC_240_Physician_Book_FollowUP_For_Patient@7caa550]" started-at="2022-11-29T13:48:55 EET" name="physician_submits_student_checkup" finished-at="2022-11-29T13:51:29 EET" duration-ms="153361" status="PASS">
+        <test-method signature="patient_vitals()[pri:0, instance:testCases.OP_TC_156_Nurse_Save_Patient_Allergies@f415a95]" started-at="2022-11-30T17:50:11 EET" name="patient_vitals" finished-at="2022-11-30T17:51:17 EET" duration-ms="65758" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- physician_submits_student_checkup -->
-      </class> <!-- testCases.OP_TC_240_Physician_Book_FollowUP_For_Patient -->
+        </test-method> <!-- patient_vitals -->
+      </class> <!-- testCases.OP_TC_156_Nurse_Save_Patient_Allergies -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
