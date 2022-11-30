@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 import opd_authentication.Authentication;
 import testBase.*;
 
-public class OP_TC_167_Nurse_ChangePassword_InvalidData extends HP_Test_Base
+public class OP_TC_269_Physician_ChangePassword_InvalidData extends HP_Test_Base
 
 {
 	
@@ -24,7 +24,7 @@ public class OP_TC_167_Nurse_ChangePassword_InvalidData extends HP_Test_Base
 		Authentication auth = new Authentication(driver);
 		try {
 
-		auth.login_HP("NUROPD02", "egy123");
+		auth.login_HP("DOCOPD01", "egy123");
 		auth.change_invalidPassword_HP("egy123","egy123", "egy123");
 		
 		Thread.sleep(3000); 
@@ -40,7 +40,7 @@ public class OP_TC_167_Nurse_ChangePassword_InvalidData extends HP_Test_Base
   		
   	   
 		}catch (InterruptedException ex) {
-			Logger.getLogger(OP_TC_167_Nurse_ChangePassword_InvalidData.class.getName()).log(Level.SEVERE, null, ex);
+			Logger.getLogger(OP_TC_269_Physician_ChangePassword_InvalidData.class.getName()).log(Level.SEVERE, null, ex);
       }
 
 	}
