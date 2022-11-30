@@ -16,9 +16,10 @@ public class Physician_Nurse_SearchFor_Patient extends Page_Base {
 		// TODO Auto-generated constructor stub 
 	}
 
-	public void search_by_Name(String First_Name) 
+	public void search_by_Name(String First_Name)  
 	{
 		try { 
+			
 			Thread.sleep(4000);  
 			By find_patient_btn = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-crm-leads/div[1]/div[2]/div[1]/div[1]");

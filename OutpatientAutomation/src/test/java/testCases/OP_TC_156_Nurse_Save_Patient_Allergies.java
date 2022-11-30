@@ -31,6 +31,7 @@ public class OP_TC_156_Nurse_Save_Patient_Allergies extends HP_Test_Base
 		Nurse_Submit_Allergy_Form form = new Nurse_Submit_Allergy_Form(driver);
 		form.nurse_fill_allergy_form();
 		form.save_allergy(); 
+		
 	}
 
 }

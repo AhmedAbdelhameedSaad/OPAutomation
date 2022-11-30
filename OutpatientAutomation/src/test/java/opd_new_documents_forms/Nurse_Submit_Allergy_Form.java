@@ -133,6 +133,7 @@ public class Nurse_Submit_Allergy_Form extends Page_Base{
 	public void submit_allergy()
 	{
 		try {
+			
 			Thread.sleep(3000); 
 
 			By submit_button = By.xpath(
@@ -155,6 +156,7 @@ public class Nurse_Submit_Allergy_Form extends Page_Base{
 			By save_as_drift_button = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-clinicalform/div/div[2]/div[2]/div[2]/button[3]");
 			driver.findElement(save_as_drift_button).click();
+			
 
 		}catch (InterruptedException ex) {
 			Logger.getLogger(Nurse_Submit_Allergy_Form.class.getName()).log(Level.SEVERE, null, ex);
