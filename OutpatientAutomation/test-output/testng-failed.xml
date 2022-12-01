@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.OP_TC_154_Nurse_Submit_Patient_Allergies">
+      <class name="testCases.OP_TC_176_Nurse_Submit_ER_Triage">
         <methods>
           <include name="patient_vitals"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- testCases.OP_TC_154_Nurse_Submit_Patient_Allergies -->
+      </class> <!-- testCases.OP_TC_176_Nurse_Submit_ER_Triage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
