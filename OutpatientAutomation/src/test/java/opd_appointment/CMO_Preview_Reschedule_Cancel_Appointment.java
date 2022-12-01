@@ -88,14 +88,14 @@ public void CMO_Reschedule_Doctor_Appointments(String clinicName) {
 		
 		driver.findElement(familymedicine_btn).click();  
 		
-/*		By generalSurgery_btn = By.xpath( 
-				"/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[1]/div[2]/div[2]/div[1]/div[2]");
-		driver.findElement(generalSurgery_btn).click();  */
+	By doctor_zohour_checkbox = By.xpath( 
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[2]/div[1]/app-crm-quick-filters/div/div/div[2]/div[7]/div[4]/input");
+		driver.findElement(doctor_zohour_checkbox).click();  
 
 		
-		By amr_moez_checkbox = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[2]/div[1]/app-crm-quick-filters/div/div/div[2]/div[9]/div[4]/input");
+		/*			By amr_moez_checkbox = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[2]/div[1]/app-crm-quick-filters/div/div/div[2]/div[9]/div[4]/input");
 		
-		driver.findElement(amr_moez_checkbox).click() ;
+		driver.findElement(amr_moez_checkbox).click() ; 
 		
 		
         By calender_btn = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[1]/div[2]/div/div[1]/input");
@@ -109,7 +109,7 @@ public void CMO_Reschedule_Doctor_Appointments(String clinicName) {
 
 		 By update_btn = By.xpath("/html/body/div/div[2]/div/owl-date-time-container/div[2]/div/button[2]/span");
 				
-		driver.findElement( update_btn).click() ;
+		driver.findElement( update_btn).click() ;  */
 		
 		By eightAM_date_btn = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[2]/div[2]/app-appointments-calendar-view/div/div/div/div[2]/div[1]/div[2]/div/div/div/div/span[1]");
 
@@ -392,6 +392,98 @@ public void CMO_Book_visit_and_Check_Out(String patient_id, String clinic_name, 
 	}
 }
 
+
+
+public void CMO_Reschedule2__Doctor_Appointments(String clinicName) {
+
+	try {
+
+		Thread.sleep(4000); 
+		
+         //click on clinical diary icon 
+		
+		By clinical_diary = By.xpath("/html/body/app-root/app-crm/div/app-navigation/div/div[2]/div/img");
+		 
+		driver.findElement(clinical_diary).click(); 
+		
+		// search clinic
+
+		By search_button = By.id("clinic-btn");
+		
+		driver.findElement(search_button).click();
+
+		Thread.sleep(2000);
+        
+		By search_textbox = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[1]/div[2]/div[1]/input");
+		driver.findElement(search_textbox).sendKeys(clinicName);
+	
+		Thread.sleep(2000);
+			By first_option = By.xpath(
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[1]/div[2]/div[2]/div");
+		
+		driver.findElement(first_option).click();  
+		
+		Thread.sleep(3000);
+	By doctor_zohour_checkbox = By.xpath( 
+				"/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[2]/div[1]/app-crm-quick-filters/div/div/div[2]/div[7]/div[4]/input");
+		driver.findElement(doctor_zohour_checkbox).click();  
+
+		
+		/*			By amr_moez_checkbox = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[2]/div[1]/app-crm-quick-filters/div/div/div[2]/div[9]/div[4]/input");
+		
+		driver.findElement(amr_moez_checkbox).click() ; 
+		
+		
+        By calender_btn = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[1]/div[2]/div/div[1]/input");
+		
+		driver.findElement(calender_btn).click() ;
+		
+		 By nineteen_date_btn = By.xpath("/html/body/div/div[2]/div/owl-date-time-container/div[2]/owl-date-time-calendar/div[2]/owl-date-time-month-view/table/tbody/tr[3]/td[7]/span");
+			
+		driver.findElement( nineteen_date_btn).click() ;
+			
+
+		 By update_btn = By.xpath("/html/body/div/div[2]/div/owl-date-time-container/div[2]/div/button[2]/span");
+				
+		driver.findElement( update_btn).click() ;  */
+		
+		Thread.sleep(3000);
+		By two_date_btn = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[2]/div[2]/app-appointments-calendar-view/div/div/div/div[2]/div[1]/div[2]/div/div/div/div/span[1]");
+
+		driver.findElement(two_date_btn).click() ;
+		
+	/*	JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,250)"); */
+		
+		Thread.sleep(2000);
+        By reschedule_btn = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/div/div[2]/div[2]/app-appointments-calendar-view/div/div/div/div[2]/div[1]/div[2]/app-appointment-info/div/div[3]/div[3]");
+
+		driver.findElement(reschedule_btn).click() ;
+		
+			
+		Thread.sleep(3000);
+		By onepm_btn = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div[1]/div[2]/div/div[2]/div[2]/div[2]/div/app-practitioner/div[3]/app-ex-schedule-appointment/div/div[2]/app-practitioner-slot/div/div/div/div/div/div[3]/div");
+		
+		driver.findElement( onepm_btn).click() ;
+		
+		Thread.sleep(2000);
+         By confirm_btn = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div/div[2]/div/div[3]/div[2]/button");
+		
+		driver.findElement( confirm_btn).click() ;
+		
+		Thread.sleep(2000);
+		
+      By close_btn = By.xpath("/html/body/app-root/app-crm/div/div/app-clinical-diary/app-ex-book-appointment/div[1]/div[2]/div/div[3]/div[2]/button");
+		
+		driver.findElement( close_btn).click() ;
+		
+				
+
+	} catch (InterruptedException ex) {
+		Logger.getLogger(CMO_Preview_Reschedule_Cancel_Appointment.class.getName()).log(Level.SEVERE, null, ex);
+	}
+}
 }
 
 

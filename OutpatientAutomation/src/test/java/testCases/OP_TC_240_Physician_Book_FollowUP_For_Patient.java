@@ -16,7 +16,7 @@ import opd_patient.Physician_Nurse_SearchFor_Patient;
 import opd_patient.SelectPatientOP;
 import testBase.*;
 
-public class OP_TC_240_Physician_Book_FollowUP_For_Patient extends HP_Test_Base 
+public class OP_TC_240_Physician_Book_FollowUP_For_Patient extends HP_Test_Base  
 
 {
 

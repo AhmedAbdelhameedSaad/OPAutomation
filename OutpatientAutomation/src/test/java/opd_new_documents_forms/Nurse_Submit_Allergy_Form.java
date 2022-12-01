@@ -24,7 +24,7 @@ public class Nurse_Submit_Allergy_Form extends Page_Base{
 
 			// Choose Allergy Type
 			
-			Thread.sleep(3000);
+			Thread.sleep(3000); 
 			By general_radiobtn = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-clinicalform/div/div[2]/div[1]/div[2]/div/div/div/div/div[3]/app-section/div/div/app-segment/div/div/div[2]/div[2]/div/input");
 			driver.findElement(general_radiobtn).click(); 
 			
