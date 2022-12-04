@@ -31,7 +31,7 @@ public class OP_TC_53_CMO_Cancel_Rescheduled_Appointment extends HP_Test_Base {
 	{
             
     	loginobj = new Authentication(driver);  
-		
+
 		 loginobj.login_HP("CMOOPD02", "egy123");  		  
 	}
 	 
@@ -42,6 +42,7 @@ public class OP_TC_53_CMO_Cancel_Rescheduled_Appointment extends HP_Test_Base {
   	{
 	   bookapp = new Book_appointment (driver);
 	   bookapp.Book_Appoint_ByInsuranceID("General surgery", "A100037520");
+	   
             reschedule = new CMO_Preview_Reschedule_Cancel_Appointment(driver);
             cancel = new CMO_Preview_Reschedule_Cancel_Appointment(driver);
       	

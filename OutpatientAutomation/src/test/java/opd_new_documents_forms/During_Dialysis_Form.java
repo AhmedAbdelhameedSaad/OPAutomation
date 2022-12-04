@@ -14,8 +14,6 @@ public class During_Dialysis_Form extends Page_Base {
 
 	public During_Dialysis_Form(WebDriver driver) {
 		super(driver); 
-		
-		 
 	}
  
 	public void nurse_fill_during_dialysis_form() {

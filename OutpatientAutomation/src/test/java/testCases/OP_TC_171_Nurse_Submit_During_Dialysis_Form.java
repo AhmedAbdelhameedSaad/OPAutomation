@@ -18,6 +18,7 @@ public class OP_TC_171_Nurse_Submit_During_Dialysis_Form extends HP_Test_Base
 
 	@Test
 	public void patient_vitals() {
+		
 		Authentication auth = new Authentication(driver);
 		auth.login_HP("NURS2", "egy123"); 
 	

@@ -231,7 +231,6 @@ public void select_During_Dialysis() {
 public void select_ER_Triage() {
 
 	try {
-
 		Thread.sleep(4000);
 		// Click on Action
 		By Action = By.xpath("//div[text()='Actions ']");

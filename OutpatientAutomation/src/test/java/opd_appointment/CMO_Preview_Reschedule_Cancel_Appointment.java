@@ -398,9 +398,11 @@ public void CMO_Reschedule2__Doctor_Appointments(String clinicName) {
 
 	try {
 
-		Thread.sleep(4000); 
+		 
 		
          //click on clinical diary icon 
+		
+		Thread.sleep(4000);
 		
 		By clinical_diary = By.xpath("/html/body/app-root/app-crm/div/app-navigation/div/div[2]/div/img");
 		 
