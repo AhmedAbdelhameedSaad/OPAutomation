@@ -12,11 +12,11 @@ import opd_HP_Menus.Left_Menu_Items;
 import opd_HP_Menus.NewDocument_Menu_Items;
 import opd_authentication.Authentication;
 import opd_new_documents_forms.OPConsultation_Form;
-import opd_patient.Physician_SearchFor_Patient;
+import opd_patient.Physician_Nurse_SearchFor_Patient;
 import opd_patient.SelectPatientOP;
 import testBase.*;
 
-public class OP_TC_240_Physician_Book_FollowUP_For_Patient extends HP_Test_Base 
+public class OP_TC_240_Physician_Book_FollowUP_For_Patient extends HP_Test_Base  
 
 {
 
@@ -24,7 +24,7 @@ public class OP_TC_240_Physician_Book_FollowUP_For_Patient extends HP_Test_Base
 	public void physician_submits_student_checkup() throws InterruptedException {
 		Authentication auth = new Authentication(driver);  
 		Action_Menu_Items action = new Action_Menu_Items(driver);
-		Physician_SearchFor_Patient search = new Physician_SearchFor_Patient(driver);
+		Physician_Nurse_SearchFor_Patient search = new Physician_Nurse_SearchFor_Patient(driver);
 		opd_new_documents_forms.Physician_submit_Checkups submit = new opd_new_documents_forms.Physician_submit_Checkups (driver);
 		OPConsultation_Form consult = new OPConsultation_Form (driver);
 		
@@ -33,7 +33,7 @@ public class OP_TC_240_Physician_Book_FollowUP_For_Patient extends HP_Test_Base
     	   auth.physician_login_HP("DOCUAT5", "egy123"); 
     	   Thread.sleep(2000); 
     	  
-    	   search.physician_search_by_Name("new patient");  
+    	   search.search_by_Name("new patient");  
     	 
     	   Thread.sleep(2000); 
     	 

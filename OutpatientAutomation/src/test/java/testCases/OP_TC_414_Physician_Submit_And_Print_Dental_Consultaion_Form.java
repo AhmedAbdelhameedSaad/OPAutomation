@@ -9,10 +9,10 @@ import org.testng.annotations.Test;
 import opd_new_documents_forms.Physician_submit_Checkups;
 import opd_HP_Menus.Action_Menu_Items;
 import opd_authentication.Authentication;
-import opd_patient.Physician_SearchFor_Patient;
+import opd_patient.Physician_Nurse_SearchFor_Patient;
 import testBase.*;
 
-public class OP_TC_414_Physician_Submit_And_Print_Dental_Consultaion_Form extends HP_Test_Base
+public class OP_TC_414_Physician_Submit_And_Print_Dental_Consultaion_Form extends HP_Test_Base 
 
 {
 
@@ -20,14 +20,14 @@ public class OP_TC_414_Physician_Submit_And_Print_Dental_Consultaion_Form extend
 	public void physician_submits_student_checkup() throws InterruptedException {
 		Authentication auth = new Authentication(driver);  
 		Action_Menu_Items action = new Action_Menu_Items(driver);
-		Physician_SearchFor_Patient search = new Physician_SearchFor_Patient(driver);
+		Physician_Nurse_SearchFor_Patient search = new Physician_Nurse_SearchFor_Patient(driver);
 		Physician_submit_Checkups submit = new Physician_submit_Checkups (driver);
 		
        try {
     	   
 
     	   auth.physician_login_HP("DOCUAT5", "egy123"); 
-    	   search.physician_search_by_Name("new patient");  
+    	   search.search_by_Name("new patient");  
     	   
     	   Thread.sleep(2000);
     	  

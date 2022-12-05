@@ -104,7 +104,7 @@ public class Register_Patient extends Page_Base  {
 		
 		Thread.sleep(3000);
 			JavascriptExecutor java = (JavascriptExecutor) driver;
-			java.executeScript("scroll(0,1000)"); 
+			java.executeScript("scroll(0,1000)");  
 			
 		} catch (InterruptedException ex) {
 			Logger.getLogger(Register_Patient.class.getName()).log(Level.SEVERE, null, ex);			
